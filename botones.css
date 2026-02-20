@@ -1,0 +1,97 @@
+/*Esta hoja de estilos incluye los estilos de los botones*/
+
+/*Boton general para crear un boton vacio, no tiene fondo ni bordes*/
+.boton {
+    font-size: 30px;
+    text-align: center;
+    font-weight: bolder;
+    margin: 10px;
+    width: 40px;
+    height: 40px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+/*Hace una animacion al pasar por un boton*/
+.boton:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+/*Boton de numeros normales*/
+.botonNum {
+    background-color: blue;
+}
+/*Boton de operadores*/
+.botonOp {
+    background-color: green;
+}
+/*Boton para borrar todo el contenido de la pantalla de la calculadora, color rojo */
+.botonCE {
+    font-size: 20px;
+    align-content: center;
+    background-color: red;
+}
+/*Boton para borrar el ultimo caracter*/
+.botonC {
+    font-size: 20px;
+    align-content: center;
+    background-color: lightgray;
+}
+/*Boton para cambiar de estilo entre claro y oscuro*/
+.toggle {
+    position: relative;
+    left: 20px;
+    width: 150px;
+    height: 100px;
+    font-size: 30px;
+    text-align: center;
+    align-content: center;
+    border-radius:  20px;
+    background-color: black;
+    color: white;
+    border: 3px solid white;
+}
+/*Boton de conversion entre bases de la calculadora de programador*/
+.conversion{
+    background-color: yellow;
+    font-size: 20px;
+    align-content: center;
+}
+/*Select para la calculadora de divisas*/
+.SelectDivisa {
+    margin-top: 10px;
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    border: 3px solid lightcoral;
+    color: antiquewhite;
+    font-size: 25px;
+    font-weight: bolder;
+}
+/*Boton vacio, se puede usar si quieres dejar un espacio vacio sin que lo ocupe el siguiente boton*/
+.vacio {
+    transition: none;
+}
+.vacio:hover {
+    transform: none;
+    cursor: default;
+}
+/*Boton para letras hexadecimales*/
+.hex {
+    background-color: purple;
+}
+/*Boton de enviar para el calculo de fechas*/
+#enviar {
+    width: 100%;
+    background-color: green;
+    height: 100px;
+    border: 3px solid black;
+    font-size: 80px;
+    text-align: center;
+    align-content: center;
+    color: white;
+    font-weigth: bolder;
+}
+/*Seleccionador del tipo de calculo para la calculadora de fechas*/
+#tipoCalculo {
+    width: 100%;
+}

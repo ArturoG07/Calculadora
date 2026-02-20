@@ -1,0 +1,55 @@
+/*Hoja de estilos con los estilos necesarios para el funcionamiento del carrusel*/
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vm;
+    background: #111;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+/*Carrusel principal*/
+.carousel {
+    position: relative;
+    width: 600px;
+    overflow: hidden;
+}
+/*Recorrido del carrusel*/
+.carousel-track {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.4s ease;
+}
+/*Calculadoras con el efecto de transicion*/
+.calculadora {
+    margin: 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.5;
+    transform: scale(0.8);
+    transition: all 0.4s ease;
+}
+/*Calculadora que estara activa*/
+.calculadora.activa {
+    opacity: 1;
+    transform: scale(1);
+}
+/*Boton de navegacion*/
+.nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #222;
+    color: white;
+    border: none;
+    font-size: 2rem;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+/*Botones de navegacion*/
+.prev { left: 0; }
+.next { right: 0; }
