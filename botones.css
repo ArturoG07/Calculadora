@@ -24,7 +24,7 @@
 .botonOp {
     background-color: green;
 }
-/*Boton para borrar todo el contenido de la pantalla de la calculadora, color rojo */
+/*Boton para borrar el contenido de la pantalla de la calculadora, color rojo */
 .botonCE {
     font-size: 20px;
     align-content: center;
