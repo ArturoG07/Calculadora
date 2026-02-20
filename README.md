@@ -35,14 +35,14 @@ Este proyecto consiste en un conjunto de **cuatro calculadoras interactivas** co
 
 ## 📂 Estructura del Proyecto
 /Calculadora
-│
-├─ index.html # Estructura principal y carrusel
-├─ calculos.js # Lógica de cálculo para operaciones, divisas y fechas
-├─ acciones.js # Manejo de eventos y UI
-├─ carrusel.js # Control del carrusel de calculadoras
-├─ botones.css # Estilos de los botones
-├─ contenedores.css # Estilos de contenedores y pantallas
-├─ light.css # Tema claro
-├─ dark.css # Tema oscuro
-├─carrusel.css #Control de contenedores del carrusel
-└─ README.md # Documentación del proyecto
+
+index.html # Estructura principal y carrusel
+calculos.js # Lógica de cálculo para operaciones, divisas y fechas
+acciones.js # Manejo de eventos y UI
+carrusel.js # Control del carrusel de calculadoras
+botones.css # Estilos de los botones
+contenedores.css # Estilos de contenedores y pantallas
+light.css # Tema claro
+dark.css # Tema oscuro
+carrusel.css #Control de contenedores del carrusel
+README.md # Documentación del proyecto
