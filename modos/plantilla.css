@@ -1,0 +1,110 @@
+/**Esta es una plantilla para nuevos estilos, con  lo que hay que asignarle color borde
+ *Una vez terminado el nuevo estilo, para implementarlo de forma correcta hay que añadir la hoja de estilos en el index
+ *el metodo de modos/estilos.js lo añadira automaticamente a la lista de estilos
+ *Las partes con **** hay que sustituirlas con el nombre del nuevo tema
+ */
+
+/*Fondo general*/
+body.tema-**** {
+    background-color: #000000;
+}
+/*Fondo de la calculadora*/
+.tema-**** .calculadora {
+    background-color: #ffffff;
+    border: 3px solid #cccccc;
+}
+/*Fondo, borde y color de la pantalla de la calculadora*/
+.tema-**** .pantalla {
+    background-color: #f9f9f9;
+    border: 2px solid #cccccc;
+    color: #333;
+}
+/*Estilo general para botones, aunque se suelen añadir a cada boton distintivamente*/
+.tema-**** .boton {
+    background-color: #e0e0e0;
+    border: 2px solid #bdbdbd;
+    color: #000;
+}
+/*Botones de operacion, incluye +, -, /, *, (, ), =, etc...*/
+.tema-**** .botonOp {
+    background-color: #d1d1ff;
+    border: 2px solid #8c8cff;
+}
+/*Boton para borrar la pantalla entera, como norma general sera rojo*/
+.tema-**** .botonCE {
+    background-color: #ff6b6b;
+    border: 2px solid #c0392b;
+    color: white;
+}
+/*Boton para borrar el ultimo caracter en pantalla*/
+.tema-**** .botonC {
+    background-color: #ffd166;
+    border: 2px solid #e0a800;
+}
+/*Botones para los operadores hexadecimales de la calculadora de programador (A, B, C, D, E, F)*/
+.tema-**** .hex {
+    background-color: #cdb4db;
+    border: 2px solid #9d4edd;
+}
+/*Boton que incluye la base actual de la calculadora hexadecimal*/
+.tema-**** #Base {
+    background-color: #eef2ff;
+    border: 2px solid #8c8cff;
+    color: #333;
+}
+/*Boton de enviar como alternativa de algunas calculadoras al =*/
+.tema-**** .enviar {
+    background-color: #4caf50;
+    border: 2px solid #2e7d32;
+    color: white;
+}
+/*Botones para las conversiones entre bases de la calculadora de programador*/
+.tema-**** .conversion {
+    background-color: #b3e5fc;
+    border: 2px solid #0288d1;
+}
+/*Boton para seleccionar el tipo de divisa y de calculo en la calculadora de fechas*/
+.tema-**** .SelectDivisa,
+.tema-**** #tipoCalculo {
+    background-color: #ffffff;
+    border: 2px solid #cccccc;
+    color: #333;
+}
+/*Boton para cambiar de estilo*/
+.tema-**** .toggle {
+    background-color: white;
+    border: 3px solid black;
+    color: black
+}
+/*Boton para mostrar el historial*/
+.tema-**** .botonHist {
+    background-color: #dcedc8;
+    border: 2px solid #7cb342;
+}
+/*Titulo de las calculadoras*/
+.tema-**** h2 {
+    color: black;
+}
+/*Contenedor del historial*/
+.tema-**** #historial {
+    background-color: #f5ffdd;
+    opacity: 0.7;
+    border: 3px solid black;
+}
+/*Contenedor para cada operacion que se lleva al historial*/
+.tema-**** .operacion {
+    background-color: #f5ffdd;
+    opacity: 1;
+    border: 3px solid black;
+    color: #00ffcc;
+    text-weigth: bold;
+}
+/*Botones de select e input*/
+.tema-oscuro select,
+.tema-oscuro input,
+.tema-oscuro #tipoInteres{
+    background-color: black;
+    color: #00ffcc;
+    border: 3px solid white;
+    font-weight: bolder;
+}

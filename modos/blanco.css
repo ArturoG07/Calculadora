@@ -1,0 +1,132 @@
+/*Fondo general*/
+body.tema-blanco {
+	background-color: #f4f6f9;
+}
+
+/*Fondo de la calculadora*/
+.tema-blanco .calculadora {
+	background-color: #ffffff;
+	border: 3px solid #dcdfe6;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/*Fondo, borde y color de la pantalla de la calculadora*/
+.tema-blanco .pantalla {
+	background-color: #f9fafb;
+	border: 2px solid #cfd8dc;
+	color: #1f2937;
+}
+
+/*Estilo general para botones*/
+.tema-blanco .boton {
+	background-color: #ffffff;
+	border: 2px solid #d1d5db;
+	color: #111827;
+	transition: all 0.2s ease-in-out;
+}
+
+.tema-blanco .boton:hover {
+	background-color: #f3f4f6;
+	border-color: #9ca3af;
+}
+
+/*Botones de operacion*/
+.tema-blanco .botonOp {
+	background-color: #e0f2fe;
+	border: 2px solid #38bdf8;
+	color: #075985;
+}
+
+/*Boton CE*/
+.tema-blanco .botonCE {
+	background-color: #ef4444;
+	border: 2px solid #b91c1c;
+	color: white;
+}
+
+/*Boton C*/
+.tema-blanco .botonC {
+	background-color: #facc15;
+	border: 2px solid #ca8a04;
+	color: #1f2937;
+}
+
+/*Botones hexadecimales*/
+.tema-blanco .hex {
+	background-color: #f3e8ff;
+	border: 2px solid #a855f7;
+	color: #4c1d95;
+}
+
+/*Boton Base*/
+.tema-blanco #Base {
+	background-color: #eef2ff;
+	border: 2px solid #6366f1;
+	color: #312e81;
+}
+
+/*Boton enviar*/
+.tema-blanco .enviar {
+	background-color: #22c55e;
+	border: 2px solid #15803d;
+	color: white;
+}
+
+/*Botones conversion*/
+.tema-blanco .conversion {
+	background-color: #e0f7fa;
+	border: 2px solid #06b6d4;
+	color: #164e63;
+}
+
+/*Selectores*/
+.tema-blanco .SelectDivisa,
+.tema-blanco #tipoCalculo {
+	background-color: #ffffff;
+	border: 2px solid #d1d5db;
+	color: #1f2937;
+}
+
+/*Boton toggle*/
+.tema-blanco .toggle {
+	background-color: #ffffff;
+	border: 3px solid #1f2937;
+	color: #1f2937;
+}
+
+/*Boton historial*/
+.tema-blanco .botonHist {
+	background-color: #dcfce7;
+	border: 2px solid #16a34a;
+	color: #14532d;
+}
+
+/*Titulo*/
+.tema-blanco h2 {
+	color: #111827;
+}
+
+/*Contenedor historial*/
+.tema-blanco #historial {
+	background-color: #f9fafb;
+	border: 3px solid #d1d5db;
+	opacity: 1;
+}
+
+/*Operacion individual*/
+.tema-blanco .operacion {
+	background-color: #ffffff;
+	border: 2px solid #e5e7eb;
+	color: #0f172a;
+	font-weight: bold;
+}
+
+/*Inputs y selects generales*/
+.tema-blanco select,
+.tema-blanco input,
+.tema-blanco #tipoInteres {
+	background-color: #ffffff;
+	color: #111827;
+	border: 2px solid #d1d5db;
+	font-weight: 600;
+}

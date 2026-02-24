@@ -1,0 +1,138 @@
+/** Tema Cyber Sunset - moderno, vibrante y sorprendente */
+
+/*Fondo general*/
+body.tema-cyber {
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+}
+
+/*Fondo de la calculadora*/
+.tema-cyber .calculadora {
+    background-color: #111827;
+    border: 3px solid #ff00cc;
+    box-shadow: 0 0 20px rgba(255, 0, 204, 0.4);
+}
+
+/*Pantalla*/
+.tema-cyber .pantalla {
+    background-color: #0b1120;
+    border: 2px solid #00f5ff;
+    color: #00f5ff;
+    text-shadow: 0 0 6px rgba(0, 245, 255, 0.6);
+}
+
+/*Botones generales*/
+.tema-cyber .boton {
+    background-color: #1f2937;
+    border: 2px solid #374151;
+    color: #f9fafb;
+    transition: all 0.2s ease-in-out;
+}
+
+.tema-cyber .boton:hover {
+    background-color: #2d3748;
+    border-color: #ff00cc;
+    box-shadow: 0 0 10px rgba(255, 0, 204, 0.6);
+}
+
+/*Botones de operación*/
+.tema-cyber .botonOp {
+    background: linear-gradient(45deg, #ff00cc, #3333ff);
+    border: 2px solid #ff00cc;
+    color: #ffffff;
+}
+
+/*Botón CE*/
+.tema-cyber .botonCE {
+    background-color: #ff1744;
+    border: 2px solid #ff4569;
+    color: white;
+    box-shadow: 0 0 10px rgba(255, 23, 68, 0.6);
+}
+
+/*Botón C*/
+.tema-cyber .botonC {
+    background-color: #ff9100;
+    border: 2px solid #ffb74d;
+    color: #1a1a1a;
+}
+
+/*Botones hexadecimales*/
+.tema-cyber .hex {
+    background-color: #6a00f4;
+    border: 2px solid #c77dff;
+    color: #f3e8ff;
+}
+
+/*Botón Base*/
+.tema-cyber #Base {
+    background-color: #001f3f;
+    border: 2px solid #00f5ff;
+    color: #00f5ff;
+}
+
+/*Botón enviar*/
+.tema-cyber .enviar {
+    background-color: #00c853;
+    border: 2px solid #69f0ae;
+    color: #003d1f;
+}
+
+/*Botones conversión*/
+.tema-cyber .conversion {
+    background-color: #0091ea;
+    border: 2px solid #40c4ff;
+    color: #ffffff;
+}
+
+/*Selectores*/
+.tema-cyber .SelectDivisa,
+.tema-cyber #tipoCalculo {
+    background-color: #111827;
+    border: 2px solid #00f5ff;
+    color: #e0f7ff;
+}
+
+/*Botón toggle*/
+.tema-cyber .toggle {
+    background-color: #000000;
+    border: 3px solid #ff00cc;
+    color: #ff00cc;
+}
+
+/*Botón historial*/
+.tema-cyber .botonHist {
+    background-color: #1a1a2e;
+    border: 2px solid #00f5ff;
+    color: #00f5ff;
+}
+
+/*Título*/
+.tema-cyber h2 {
+    color: #ff00cc;
+    text-shadow: 0 0 8px rgba(255, 0, 204, 0.7);
+}
+
+/*Contenedor historial*/
+.tema-cyber #historial {
+    background-color: #0b1120;
+    border: 3px solid #ff00cc;
+    opacity: 1;
+}
+
+/*Operación individual*/
+.tema-cyber .operacion {
+    background-color: #111827;
+    border: 2px solid #3333ff;
+    color: #00f5ff;
+    font-weight: bold;
+}
+
+/*Inputs y selects generales*/
+.tema-cyber select,
+.tema-cyber input,
+.tema-cyber #tipoInteres {
+    background-color: #0b1120;
+    color: #00f5ff;
+    border: 2px solid #ff00cc;
+    font-weight: 600;
+}

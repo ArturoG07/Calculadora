@@ -1,0 +1,134 @@
+/** Tema pastel suave y moderno */
+
+/*Fondo general*/
+body.tema-pastel {
+    background-color: #fdf6f9;
+}
+
+/*Fondo de la calculadora*/
+.tema-pastel .calculadora {
+    background-color: #ffffff;
+    border: 3px solid #e9d5ff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/*Pantalla*/
+.tema-pastel .pantalla {
+    background-color: #fef9ff;
+    border: 2px solid #d8b4fe;
+    color: #4b5563;
+}
+
+/*Botones generales*/
+.tema-pastel .boton {
+    background-color: #ffffff;
+    border: 2px solid #e5e7eb;
+    color: #374151;
+    transition: all 0.2s ease-in-out;
+}
+
+.tema-pastel .boton:hover {
+    background-color: #f3f4f6;
+    border-color: #c4b5fd;
+}
+
+/*Botones de operación*/
+.tema-pastel .botonOp {
+    background-color: #dbeafe; /* azul pastel */
+    border: 2px solid #93c5fd;
+    color: #1e3a8a;
+}
+
+/*Botón CE*/
+.tema-pastel .botonCE {
+    background-color: #fecaca; /* rojo pastel */
+    border: 2px solid #f87171;
+    color: #7f1d1d;
+}
+
+/*Botón C*/
+.tema-pastel .botonC {
+    background-color: #fef3c7; /* amarillo pastel */
+    border: 2px solid #fcd34d;
+    color: #78350f;
+}
+
+/*Botones hexadecimales*/
+.tema-pastel .hex {
+    background-color: #e9d5ff; /* lila pastel */
+    border: 2px solid #c4b5fd;
+    color: #5b21b6;
+}
+
+/*Botón Base*/
+.tema-pastel #Base {
+    background-color: #e0f2fe;
+    border: 2px solid #7dd3fc;
+    color: #075985;
+}
+
+/*Botón enviar*/
+.tema-pastel .enviar {
+    background-color: #bbf7d0; /* verde pastel */
+    border: 2px solid #4ade80;
+    color: #14532d;
+}
+
+/*Botones conversión*/
+.tema-pastel .conversion {
+    background-color: #fde68a;
+    border: 2px solid #facc15;
+    color: #713f12;
+}
+
+/*Selectores*/
+.tema-pastel .SelectDivisa,
+.tema-pastel #tipoCalculo {
+    background-color: #ffffff;
+    border: 2px solid #e9d5ff;
+    color: #374151;
+}
+
+/*Botón toggle*/
+.tema-pastel .toggle {
+    background-color: #ffffff;
+    border: 3px solid #c4b5fd;
+    color: #6d28d9;
+}
+
+/*Botón historial*/
+.tema-pastel .botonHist {
+    background-color: #d1fae5;
+    border: 2px solid #6ee7b7;
+    color: #065f46;
+}
+
+/*Título*/
+.tema-pastel h2 {
+    color: #6d28d9;
+}
+
+/*Contenedor historial*/
+.tema-pastel #historial {
+    background-color: #fef9ff;
+    border: 3px solid #e9d5ff;
+    opacity: 1;
+}
+
+/*Operación individual*/
+.tema-pastel .operacion {
+    background-color: #ffffff;
+    border: 2px solid #fbcfe8;
+    color: #9d174d;
+    font-weight: bold;
+}
+
+/*Inputs y selects generales*/
+.tema-pastel select,
+.tema-pastel input,
+.tema-pastel #tipoInteres {
+    background-color: #ffffff;
+    color: #374151;
+    border: 2px solid #e9d5ff;
+    font-weight: 600;
+}

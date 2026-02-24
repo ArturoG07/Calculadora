@@ -1,0 +1,140 @@
+/*Fondo general*/
+body.tema-neon {
+    background: linear-gradient(135deg, #0f0f1a, #1a0033);
+}
+
+/*Fondo de la calculadora*/
+.tema-neon .calculadora {
+    background-color: #141427;
+    border: 3px solid #00f5ff;
+    box-shadow: 0 0 20px #00f5ff;
+}
+
+/*Fondo, borde y color de la pantalla de la calculadora*/
+.tema-neon .pantalla {
+    background-color: #000000;
+    border: 2px solid #39ff14;
+    color: #39ff14;
+    box-shadow: 0 0 10px #39ff14 inset;
+}
+
+/*Estilo general para botones*/
+.tema-neon .boton {
+    background-color: #1f1f3d;
+    border: 2px solid #ff00ff;
+    color: #ffffff;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.tema-neon .boton:hover {
+    background-color: #ff00ff;
+    color: #000;
+}
+
+/*Botones de operacion*/
+.tema-neon .botonOp {
+    background-color: #00f5ff;
+    border: 2px solid #0088ff;
+    color: #000;
+    font-weight: bold;
+}
+
+/*Boton CE*/
+.tema-neon .botonCE {
+    background-color: #ff0055;
+    border: 2px solid #ff0033;
+    color: white;
+}
+
+/*Boton C*/
+.tema-neon .botonC {
+    background-color: #ffcc00;
+    border: 2px solid #ff9900;
+    color: black;
+}
+
+/*Hexadecimales*/
+.tema-neon .hex {
+    background-color: #9d4edd;
+    border: 2px solid #c77dff;
+    color: white;
+}
+
+/*Base*/
+.tema-neon #Base {
+    background-color: #240046;
+    border: 2px solid #00f5ff;
+    color: #00f5ff;
+}
+
+/*Enviar*/
+.tema-neon .enviar {
+    background-color: #39ff14;
+    border: 2px solid #00c853;
+    color: black;
+    font-weight: bold;
+}
+
+/*Conversion*/
+.tema-neon .conversion {
+    background-color: #00b4d8;
+    border: 2px solid #0077b6;
+    color: white;
+}
+
+/*SelectDivisa y tipoCalculo*/
+.tema-neon .SelectDivisa,
+.tema-neon #tipoCalculo {
+    background-color: #1f1f3d;
+    border: 2px solid #ff00ff;
+    color: white;
+}
+
+/*Toggle*/
+.tema-neon .toggle {
+    background-color: #000;
+    border: 3px solid #39ff14;
+    color: #39ff14;
+    font-weight: bold;
+}
+
+/*Boton historial*/
+.tema-neon .botonHist {
+    background-color: #00ffcc;
+    border: 2px solid #00bfa6;
+    color: black;
+}
+
+/*Titulo*/
+.tema-neon h2 {
+    color: #00f5ff;
+    text-shadow: 0 0 8px #00f5ff;
+}
+
+/*Contenedor historial*/
+.tema-neon #historial {
+    background-color: #0d0d1a;
+    border: 3px solid #ff00ff;
+    color: white;
+}
+
+/*Operacion individual*/
+.tema-neon .operacion {
+    background-color: #1a1a33;
+    border: 2px solid #00f5ff;
+    color: #39ff14;
+    font-weight: bold;
+    margin: 4px 0;
+    padding: 4px;
+}
+
+/*Select e input*/
+.tema-neon select,
+.tema-neon input,
+.tema-neon #tipoInteres {
+    background-color: #000;
+    color: #39ff14;
+    border: 2px solid #00f5ff;
+    font-weight: bold;
+}

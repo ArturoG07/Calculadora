@@ -1,0 +1,134 @@
+/** Tema verde moderno y contrastado */
+
+/*Fondo general*/
+body.tema-verde {
+    background-color: #e8f5e9;
+}
+
+/*Fondo de la calculadora*/
+.tema-verde .calculadora {
+    background-color: #ffffff;
+    border: 3px solid #66bb6a;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+/*Pantalla*/
+.tema-verde .pantalla {
+    background-color: #f1f8f4;
+    border: 2px solid #81c784;
+    color: #1b4332;
+}
+
+/*Botones generales*/
+.tema-verde .boton {
+    background-color: #ffffff;
+    border: 2px solid #a5d6a7;
+    color: #1b4332;
+    transition: all 0.2s ease-in-out;
+}
+
+.tema-verde .boton:hover {
+    background-color: #e8f5e9;
+    border-color: #66bb6a;
+}
+
+/*Botones de operación*/
+.tema-verde .botonOp {
+    background-color: #c8e6c9;
+    border: 2px solid #43a047;
+    color: #1b5e20;
+}
+
+/*Botón CE*/
+.tema-verde .botonCE {
+    background-color: #d32f2f;
+    border: 2px solid #b71c1c;
+    color: white;
+}
+
+/*Botón C*/
+.tema-verde .botonC {
+    background-color: #aed581;
+    border: 2px solid #7cb342;
+    color: #1b4332;
+}
+
+/*Botones hexadecimales*/
+.tema-verde .hex {
+    background-color: #b2dfdb;
+    border: 2px solid #00897b;
+    color: #004d40;
+}
+
+/*Botón Base*/
+.tema-verde #Base {
+    background-color: #dcedc8;
+    border: 2px solid #689f38;
+    color: #33691e;
+}
+
+/*Botón enviar*/
+.tema-verde .enviar {
+    background-color: #2e7d32;
+    border: 2px solid #1b5e20;
+    color: #ffffff;
+}
+
+/*Botones conversión*/
+.tema-verde .conversion {
+    background-color: #c5e1a5;
+    border: 2px solid #558b2f;
+    color: #33691e;
+}
+
+/*Selectores*/
+.tema-verde .SelectDivisa,
+.tema-verde #tipoCalculo {
+    background-color: #ffffff;
+    border: 2px solid #81c784;
+    color: #1b4332;
+}
+
+/*Botón toggle*/
+.tema-verde .toggle {
+    background-color: #ffffff;
+    border: 3px solid #2e7d32;
+    color: #2e7d32;
+}
+
+/*Botón historial*/
+.tema-verde .botonHist {
+    background-color: #d0f0c0;
+    border: 2px solid #43a047;
+    color: #1b5e20;
+}
+
+/*Título*/
+.tema-verde h2 {
+    color: #1b4332;
+}
+
+/*Contenedor historial*/
+.tema-verde #historial {
+    background-color: #f1f8f4;
+    border: 3px solid #66bb6a;
+    opacity: 1;
+}
+
+/*Operación individual*/
+.tema-verde .operacion {
+    background-color: #ffffff;
+    border: 2px solid #a5d6a7;
+    color: #2e7d32;
+    font-weight: bold;
+}
+
+/*Inputs y selects generales*/
+.tema-verde select,
+.tema-verde input,
+.tema-verde #tipoInteres {
+    background-color: #ffffff;
+    color: #1b4332;
+    border: 2px solid #66bb6a;
+    font-weight: 600;
+}
