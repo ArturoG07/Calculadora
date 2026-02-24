@@ -17,7 +17,7 @@
 	<script src="calculos/divisas.js" defer></script>
 	<script src="calculos/fechas.js" defer></script>
 	<script src="calculos/interes.js" defer></script>
-	<script src="calculos/calculos.js" defer></script>
+	<script src="calculos/IMC.js" defer></script>
 	<script src="calculos/programador.js" defer></script>
 	<script src="carrusel/carrusel.js" defer></script>
 	<script src="historial/historial.js" defer></script>
@@ -521,6 +521,13 @@ Se muestra unicamente cuando estas en la calculadora de programador, en las dema
 		<input type="number" required placeholder="Años" id="aniosInteres">
 		<div class="enviar" onclick="calculoInteres()">ENVIAR</div>
 	</div>
+		<div class="calculadora" id="calc6">
+			<h2>IMC</h2>
+			<div class="pantalla" id="pnt6"></div>
+			<input type="number" required placeholder="Peso en Kg" id="peso">
+			<input type="number" required placeholder="Altura en metros" id="altura">
+			<div class="enviar" onclick="calculoIMC()">ENVIAR</div>
+		</div>
 	</div>
 
 		<button class="nav prev">&#10094;</button>

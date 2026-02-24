@@ -37,7 +37,6 @@ function cambiarTema() {
     document.body.classList.add(temas[actual]);
 }
 
-
 // Inicializar automáticamente
 obtenerTemas();
 cambiarTema();

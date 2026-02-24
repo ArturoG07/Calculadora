@@ -22,6 +22,7 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     margin: 20px;
+    justify-content: center;
 }
 /*Pantalla de todas las calculadoras, se pone justo despues del titulo y antes de los botones, el largo
 se ajustara automaticamente, si quieres ajustar la altura se debe hacer con los id */

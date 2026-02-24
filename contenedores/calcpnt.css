@@ -1,21 +1,19 @@
 /*Esta hoja contiene las asignaciones personalizadas para un contendor en especifico*/
+.calculadora {
+    width: 300px;
+}
 #calc1 {
     width: 250px;
-}
-#calc2 {
-    width: 300px;
-}
-#calc3 {
-    width: 300px;
-}
-#calc4 {
-    width: 300px;
 }
 #calc5 {
     width: 350px;
 }
 #pnt5 {
     height: 200px;
+    font-size: 20px;
+}
+#pnt6 {
+    height: 150px;
     font-size: 20px;
 }
 #calc5 input {
