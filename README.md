@@ -3,7 +3,7 @@
 
 # Calculadoras Multifunción
 
-Este proyecto consiste en un conjunto de **cinco calculadoras interactivas** con interfaz gráfica y funcionalidades avanzadas. Incluye un carrusel para cambiar entre calculadoras y la opción de alternar entre **distintos estilos**.
+Este proyecto consiste en un conjunto de **seis calculadoras interactivas** con interfaz gráfica y funcionalidades avanzadas. Incluye un carrusel para cambiar entre calculadoras y la opción de alternar entre **distintos estilos**.
 
 ## 🖥️ Calculadoras Incluidas
 
