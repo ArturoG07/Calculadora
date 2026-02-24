@@ -1,0 +1,51 @@
+/*Esta hoja de estilos incluye las propiedades de los contenedores comunes*/
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    background: #111;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+/*Crea una calculadora, al añadir una nueva se ordenaran todos los botones solos*/
+.calculadora {
+    position: relative;
+    border-radius: 10px;
+    top: 20px;
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+/*Pantalla de todas las calculadoras, se pone justo despues del titulo y antes de los botones, el largo
+se ajustara automaticamente, si quieres ajustar la altura se debe hacer con los id */
+.pantalla {
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    height: 100px;
+    align-content: center;
+    font-size: 45px;
+    text-align: center;
+    font-weight: bolder;
+    overflow-x: auto;
+    overflow-y: auto;
+    border: 3px solid black;
+}
+/*Titulo de las calculadoras*/
+h2{
+    font-size: 50px;
+    text-align: center;
+    margin: 0px;
+}
+input {
+    margin: 20px;
+    height: 30px;
+}
+

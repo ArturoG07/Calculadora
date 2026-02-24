@@ -23,6 +23,7 @@ function updateCarousel() {
     } else {
         document.getElementById("Base").style.display = "block";
     }
+    actualizarBotones();
 }
 /*Comprueba que haya mas calculadoras, pasa a la siquiente y actualiza el carrusel*/
 nextBtn.addEventListener('click', () => {
@@ -39,4 +40,15 @@ prevBtn.addEventListener('click', () => {
     }
 });
 
+function actualizarBotones() {
+    const calculadoras = document.querySelectorAll('.calculadora');
+    calculadoras.forEach(calc => {
+        const botones = calc.querySelectorAll('.boton');
+        if (calc.classList.contains('activa')) {
+            botones.forEach(btn => btn.style.pointerEvents = 'auto'); // activa botones
+        } else {
+            botones.forEach(btn => btn.style.pointerEvents = 'none'); // desactiva botones
+        }
+    });
+}
 updateCarousel();

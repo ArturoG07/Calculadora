@@ -1,15 +1,4 @@
 /*Hoja de estilos con los estilos necesarios para el funcionamiento del carrusel*/
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100vm;
-    background: #111;
-    margin: 0;
-    font-family: Arial, sans-serif;
-    overflow: hidden;
-}
 /*Carrusel principal*/
 .carousel {
     position: relative;
@@ -25,11 +14,7 @@ body {
 }
 /*Calculadoras con el efecto de transicion*/
 .calculadora {
-    margin: 0 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0.5;
+    opacity: 0.4;
     transform: scale(0.8);
     transition: all 0.4s ease;
 }
@@ -40,8 +25,8 @@ body {
 }
 /*Boton de navegacion*/
 .nav {
-    position: absolute;
-    top: 50%;
+    position: fixed;
+    bottom: 0px;
     transform: translateY(-50%);
     background: #222;
     color: white;
@@ -50,6 +35,7 @@ body {
     padding: 10px;
     cursor: pointer;
     z-index: 10;
+    width: 50px;
 }
 /*Botones de navegacion*/
 .prev { left: 0; }

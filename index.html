@@ -1,22 +1,40 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-	<link type="text/css" href="botones.css" rel="stylesheet"/>
-	<link type="text/css" href="contenedores.css" rel="stylesheet"/>
-	<link type="text/css" href="carrusel.css" rel="stylesheet"/>
-	<link type="text/css" href="light.css" rel="stylesheet" id="tema"/>
-	<script src="acciones.js" defer></script>
-	<script src="calculos.js" defer></script>
-	<script src="carrusel.js" defer></script>
+	<link type="text/css" href="botones/botones.css" rel="stylesheet"/>
+	<link type="text/css" href="contenedores/contenedores.css" rel="stylesheet"/>
+	<link type="text/css" href="historial/historial.css" rel="stylesheet"/>
+	<link type="text/css" href="carrusel/carrusel.css" rel="stylesheet"/>
+	<link type="text/css" href="contenedores/calcpnt.css" rel="stylesheet"/>
+	<link type="text/css" href="modos/blue.css" rel="stylesheet"/>
+	<link type="text/css" href="modos/green.css" rel="stylesheet"/>
+	<link type="text/css" href="modos/negro.css" rel="stylesheet"/>
+	<link type="text/css" href="modos/blanco.css" rel="stylesheet"/>
+	<link type="text/css" href="modos/pastel.css" rel="stylesheet"/>
+	<link type="text/css" href="modos/neon.css" rel="stylesheet"/>
+	<link type="text/css" href="modos/cyber.css" rel="stylesheet"/>
+	<script src="acciones/acciones.js" defer></script>
+	<script src="calculos/divisas.js" defer></script>
+	<script src="calculos/fechas.js" defer></script>
+	<script src="calculos/interes.js" defer></script>
+	<script src="calculos/calculos.js" defer></script>
+	<script src="calculos/programador.js" defer></script>
+	<script src="carrusel/carrusel.js" defer></script>
+	<script src="historial/historial.js" defer></script>
+	<script src="modos/estilos.js" defer></script>
+
 	<meta charset="UTF-8"/>
 	<title>Calculadora</title>
 </head>
-<body>
+<body class="tema-claro">
 <!--La zona alta se usa unicamente para la base de la calculadora de programador, al hacer click en ella se cambiara a otra
 Se muestra unicamente cuando estas en la calculadora de programador, en las demas se pone la base automaticamente a decimal-->
 	<div class="zonaAlta">
 		<div id="Base" onclick="cambiarBase()">Decimal</div>
 	</div>
+		<div id="historial">
+		</div>
+		<div class="boton botonHist" id="botonHist" onclick="cambiarVista();">Mostrar historial></div>
 <!--El carousel track sera el recorrido del carrusel para cambiar entre calculadoras con flechas-->
 	<div class="carousel-track">
 	<div class="calculadora" id="calc1">
@@ -102,9 +120,11 @@ Se muestra unicamente cuando estas en la calculadora de programador, en las dema
 			<option value="CAD">Dolar canadiense</option>
 			<option value="AUD">Dolar australiano</option>
 		</select>
-		<div class="boton vacio"></div>
 		<div class="boton botonCE" onclick="borrar();">CE</div>
 		<div class="boton botonC" onclick="borrarUltimo();">C</div>
+		<div class="boton botonOp" onclick="cambioDivisa();">=</div>
+		<div class="boton botonOp" onclick="apretarBoton('.');">.</div>
+
 		<div class="boton vacio"></div>
 		<div class="boton botonNum" onclick="apretarBoton('1');">1</div>
 		<div class="boton botonNum" onclick="apretarBoton('2');">2</div>
@@ -116,8 +136,6 @@ Se muestra unicamente cuando estas en la calculadora de programador, en las dema
 		<div class="boton botonNum" onclick="apretarBoton('8');">8</div>
 		<div class="boton botonNum" onclick="apretarBoton('9');">9</div>
 		<div class="boton botonNum" onclick="apretarBoton('0')">0</div>
-		<div class="boton botonOp" onclick="apretarBoton('.');">.</div>
-		<div class="boton botonOp" onclick="cambioDivisa();">=</div>
 	</div>
 		<div class="calculadora" id="calc4">
 			<h2>Calculo de fechas</h2>
@@ -488,15 +506,26 @@ Se muestra unicamente cuando estas en la calculadora de programador, en las dema
 			<option value="3">Diferencia de años</option>
 			<option value="4">Edad</option>
 		</select>
-			<div id="enviar" onclick="calculoFecha();">ENVIAR</div>
+			<div class="enviar" onclick="calculoFecha();">ENVIAR</div>
 		</div>
-		</div>
+	<div class="calculadora" id="calc5">
+		<h2>Interes</h2>
+		<div class="pantalla" id="pnt5"></div>
+		<input type="number" required placeholder="Capital" id="capital">
+		<input type="number" required placeholder="Interés" id="interes">
+		<select id="tipoInteres">
+			<option>Tipo de Interés...</option>
+			<option>Simple</option>
+			<option>Compuesto</option>
+		</select>
+		<input type="number" required placeholder="Años" id="aniosInteres">
+		<div class="enviar" onclick="calculoInteres()">ENVIAR</div>
 	</div>
-	<div class="zonaBaja">
+	</div>
+
 		<button class="nav prev">&#10094;</button>
 		<button class="nav next">&#10095;</button>
 		<div class="toggle" onclick="cambiarTema();">Cambiar tema</div>
-	</div>
 </body>
 </html>
 
