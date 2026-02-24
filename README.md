@@ -28,6 +28,8 @@ Este proyecto consiste en un conjunto de **cinco calculadoras interactivas** con
 5. **Calculadora de  Interes**
    - Permite calcular el total pagado, el total de intereses y la cuota mensual de un interes
    - Incluye interes simple y compuesto
+6. **Calculadora de IMC**
+   - Permite calcular el indice de masa corporal a partir de un peso en kilos y una altura en metros
 ## 🎨 Funcionalidades Generales
 
 - **Carrusel de calculadoras**: navega fácilmente entre las cinco calculadoras mediante flechas.
