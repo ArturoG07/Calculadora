@@ -3,7 +3,7 @@
 
 # Calculadoras Multifunción
 
-Este proyecto consiste en un conjunto de **seis calculadoras interactivas** con interfaz gráfica y funcionalidades avanzadas. Incluye un carrusel para cambiar entre calculadoras y la opción de alternar entre **distintos estilos**.
+Este proyecto consiste en un conjunto de **calculadoras interactivas** con interfaz gráfica y funcionalidades avanzadas. Incluye un carrusel para cambiar entre calculadoras y la opción de alternar entre **distintos estilos**.
 
 ## 🖥️ Calculadoras Incluidas
 
@@ -30,6 +30,9 @@ Este proyecto consiste en un conjunto de **seis calculadoras interactivas** con 
    - Incluye interes simple y compuesto
 6. **Calculadora de IMC**
    - Permite calcular el indice de masa corporal a partir de un peso en kilos y una altura en metros
+7. **Calculadora de Macros**
+   - Permite calcular el total de calorias, y macronutrientes (proteinas, carbohidratos y grasas) de una persona
+dado su peso, altura, edad, sexo, nivel de actividad, objetivo, y preferencia de distribucion
 ## 🎨 Funcionalidades Generales
 
 - **Carrusel de calculadoras**: navega fácilmente entre las cinco calculadoras mediante flechas.
@@ -50,6 +53,8 @@ Este proyecto consiste en un conjunto de **seis calculadoras interactivas** con 
    - **divisas.js**
    - **fechas.js**
    - **interes.js**
+   - **IMC.js**
+   - **macros.js**
 - #### /carrusel
    - Incluye los estilos y funciones para el funcionamiento del carrusel
    - **carrusel.js**

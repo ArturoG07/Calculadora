@@ -45,3 +45,18 @@
 #calc4 #tipoCalculo {
     width: 100%;
 }
+#calc7 input,
+#calc7 select{
+    width: 100%;
+    margin: 10px;
+}
+#calc7 p{
+    text-align: left;
+}
+#calc7 {
+width: 400px;
+}
+#pnt7{
+    height: 200px;
+    font-size: 20px;
+}

@@ -1,3 +1,4 @@
+/*Calculo de el indice de masa corporal*/
 function calculoIMC(){
     let peso = document.getElementById("peso").value;
     let altura = document.getElementById("altura").value;

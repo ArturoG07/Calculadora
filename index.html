@@ -15,6 +15,7 @@
 	<link type="text/css" href="modos/cyber.css" rel="stylesheet"/>
 	<script src="acciones/acciones.js" defer></script>
 	<script src="calculos/divisas.js" defer></script>
+	<script src="calculos/macros.js" defer></script>
 	<script src="calculos/fechas.js" defer></script>
 	<script src="calculos/interes.js" defer></script>
 	<script src="calculos/IMC.js" defer></script>
@@ -527,6 +528,40 @@ Se muestra unicamente cuando estas en la calculadora de programador, en las dema
 			<input type="number" required placeholder="Peso en Kg" id="peso">
 			<input type="number" required placeholder="Altura en metros" id="altura">
 			<div class="enviar" onclick="calculoIMC()">ENVIAR</div>
+		</div>
+		<div class="calculadora" id="calc7">
+			<h2>Macros</h2>
+			<div class="pantalla" id="pnt7"></div>
+			<input type="number" required placeholder="Peso en Kg" id="peso2">
+			<input type="number" required placeholder="Altura en metros" id="altura2">
+			<input type="number" required placeholder="Edad" id="edad">
+			Sexo:
+			<select id="sexo">
+				<option value="1">Hombre</option>
+				<option value="2">Mujer</option>
+			</select>
+			Nivel de actividad:
+			<select id="actividad">
+				<option value="1.2">Sedentario</option>
+				<option value="1.375">Ligero</option>
+				<option value="1.55">Moderado</option>
+				<option value="1.725">Alto</option>
+				<option value="1.9">Muy Alto</option>
+			</select>
+			Objetivo:
+			<select id="obj">
+				<option value="0.85">Perdida de peso</option>
+				<option value="1">Mantenimiento</option>
+				<option value="1.1">Ganancia muscular</option>
+			</select>
+			Preferencia:
+			<select id="pref">
+				<option value="1">Balanceado (40/30/30)</option>
+				<option value="2">Alto en proteina</option>
+				<option value="3">Bajo en carbohidratos</option>
+				<option value="4">Alto en carbohidratos</option>
+			</select>
+			<div class="enviar" onclick="calcularMacros();">ENVIAR</div>
 		</div>
 	</div>
 
