@@ -42,13 +42,28 @@ prevBtn.addEventListener('click', () => {
 
 function actualizarBotones() {
     const calculadoras = document.querySelectorAll('.calculadora');
+
     calculadoras.forEach(calc => {
         const botones = calc.querySelectorAll('.boton');
-        if (calc.classList.contains('activa')) {
-            botones.forEach(btn => btn.style.pointerEvents = 'auto'); // activa botones
-        } else {
-            botones.forEach(btn => btn.style.pointerEvents = 'none'); // desactiva botones
-        }
+        const inputs = calc.querySelectorAll('input');
+        const selects = calc.querySelectorAll('select');
+
+        const activa = calc.classList.contains('activa');
+
+        // Activar / desactivar botones
+        botones.forEach(btn => {
+            btn.style.pointerEvents = activa ? 'auto' : 'none';
+        });
+
+        // Activar / desactivar inputs
+        inputs.forEach(input => {
+            input.disabled = !activa;
+        });
+
+        // Activar / desactivar selects
+        selects.forEach(select => {
+            select.disabled = !activa;
+        });
     });
 }
 updateCarousel();

@@ -33,6 +33,8 @@ Este proyecto consiste en un conjunto de **calculadoras interactivas** con inter
 7. **Calculadora de Macros**
    - Permite calcular el total de calorias, y macronutrientes (proteinas, carbohidratos y grasas) de una persona
 dado su peso, altura, edad, sexo, nivel de actividad, objetivo, y preferencia de distribucion
+8. **Calculadora de clima**
+   - Permite buscar en tiempo real de una zona usando una api de clima abierta
 ## 🎨 Funcionalidades Generales
 
 - **Carrusel de calculadoras**: navega fácilmente entre las cinco calculadoras mediante flechas.
@@ -55,6 +57,7 @@ dado su peso, altura, edad, sexo, nivel de actividad, objetivo, y preferencia de
    - **interes.js**
    - **IMC.js**
    - **macros.js**
+   - **clima.js**
 - #### /carrusel
    - Incluye los estilos y funciones para el funcionamiento del carrusel
    - **carrusel.js**

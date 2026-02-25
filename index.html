@@ -19,6 +19,7 @@
 	<script src="calculos/fechas.js" defer></script>
 	<script src="calculos/interes.js" defer></script>
 	<script src="calculos/IMC.js" defer></script>
+	<script src="calculos/clima.js" defer></script>
 	<script src="calculos/programador.js" defer></script>
 	<script src="carrusel/carrusel.js" defer></script>
 	<script src="historial/historial.js" defer></script>
@@ -562,6 +563,12 @@ Se muestra unicamente cuando estas en la calculadora de programador, en las dema
 				<option value="4">Alto en carbohidratos</option>
 			</select>
 			<div class="enviar" onclick="calcularMacros();">ENVIAR</div>
+		</div>
+		<div class="calculadora" id="calc8">
+			<h2>Clima</h2>
+			<div class="pantalla" id="pnt8"></div>
+			<input type="text" required placeholder="Zona" id="zona">
+			<div class="enviar" onclick="buscarClima();">ENVIAR</div>
 		</div>
 	</div>
 

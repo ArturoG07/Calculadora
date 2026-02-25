@@ -10,6 +10,7 @@ body {
     background: #111;
     font-family: Arial, sans-serif;
     overflow: hidden;
+    /*white-space: pre-wrap;*/
 }
 
 /*Crea una calculadora, al añadir una nueva se ordenaran todos los botones solos*/
