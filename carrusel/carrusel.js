@@ -8,6 +8,11 @@ const prevBtn = document.querySelector('.prev');
 const nextBtn = document.querySelector('.next');
 /*Indice*/
 let currentIndex = 0;
+
+window.addEventListener("load", () => {
+    updateCarousel();
+});
+window.addEventListener("resize", updateCarousel);
 /*Funcion principal del carrusel, quita a todos la clase activa, y se la asigna al indice actual*/
 function updateCarousel() {
     cards.forEach(calculadora => calculadora.classList.remove('activa'));
@@ -66,4 +71,3 @@ function actualizarBotones() {
         });
     });
 }
-updateCarousel();

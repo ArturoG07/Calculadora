@@ -21,6 +21,8 @@
 	<script src="calculos/IMC.js" defer></script>
 	<script src="calculos/clima.js" defer></script>
 	<script src="calculos/programador.js" defer></script>
+	<script src="calculos/conversiones.js" defer></script>
+	<script src="calculos/deportiva.js" defer></script>
 	<script src="carrusel/carrusel.js" defer></script>
 	<script src="historial/historial.js" defer></script>
 	<script src="modos/estilos.js" defer></script>
@@ -37,6 +39,7 @@ Se muestra unicamente cuando estas en la calculadora de programador, en las dema
 		<div id="historial">
 		</div>
 		<div class="boton botonHist" id="botonHist" onclick="cambiarVista();">Mostrar historial></div>
+<div class="carousel">
 <!--El carousel track sera el recorrido del carrusel para cambiar entre calculadoras con flechas-->
 	<div class="carousel-track">
 	<div class="calculadora" id="calc1">
@@ -570,7 +573,48 @@ Se muestra unicamente cuando estas en la calculadora de programador, en las dema
 			<input type="text" required placeholder="Zona" id="zona">
 			<div class="enviar" onclick="buscarClima();">ENVIAR</div>
 		</div>
+		<div class="calculadora" id="calc9">
+			<h2>Conversor de unidades</h2>
+			<div class="pantalla" id="pnt9"></div>
+			<p>Categoria</p>
+			<select id="categoria">
+				<option value="1">Longitud</option>
+				<option value="2">Peso</option>
+				<option value="3">Temperatura</option>
+				<option value="4">Velocidad</option>
+				<option value="5">Almacenamiento</option>
+				<option value="6">Energia</option>
+				<option value="7">Area</option>
+				<option value="8">Tiempo</option>
+				<option value="9">Potencia</option>
+				<option value="10">Presion</option>
+			</select>
+			<p>Valor:</p>
+			<input type="text" required id="valor">
+			<p>Unidad de origen</p>
+			<select id="origen"></select>
+			<p>Unidad de destino</p>
+			<select id="destino"></select>
+			<div class="enviar" onclick="calcularConversion();">ENVIAR</div>
+		</div>
+		<div class="calculadora" id="calc10">
+			<h2>Deportiva</h2>
+			<div class="pantalla" id="pnt10"></div>
+			<label for="kilometros">Kilometros:</label>
+			<input type="number" required id="kilometros">
+			<p>Horas:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				Minutos:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				Segundos:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+			<input type="number" id="horas" required>
+			<input type="number" id="minutos" required  min="0" max="59">
+			<input type="number" id="segundos" required  min="0" max="59">
+
+
+			<div class="enviar" onclick="calcularRendimiento();">ENVIAR</div>
+
+		</div>
 	</div>
+</div>
 
 		<button class="nav prev">&#10094;</button>
 		<button class="nav next">&#10095;</button>

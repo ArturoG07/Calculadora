@@ -35,9 +35,14 @@ Este proyecto consiste en un conjunto de **calculadoras interactivas** con inter
 dado su peso, altura, edad, sexo, nivel de actividad, objetivo, y preferencia de distribucion
 8. **Calculadora de clima**
    - Permite buscar en tiempo real de una zona usando una api de clima abierta
+9. **Conversor de unidades**
+   - Convierte una diversa cantidad de unidades
+10. **Deportiva**
+   -Permite calcular el rendimiento deportivo en m/s y km/h dada una cantida de kilometros, horas, minutos, y segundos
 ## 🎨 Funcionalidades Generales
 
-- **Carrusel de calculadoras**: navega fácilmente entre las cinco calculadoras mediante flechas.
+- **Carrusel de calculadoras**: navega fácilmente entre las calculadoras mediante flechas.
+- **Teclado funcional**: en una parte de las calculadoras se puede operar directamente con el teclado
 - **Estilos**: cambia la apariencia de toda la interfaz con un solo botón.
 - **Pantallas dinámicas**: cada calculadora tiene su propia pantalla de resultados que se actualiza en tiempo real.
 - **Interfaz responsiva**: los botones y contenedores se ajustan automáticamente según la calculadora activa.
@@ -58,6 +63,8 @@ dado su peso, altura, edad, sexo, nivel de actividad, objetivo, y preferencia de
    - **IMC.js**
    - **macros.js**
    - **clima.js**
+   - **conversor.js**
+   - **deportiva.js**
 - #### /carrusel
    - Incluye los estilos y funciones para el funcionamiento del carrusel
    - **carrusel.js**

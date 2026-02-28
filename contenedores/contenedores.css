@@ -4,13 +4,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0;
-    height: 100%;
+    height: 100vh;
     width: 100%;
     background: #111;
     font-family: Arial, sans-serif;
-    overflow: hidden;
-    /*white-space: pre-wrap;*/
+    margin: 0;
 }
 
 /*Crea una calculadora, al añadir una nueva se ordenaran todos los botones solos*/
@@ -24,6 +22,8 @@ body {
     flex-wrap: wrap;
     margin: 20px;
     justify-content: center;
+    flex-shrink: 0;
+    width: 300px;
 }
 /*Pantalla de todas las calculadoras, se pone justo despues del titulo y antes de los botones, el largo
 se ajustara automaticamente, si quieres ajustar la altura se debe hacer con los id */
