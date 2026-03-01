@@ -85,3 +85,5 @@ dado su peso, altura, edad, sexo, nivel de actividad, objetivo, y preferencia de
    - **green.css**
    - **negro.css**
    - **pastel.css**
+   - **neon.css**
+   - **estilos.js**: script para el cambio entre modos

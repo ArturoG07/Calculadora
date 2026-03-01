@@ -44,10 +44,47 @@ se ajustara automaticamente, si quieres ajustar la altura se debe hacer con los 
 h2{
     font-size: 50px;
     text-align: center;
-    margin: 0px;
+    margin: 0;
 }
 input {
     margin: 20px;
     height: 30px;
 }
 
+#inf {
+    position: fixed;
+    background-color: green;
+    color: white;
+    top: 5px;
+    right: 5px;
+    border: 3px solid darkgreen;
+    border-radius: 10px;
+    font-weight: bolder;
+    text-align: center;
+    align-content: center;
+}
+#contInf {
+    position: absolute;
+    right: 20px;
+    top: 5px;
+    bottom: 50%;
+    width: 25%;
+    background-color: lightgreen;
+    z-index: 10;
+    border: 3px solid green;
+    padding: 20px;
+    color: ghostwhite;
+    font-weight: bolder;
+    display:none;
+    color: black;
+}
+#ocultarInfo {
+    position: absolute;
+    background-color: red;
+    border: 3px solid darkred;
+    bottom: 10px;
+    left: 10px;
+    width: 50px;
+    heigth: 10px;
+    border-radius: 5px;
+}

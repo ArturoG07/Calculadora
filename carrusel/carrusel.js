@@ -29,6 +29,7 @@ function updateCarousel() {
         document.getElementById("Base").style.display = "block";
     }
     actualizarBotones();
+    cargarContenidoInfo(document.querySelector(".calculadora.activa"));
 }
 /*Comprueba que haya mas calculadoras, pasa a la siquiente y actualiza el carrusel*/
 nextBtn.addEventListener('click', () => {

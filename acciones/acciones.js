@@ -93,8 +93,59 @@ function resolver() {
         pantalla.textContent = "Error";
     }
 }
+function mostrarInfo() {
+    document.getElementById("contInf").style.display = "block";
+    document.getElementById("inf").style.display = "none";
+    let calcActiva = document.querySelector(".calculadora.activa");
+    cargarContenidoInfo(calcActiva);
+}
 
+function ocultarInfo() {
+    document.getElementById("contInf").style.display = "none";
+    document.getElementById("inf").style.display = "block";
+}
+function cargarContenidoInfo(calc) {
+   let contenido = document.getElementById("contenido");
+    if (calc.id === "calc1") {
+        contenido.textContent = "Realiza operaciones matemáticas fundamentales como suma, resta, multiplicación, división, paréntesis y decimales, ofreciendo una experiencia rápida y sencilla.";
+    }
 
+    if (calc.id === "calc2") {
+        contenido.textContent = "Permite trabajar con números en decimal, hexadecimal, octal y binario, realizando conversiones automáticas entre bases y mostrando la base activa en todo momento.";
+    }
+
+    if (calc.id === "calc3") {
+        contenido.textContent = "Convierte entre múltiples monedas internacionales mediante la selección de divisa de origen y destino usando tasas de cambio predefinidas.";
+    }
+
+    if (calc.id === "calc4") {
+        contenido.textContent = "Calcula la diferencia entre dos fechas en días, meses o años, y permite obtener la edad exacta a partir de una fecha de nacimiento.";
+    }
+
+    if (calc.id === "calc5") {
+        contenido.textContent = "Calcula el total pagado, los intereses generados y la cuota mensual utilizando interés simple o compuesto según el caso.";
+    }
+
+    if (calc.id === "calc6") {
+        contenido.textContent = "Obtén tu Índice de Masa Corporal introduciendo peso y altura para conocer tu estado corporal de forma rápida.";
+    }
+
+    if (calc.id === "calc7") {
+        contenido.textContent = "Calcula calorías y distribución de macronutrientes según tus datos físicos, nivel de actividad y objetivo.";
+    }
+
+    if (calc.id === "calc8") {
+        contenido.textContent = "Consulta el clima en tiempo real de cualquier ubicación mediante una API meteorológica abierta.";
+    }
+
+    if (calc.id === "calc9") {
+        contenido.textContent = "Convierte fácilmente entre diferentes unidades de medida como longitud, peso o temperatura.";
+    }
+
+    if (calc.id === "calc10") {
+        contenido.textContent = "Calcula tu velocidad media en m/s y km/h a partir de la distancia recorrida y el tiempo empleado.";
+    }
+}
 
 
 

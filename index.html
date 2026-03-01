@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-	<link type="text/css" href="botones/botones.css" rel="stylesheet"/>
+	<link type="text/css" href="contenedores/botones.css" rel="stylesheet"/>
 	<link type="text/css" href="contenedores/contenedores.css" rel="stylesheet"/>
 	<link type="text/css" href="historial/historial.css" rel="stylesheet"/>
 	<link type="text/css" href="carrusel/carrusel.css" rel="stylesheet"/>
@@ -39,6 +39,11 @@ Se muestra unicamente cuando estas en la calculadora de programador, en las dema
 		<div id="historial">
 		</div>
 		<div class="boton botonHist" id="botonHist" onclick="cambiarVista();">Mostrar historial></div>
+		<div class="boton" id="inf"  onclick="mostrarInfo();">i</div>
+		<div id="contInf">
+			<div id="contenido"></div>
+			<div class="boton" id="ocultarInfo" onclick="ocultarInfo()">^^</div>
+		</div>
 <div class="carousel">
 <!--El carousel track sera el recorrido del carrusel para cambiar entre calculadoras con flechas-->
 	<div class="carousel-track">
