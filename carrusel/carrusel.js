@@ -28,6 +28,7 @@ function updateCarousel() {
     } else {
         document.getElementById("Base").style.display = "block";
     }
+    /*Al finalizar de actualizar el carrusel, actualiza los botones y el contenido de informacion*/
     actualizarBotones();
     cargarContenidoInfo(document.querySelector(".calculadora.activa"));
 }

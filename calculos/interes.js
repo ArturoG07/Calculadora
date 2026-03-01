@@ -1,3 +1,4 @@
+/*Calcula los intereses dados los datos en la calculadora*/
 function calculoInteres() {
     let capital = Number(document.getElementById("capital").value);
     let interes = Number(document.getElementById("interes").value)/100;
@@ -37,6 +38,7 @@ Cuota mensual: ${cuota.toFixed(2)}`;
         pantalla.textContent = comprobacion;
     }
 }
+/*Comprueba que se hayan introducido todos los parametros*/
 function comprobarParametrosInteres(capital, interes, tipo, anios) {
     let comprobacion = true;
     if (!capital) comprobacion = "Introduzca capital";

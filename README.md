@@ -47,6 +47,7 @@ dado su peso, altura, edad, sexo, nivel de actividad, objetivo, y preferencia de
 - **Pantallas dinámicas**: cada calculadora tiene su propia pantalla de resultados que se actualiza en tiempo real.
 - **Interfaz responsiva**: los botones y contenedores se ajustan automáticamente según la calculadora activa.
 - **Historial**: guarda cada operacion en un historial de operaciones
+- **Informacion**: las calculadoras disponen de un boton de informacion en la esquina superior derecha  que muestra una breve descripcion
 
 ## 📂 Estructura del Proyecto
 ### /Calculadora

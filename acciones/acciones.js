@@ -107,11 +107,33 @@ function ocultarInfo() {
 function cargarContenidoInfo(calc) {
    let contenido = document.getElementById("contenido");
     if (calc.id === "calc1") {
-        contenido.textContent = "Realiza operaciones matemáticas fundamentales como suma, resta, multiplicación, división, paréntesis y decimales, ofreciendo una experiencia rápida y sencilla.";
+        contenido.textContent = "" +
+            "Realiza operaciones matemáticas fundamentales como suma, resta, multiplicación, división, paréntesis y decimales, ofreciendo una experiencia rápida y sencilla." +
+            "\nId: calc1 (calculadora)/ pnt1 (pantalla)" +
+            "\nBotones por teclado: Si" +
+            "\nPosibles motivos de error:" +
+            "\n   -Operacion no valida, (parentesis mal puestos, operaciones no validas)" +
+            "\nManejo de errores:" +
+            "\n   -Aviso por pantalla" +
+            "\nArchivos especificos:" +
+            "\nArchivos generales:" +
+            "\n   -acciones/acciones.js: Acciones generales, esta calculadora no depende de archivo propio por el momento" +
+            "\n   -Directorio contenedores: contiene el estilo de los contenedores que se emplean en las calculadoras" +
+            "\n   -Directorio modos: contiene colores especificos de cada modo"
+        ;
     }
 
     if (calc.id === "calc2") {
-        contenido.textContent = "Permite trabajar con números en decimal, hexadecimal, octal y binario, realizando conversiones automáticas entre bases y mostrando la base activa en todo momento.";
+        contenido.textContent = "Permite trabajar con números en decimal, hexadecimal, octal y binario, realizando conversiones automáticas entre bases y mostrando la base activa en todo momento." +
+            "\nPara cambiar de base, hacer click en el contenedor arriba a la izquierda" +
+            "\n\nId: calc2 (calculadora) pnt2 (pantalla)" +
+            "\nBotones por teclado: si (excepto botones de conversion)" +
+            "\nPosibles motivos de error:" +
+            "\n-Operacion no valida" +
+            "\n-Base no coincidente (la base no se ajusta automaticamente a los botones, por lo que se pueden usar los botones en todo momento, permitiendo usar la base erronea" +
+            "\nManejo de errores: Aviso por pantalla" +
+            "\nArchivos especificos:" +
+            "\ncalculos/programador.js: scripts para las conversiones";
     }
 
     if (calc.id === "calc3") {

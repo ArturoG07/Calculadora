@@ -50,7 +50,7 @@ input {
     margin: 20px;
     height: 30px;
 }
-
+/*Boton de mostrar informacion fijo en cada calculadora, en la esquina superior derecha*/
 #inf {
     position: fixed;
     background-color: green;
@@ -63,6 +63,7 @@ input {
     text-align: center;
     align-content: center;
 }
+/*Contenedor que contiene la informacion de las calculadoras*/
 #contInf {
     position: absolute;
     right: 20px;
@@ -77,9 +78,12 @@ input {
     font-weight: bolder;
     display:none;
     color: black;
+    overflow-y: scroll;
+    white-space: pre-line;
 }
+/*Boton de ocultar informacion dentro del contenedor de informacion*/
 #ocultarInfo {
-    position: absolute;
+    position: relative;
     background-color: red;
     border: 3px solid darkred;
     bottom: 10px;
