@@ -9,8 +9,21 @@ const nextBtn = document.querySelector('.next');
 /*Indice*/
 let currentIndex = 0;
 
+/*Permite cambiar calculadora por click*/
+function activarCalculadoraPorClick() {
+    cards.forEach((card, index) => {
+        card.addEventListener("click", () => {
+            if (index !== currentIndex) {
+                currentIndex = index;
+                updateCarousel();
+            }
+        });
+    });
+}
+
 window.addEventListener("load", () => {
     updateCarousel();
+    activarCalculadoraPorClick()
 });
 window.addEventListener("resize", updateCarousel);
 /*Funcion principal del carrusel, quita a todos la clase activa, y se la asigna al indice actual*/
@@ -46,7 +59,6 @@ prevBtn.addEventListener('click', () => {
         updateCarousel();
     }
 });
-
 function actualizarBotones() {
     const calculadoras = document.querySelectorAll('.calculadora');
 

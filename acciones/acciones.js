@@ -84,7 +84,7 @@ function resolver() {
         if (typeof resultado === "number" && isFinite(resultado)) {
             let final = resultado.toString(baseActual).toUpperCase();
             pantalla.textContent = final;
-            operacion = `${operacion} = ${final}`
+            operacion = `${operacion}`
             añadirHistorial(operacion);
         } else {
             pantalla.textContent = "Error";
@@ -108,32 +108,12 @@ function cargarContenidoInfo(calc) {
    let contenido = document.getElementById("contenido");
     if (calc.id === "calc1") {
         contenido.textContent = "" +
-            "Realiza operaciones matemáticas fundamentales como suma, resta, multiplicación, división, paréntesis y decimales, ofreciendo una experiencia rápida y sencilla." +
-            "\nId: calc1 (calculadora)/ pnt1 (pantalla)" +
-            "\nBotones por teclado: Si" +
-            "\nPosibles motivos de error:" +
-            "\n   -Operacion no valida, (parentesis mal puestos, operaciones no validas)" +
-            "\nManejo de errores:" +
-            "\n   -Aviso por pantalla" +
-            "\nArchivos especificos:" +
-            "\nArchivos generales:" +
-            "\n   -acciones/acciones.js: Acciones generales, esta calculadora no depende de archivo propio por el momento" +
-            "\n   -Directorio contenedores: contiene el estilo de los contenedores que se emplean en las calculadoras" +
-            "\n   -Directorio modos: contiene colores especificos de cada modo"
-        ;
+            "Realiza operaciones matemáticas fundamentales como suma, resta, multiplicación, división, paréntesis y decimales, ofreciendo una experiencia rápida y sencilla."
     }
 
     if (calc.id === "calc2") {
         contenido.textContent = "Permite trabajar con números en decimal, hexadecimal, octal y binario, realizando conversiones automáticas entre bases y mostrando la base activa en todo momento." +
-            "\nPara cambiar de base, hacer click en el contenedor arriba a la izquierda" +
-            "\n\nId: calc2 (calculadora) pnt2 (pantalla)" +
-            "\nBotones por teclado: si (excepto botones de conversion)" +
-            "\nPosibles motivos de error:" +
-            "\n-Operacion no valida" +
-            "\n-Base no coincidente (la base no se ajusta automaticamente a los botones, por lo que se pueden usar los botones en todo momento, permitiendo usar la base erronea" +
-            "\nManejo de errores: Aviso por pantalla" +
-            "\nArchivos especificos:" +
-            "\ncalculos/programador.js: scripts para las conversiones";
+            "\nPara cambiar de base, hacer click en el contenedor arriba a la izquierda"
     }
 
     if (calc.id === "calc3") {
@@ -169,7 +149,40 @@ function cargarContenidoInfo(calc) {
     }
 }
 
+function mostrarCalculadoras() {
+    const cont = document.getElementById("calculadoras");
 
+    if (cont.style.display === "block") {
+        cont.style.display = "none";
+        document.getElementById("calculadorasBoton").style.left ="5px";
+        document.getElementById("calculadorasBoton").style.top ="35%";
+        document.getElementById("Base").style.left = "5px";
+        document.getElementById("Base").style.top = "20px";
+    } else {
+        cont.style.display = "block";
+        document.getElementById("calculadorasBoton").style.left ="40%";
+        document.getElementById("calculadorasBoton").style.top ="0%";
+        document.getElementById("Base").style.left = "40%";
+        document.getElementById("Base").style.top = "10%";
+    }
+
+}
+
+function añadirCalculadorasMenu() {
+    const calcs = document.querySelectorAll('.calculadora');
+    const contenedor = document.getElementById("calculadoras");
+    calcs.forEach((calc, index) => {
+        let midiv = document.createElement("div");
+        midiv.classList.add("calculadoraMenu");
+        midiv.textContent = calc.querySelector("h2").textContent;
+        contenedor.append(midiv);
+        midiv.addEventListener("click", () => {
+            currentIndex = index;
+            updateCarousel();
+        });
+    });
+}
+añadirCalculadorasMenu();
 
 
 

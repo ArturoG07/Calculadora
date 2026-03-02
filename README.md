@@ -41,13 +41,14 @@ dado su peso, altura, edad, sexo, nivel de actividad, objetivo, y preferencia de
    -Permite calcular el rendimiento deportivo en m/s y km/h dada una cantida de kilometros, horas, minutos, y segundos
 ## 🎨 Funcionalidades Generales
 
-- **Carrusel de calculadoras**: navega fácilmente entre las calculadoras mediante flechas.
+- **Carrusel de calculadoras**: navega fácilmente entre las calculadoras mediante flechas o mediante un click a la calculadora deseada
 - **Teclado funcional**: en una parte de las calculadoras se puede operar directamente con el teclado
 - **Estilos**: cambia la apariencia de toda la interfaz con un solo botón.
 - **Pantallas dinámicas**: cada calculadora tiene su propia pantalla de resultados que se actualiza en tiempo real.
 - **Interfaz responsiva**: los botones y contenedores se ajustan automáticamente según la calculadora activa.
 - **Historial**: guarda cada operacion en un historial de operaciones
 - **Informacion**: las calculadoras disponen de un boton de informacion en la esquina superior derecha  que muestra una breve descripcion
+- **Menu de calculadoras con vinculos**
 
 ## 📂 Estructura del Proyecto
 ### /Calculadora

@@ -53,11 +53,8 @@ input {
 /*Boton de mostrar informacion fijo en cada calculadora, en la esquina superior derecha*/
 #inf {
     position: fixed;
-    background-color: green;
-    color: white;
     top: 5px;
     right: 5px;
-    border: 3px solid darkgreen;
     border-radius: 10px;
     font-weight: bolder;
     text-align: center;
@@ -68,27 +65,49 @@ input {
     position: absolute;
     right: 20px;
     top: 5px;
-    bottom: 50%;
+    bottom: 75%;
     width: 25%;
-    background-color: lightgreen;
     z-index: 10;
-    border: 3px solid green;
     padding: 20px;
-    color: ghostwhite;
     font-weight: bolder;
     display:none;
-    color: black;
-    overflow-y: scroll;
+    overflow-y: auto;
     white-space: pre-line;
 }
 /*Boton de ocultar informacion dentro del contenedor de informacion*/
 #ocultarInfo {
-    position: relative;
-    background-color: red;
-    border: 3px solid darkred;
+    position: absolute;
     bottom: 10px;
     left: 10px;
     width: 50px;
-    heigth: 10px;
+    height: 50px;
     border-radius: 5px;
+}
+#calculadorasBoton {
+    position: fixed;
+    left: 5px;
+    top: 35%;
+    width: 20%;
+    height: 10%;
+    z-index: 15;
+}
+#calculadoras {
+    position: absolute;
+    display: none;
+    width: 40%;
+    left: 5px;
+    top: 20px;
+    bottom: 20px;
+    z-index: 14;
+}
+.calculadoraMenu {
+    position: relative;
+    width: 95%;
+    margin: 10px;
+    height: 50px;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    font-size: 25px;
+    font-weight: bolder;
 }

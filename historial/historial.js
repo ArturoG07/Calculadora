@@ -2,7 +2,7 @@
 y cambia el texto a ocultar*/
 function mostrarHistorial() {
     document.getElementById("historial").style.display = "block";
-    document.getElementById("botonHist").textContent = "<Ocultar Historial";
+    document.getElementById("botonHist").textContent = "Ocultar Historial";
     document.getElementById("botonHist").style.left ="40%";
     document.getElementById("botonHist").style.bottom ="10%";
     document.getElementById("Base").style.left = "40%";
@@ -10,7 +10,7 @@ function mostrarHistorial() {
 /*Oculta el contenedor de historial, y devuelve los botones a su lugar original*/
 function ocultarHistorial () {
     document.getElementById("historial").style.display = "none";
-    document.getElementById("botonHist").textContent = "Mostrar historial>";
+    document.getElementById("botonHist").textContent = "Mostrar historial";
     document.getElementById("botonHist").style.left = "5px";
     document.getElementById("botonHist").style.bottom ="40%";
     document.getElementById("Base").style.left = "5px";
@@ -25,7 +25,7 @@ function añadirHistorial(textoOperacion) {
 /*Muestra o oculta el historial*/
 function cambiarVista() {
     let historial = document.getElementById("botonHist");
-    if (historial.textContent == "Mostrar historial>") {
+    if (historial.textContent == "Mostrar historial") {
         mostrarHistorial();
     } else {
         ocultarHistorial();

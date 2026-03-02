@@ -132,3 +132,51 @@ body.tema-pastel {
     border: 2px solid #e9d5ff;
     font-weight: 600;
 }
+
+/* ===== MENU CALCULADORAS ===== */
+
+.tema-pastel #calculadoras {
+    background-color: #fef9ff;
+    border: 3px solid #e9d5ff;
+    color: #374151;
+}
+
+.tema-pastel .calculadoraMenu {
+    background-color: #ffffff;
+    border: 2px solid #e5e7eb;
+    color: #4b5563;
+}
+
+.tema-pastel .calculadoraMenu:hover {
+    background-color: #f3f4f6;
+    border: 2px solid #c4b5fd;
+    color: #6d28d9;
+}
+
+/* ===== BOTON CALCULADORAS ===== */
+
+.tema-pastel #calculadorasBoton {
+    background-color: #dbeafe;
+    border: 2px solid #93c5fd;
+    color: #1e3a8a;
+}
+
+/* ===== PANEL INFORMACION ===== */
+
+.tema-pastel #contInf {
+    background-color: #fef9ff;
+    border: 3px solid #e9d5ff;
+    color: #374151;
+}
+
+.tema-pastel #inf {
+    background-color: #e0f2fe;
+    border: 2px solid #7dd3fc;
+    color: #075985;
+}
+
+.tema-pastel #ocultarInfo {
+    background-color: #fecaca;
+    border: 2px solid #f87171;
+    color: #7f1d1d;
+}

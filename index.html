@@ -31,14 +31,14 @@
 	<title>Calculadora</title>
 </head>
 <body class="tema-claro">
-<!--La zona alta se usa unicamente para la base de la calculadora de programador, al hacer click en ella se cambiara a otra
-Se muestra unicamente cuando estas en la calculadora de programador, en las demas se pone la base automaticamente a decimal-->
 	<div class="zonaAlta">
 		<div id="Base" onclick="cambiarBase()">Decimal</div>
 	</div>
 		<div id="historial">
 		</div>
-		<div class="boton botonHist" id="botonHist" onclick="cambiarVista();">Mostrar historial></div>
+		<div class="boton botonHist" id="botonHist" onclick="cambiarVista();">Mostrar historial</div>
+		<div class="boton" id="calculadorasBoton" onclick="mostrarCalculadoras();">Calculadoras</div>
+		<div id="calculadoras"></div>
 		<div class="boton" id="inf"  onclick="mostrarInfo();">i</div>
 		<div id="contInf">
 			<div id="contenido"></div>
