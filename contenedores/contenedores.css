@@ -89,7 +89,7 @@ input {
     top: 35%;
     width: 20%;
     height: 10%;
-    z-index: 15;
+    z-index: 5;
 }
 #calculadoras {
     position: absolute;
