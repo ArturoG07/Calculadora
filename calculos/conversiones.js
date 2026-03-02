@@ -5,6 +5,7 @@ const num = document.getElementById("valor");
 categoria.addEventListener("change", function() {
     actualizarOpciones(categoria.value);
 });
+actualizarOpciones(categoria.value);
 function actualizarOpciones(categoria) {
     if (categoria === "1") {
         origen.innerHTML = `
@@ -191,6 +192,7 @@ function calcularConversion() {
     if (categoria.value === "10") {
         calcularPresion(pantalla);
     }
+    añadirHistorial(`${num.value} ${origen.options[origen.selectedIndex].text} a ${destino.options[destino.selectedIndex].text}`);
 }
 let pantalla = obtenerPantallaActiva();
 
@@ -350,4 +352,3 @@ function calcularPresion(pantalla) {
     pantalla.textContent = resultado;
 }
 
-actualizarOpciones(categoria.value);

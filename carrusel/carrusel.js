@@ -8,6 +8,11 @@ const prevBtn = document.querySelector('.prev');
 const nextBtn = document.querySelector('.next');
 /*Indice*/
 let currentIndex = 0;
+
+window.addEventListener("load", () => {
+    updateCarousel();
+});
+window.addEventListener("resize", updateCarousel);
 /*Funcion principal del carrusel, quita a todos la clase activa, y se la asigna al indice actual*/
 function updateCarousel() {
     cards.forEach(calculadora => calculadora.classList.remove('activa'));
@@ -23,7 +28,9 @@ function updateCarousel() {
     } else {
         document.getElementById("Base").style.display = "block";
     }
+    /*Al finalizar de actualizar el carrusel, actualiza los botones y el contenido de informacion*/
     actualizarBotones();
+    cargarContenidoInfo(document.querySelector(".calculadora.activa"));
 }
 /*Comprueba que haya mas calculadoras, pasa a la siquiente y actualiza el carrusel*/
 nextBtn.addEventListener('click', () => {
@@ -66,4 +73,3 @@ function actualizarBotones() {
         });
     });
 }
-updateCarousel();

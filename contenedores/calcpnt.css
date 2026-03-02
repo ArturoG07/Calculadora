@@ -1,7 +1,5 @@
 /*Esta hoja contiene las asignaciones personalizadas para un contendor en especifico*/
-.calculadora {
-    width: 300px;
-}
+
 #calc1 {
     width: 250px;
 }
@@ -45,8 +43,8 @@
 #calc4 #tipoCalculo {
     width: 100%;
 }
-#calc7 input,
-#calc7 select{
+input,
+select{
     width: 100%;
     margin: 10px;
 }
@@ -63,4 +61,16 @@ width: 400px;
 #pnt8 {
     height: 200px;
     font-size: 20px;
+}
+#horas, #minutos, #segundos {
+    width: 50px;
+    height: 50px;
+}
+#calc10 {
+    justify-content: space-around;
+}
+#pnt10 {
+    height: 150px;
+    margin-bottom: 10px;
+    font-size: 30px;
 }

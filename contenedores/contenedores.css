@@ -4,13 +4,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0;
-    height: 100%;
+    height: 100vh;
     width: 100%;
     background: #111;
     font-family: Arial, sans-serif;
-    overflow: hidden;
-    /*white-space: pre-wrap;*/
+    margin: 0;
 }
 
 /*Crea una calculadora, al añadir una nueva se ordenaran todos los botones solos*/
@@ -24,6 +22,8 @@ body {
     flex-wrap: wrap;
     margin: 20px;
     justify-content: center;
+    flex-shrink: 0;
+    width: 300px;
 }
 /*Pantalla de todas las calculadoras, se pone justo despues del titulo y antes de los botones, el largo
 se ajustara automaticamente, si quieres ajustar la altura se debe hacer con los id */
@@ -44,10 +44,51 @@ se ajustara automaticamente, si quieres ajustar la altura se debe hacer con los 
 h2{
     font-size: 50px;
     text-align: center;
-    margin: 0px;
+    margin: 0;
 }
 input {
     margin: 20px;
     height: 30px;
 }
-
+/*Boton de mostrar informacion fijo en cada calculadora, en la esquina superior derecha*/
+#inf {
+    position: fixed;
+    background-color: green;
+    color: white;
+    top: 5px;
+    right: 5px;
+    border: 3px solid darkgreen;
+    border-radius: 10px;
+    font-weight: bolder;
+    text-align: center;
+    align-content: center;
+}
+/*Contenedor que contiene la informacion de las calculadoras*/
+#contInf {
+    position: absolute;
+    right: 20px;
+    top: 5px;
+    bottom: 50%;
+    width: 25%;
+    background-color: lightgreen;
+    z-index: 10;
+    border: 3px solid green;
+    padding: 20px;
+    color: ghostwhite;
+    font-weight: bolder;
+    display:none;
+    color: black;
+    overflow-y: scroll;
+    white-space: pre-line;
+}
+/*Boton de ocultar informacion dentro del contenedor de informacion*/
+#ocultarInfo {
+    position: relative;
+    background-color: red;
+    border: 3px solid darkred;
+    bottom: 10px;
+    left: 10px;
+    width: 50px;
+    heigth: 10px;
+    border-radius: 5px;
+}

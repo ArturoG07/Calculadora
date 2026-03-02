@@ -1,3 +1,4 @@
+/*Calcula los macros dados los datos en la calculadora*/
 function calcularMacros() {
     let pantalla = obtenerPantallaActiva();
     let peso = parseFloat(document.getElementById("peso2").value);
