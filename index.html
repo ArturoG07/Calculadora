@@ -33,6 +33,7 @@
 </head>
 <body class="tema-claro">
 	<div class="zonaAlta">
+		<div id="mostrarDivisas" onclick="mostrarDivisas();">Divisas</div>
 		<div id="Base" onclick="cambiarBase()">Decimal</div>
 	</div>
 		<div id="historial">
@@ -41,6 +42,174 @@
 		<div class="boton" id="calculadorasBoton" onclick="mostrarCalculadoras();">Calculadoras</div>
 		<div id="calculadoras"></div>
 		<div class="boton" id="inf"  onclick="mostrarInfo();">i</div>
+	<div id="divisas">
+		<p>USD — Dólar estadounidense</p>
+		<p>AED — Dirham de Emiratos Árabes Unidos</p>
+		<p>AFN — Afgani afgano</p>
+		<p>ALL — Lek albanés</p>
+		<p>AMD — Dram armenio</p>
+		<p>ANG — Florín de las Antillas Neerlandesas</p>
+		<p>AOA — Kwanza angoleño</p>
+		<p>ARS — Peso argentino</p>
+		<p>AUD — Dólar australiano</p>
+		<p>AWG — Florín arubeño</p>
+		<p>AZN — Manat azerbaiyano</p>
+		<p>BAM — Marco convertible bosnio</p>
+		<p>BBD — Dólar barbadense</p>
+		<p>BDT — Taka bangladesí</p>
+		<p>BGN — Lev búlgaro</p>
+		<p>BHD — Dinar bareiní</p>
+		<p>BIF — Franco burundés</p>
+		<p>BMD — Dólar bermudeño</p>
+		<p>BND — Dólar de Brunéi</p>
+		<p>BOB — Boliviano</p>
+		<p>BRL — Real brasileño</p>
+		<p>BSD — Dólar bahameño</p>
+		<p>BTN — Ngultrum butanés</p>
+		<p>BWP — Pula botsuano</p>
+		<p>BYN — Rublo bielorruso</p>
+		<p>BZD — Dólar beliceño</p>
+		<p>CAD — Dólar canadiense</p>
+		<p>CDF — Franco congoleño</p>
+		<p>CHF — Franco suizo</p>
+		<p>CLF — Unidad de Fomento (Chile)</p>
+		<p>CLP — Peso chileno</p>
+		<p>CNH — Yuan chino (offshore)</p>
+		<p>CNY — Yuan chino (Renminbi)</p>
+		<p>COP — Peso colombiano</p>
+		<p>CRC — Colón costarricense</p>
+		<p>CUP — Peso cubano</p>
+		<p>CVE — Escudo caboverdiano</p>
+		<p>CZK — Corona checa</p>
+		<p>DJF — Franco yibutiano</p>
+		<p>DKK — Corona danesa</p>
+		<p>DOP — Peso dominicano</p>
+		<p>DZD — Dinar argelino</p>
+		<p>EGP — Libra egipcia</p>
+		<p>ERN — Nakfa eritreo</p>
+		<p>ETB — Birr etíope</p>
+		<p>EUR — Euro</p>
+		<p>FJD — Dólar fiyiano</p>
+		<p>FKP — Libra malvinense</p>
+		<p>FOK — Corona feroesa</p>
+		<p>GBP — Libra esterlina</p>
+		<p>GEL — Lari georgiano</p>
+		<p>GGP — Libra de Guernsey</p>
+		<p>GHS — Cedi ghanés</p>
+		<p>GIP — Libra de Gibraltar</p>
+		<p>GMD — Dalasi gambiano</p>
+		<p>GNF — Franco guineano</p>
+		<p>GTQ — Quetzal guatemalteco</p>
+		<p>GYD — Dólar guyanés</p>
+		<p>HKD — Dólar de Hong Kong</p>
+		<p>HNL — Lempira hondureña</p>
+		<p>HRK — Kuna croata</p>
+		<p>HTG — Gourde haitiano</p>
+		<p>HUF — Forinto húngaro</p>
+		<p>IDR — Rupia indonesia</p>
+		<p>ILS — Nuevo séquel israelí</p>
+		<p>IMP — Libra de la Isla de Man</p>
+		<p>INR — Rupia india</p>
+		<p>IQD — Dinar iraquí</p>
+		<p>IRR — Rial iraní</p>
+		<p>ISK — Corona islandesa</p>
+		<p>JEP — Libra de Jersey</p>
+		<p>JMD — Dólar jamaiquino</p>
+		<p>JOD — Dinar jordano</p>
+		<p>JPY — Yen japonés</p>
+		<p>KES — Chelín keniano</p>
+		<p>KGS — Som kirguís</p>
+		<p>KHR — Riel camboyano</p>
+		<p>KID — Dólar de Kiribati</p>
+		<p>KMF — Franco comorense</p>
+		<p>KRW — Won surcoreano</p>
+		<p>KWD — Dinar kuwaití</p>
+		<p>KYD — Dólar de las Islas Caimán</p>
+		<p>KZT — Tenge kazajo</p>
+		<p>LAK — Kip laosiano</p>
+		<p>LBP — Libra libanesa</p>
+		<p>LKR — Rupia de Sri Lanka</p>
+		<p>LRD — Dólar liberiano</p>
+		<p>LSL — Loti lesotense</p>
+		<p>LYD — Dinar libio</p>
+		<p>MAD — Dirham marroquí</p>
+		<p>MDL — Leu moldavo</p>
+		<p>MGA — Ariary malgache</p>
+		<p>MKD — Denar macedonio</p>
+		<p>MMK — Kyat birmano</p>
+		<p>MNT — Tugrik mongol</p>
+		<p>MOP — Pataca de Macao</p>
+		<p>MRU — Uguiya mauritana</p>
+		<p>MUR — Rupia mauriciana</p>
+		<p>MVR — Rufiyaa maldiva</p>
+		<p>MWK — Kwacha malauí</p>
+		<p>MXN — Peso mexicano</p>
+		<p>MYR — Ringgit malasio</p>
+		<p>MZN — Metical mozambiqueño</p>
+		<p>NAD — Dólar namibio</p>
+		<p>NGN — Naira nigeriana</p>
+		<p>NIO — Córdoba nicaragüense</p>
+		<p>NOK — Corona noruega</p>
+		<p>NPR — Rupia nepalí</p>
+		<p>NZD — Dólar neozelandés</p>
+		<p>OMR — Rial omaní</p>
+		<p>PAB — Balboa panameño</p>
+		<p>PEN — Sol peruano</p>
+		<p>PGK — Kina papuana</p>
+		<p>PHP — Peso filipino</p>
+		<p>PKR — Rupia pakistaní</p>
+		<p>PLN — Zloty polaco</p>
+		<p>PYG — Guaraní paraguayo</p>
+		<p>QAR — Rial catarí</p>
+		<p>RON — Leu rumano</p>
+		<p>RSD — Dinar serbio</p>
+		<p>RUB — Rublo ruso</p>
+		<p>RWF — Franco ruandés</p>
+		<p>SAR — Riyal saudí</p>
+		<p>SBD — Dólar de las Islas Salomón</p>
+		<p>SCR — Rupia seychellense</p>
+		<p>SDG — Libra sudanesa</p>
+		<p>SEK — Corona sueca</p>
+		<p>SGD — Dólar de Singapur</p>
+		<p>SHP — Libra de Santa Elena</p>
+		<p>SLE — Leone (nuevo) de Sierra Leona</p>
+		<p>SLL — Leone (antiguo) de Sierra Leona</p>
+		<p>SOS — Chelín somalí</p>
+		<p>SRD — Dólar surinamés</p>
+		<p>SSP — Libra sursudanesa</p>
+		<p>STN — Dobra de Santo Tomé y Príncipe</p>
+		<p>SYP — Libra siria</p>
+		<p>SZL — Lilangeni suazi</p>
+		<p>THB — Baht tailandés</p>
+		<p>TJS — Somoni tayiko</p>
+		<p>TMT — Manat turcomano</p>
+		<p>TND — Dinar tunecino</p>
+		<p>TOP — Paʻanga tongano</p>
+		<p>TRY — Lira turca</p>
+		<p>TTD — Dólar de Trinidad y Tobago</p>
+		<p>TVD — Dólar de Tuvalu</p>
+		<p>TWD — Dólar taiwanés</p>
+		<p>TZS — Chelín tanzano</p>
+		<p>UAH — Grivna ucraniana</p>
+		<p>UGX — Chelín ugandés</p>
+		<p>UYU — Peso uruguayo</p>
+		<p>UZS — Som uzbeko</p>
+		<p>VES — Bolívar venezolano</p>
+		<p>VND — Dong vietnamita</p>
+		<p>VUV — Vatu vanuatuense</p>
+		<p>WST — Tala samoano</p>
+		<p>XAF — Franco CFA de África Central</p>
+		<p>XCD — Dólar del Caribe Oriental</p>
+		<p>XCG — Florín del Caribe Neerlandés</p>
+		<p>XDR — Derechos Especiales de Giro (FMI)</p>
+		<p>XOF — Franco CFA de África Occidental</p>
+		<p>XPF — Franco CFP</p>
+		<p>YER — Rial yemení</p>
+		<p>ZAR — Rand sudafricano</p>
+		<p>ZMW — Kwacha zambiano</p>
+		<p>ZWG — Dólar zimbabuense (Gold)</p>
+		<p>ZWL — Dólar zimbabuense</p>
+	</div>
 		<div id="contInf">
 			<div id="contenido"></div>
 			<div class="boton" id="ocultarInfo" onclick="ocultarInfo()">^^</div>
@@ -109,28 +278,11 @@
 	<div class="calculadora" id="calc3">
 		<h2>Divisas</h2>
 		<div class="pantalla" id="pnt3"></div>
-		<select class="SelectDivisa" id="divisa">
-			<option value="">Divisa...</option>
-			<option value="EUR">Euro</option>
-			<option value="USD">Dolar Estadounidense</option>
-			<option value="JPY">Yen</option>
-			<option value="GBP">Libra</option>
-			<option value="CNY">Yuan</option>
-			<option value="CHF">Franco</option>
-			<option value="CAD">Dolar canadiense</option>
-			<option value="AUD">Dolar australiano</option>
-		</select>
-		<select class="SelectDivisa" id="divisaConvertir">
-			<option value="">Convertir a...</option>
-			<option value="EUR">Euro</option>
-			<option value="USD">Dolar Estadounidense</option>
-			<option value="JPY">Yen</option>
-			<option value="GBP">Libra</option>
-			<option value="CNY">Yuan</option>
-			<option value="CHF">Franco</option>
-			<option value="CAD">Dolar canadiense</option>
-			<option value="AUD">Dolar australiano</option>
-		</select>
+		<p>Original:</p>
+		<input type="text" id="divisa">
+		Nueva:
+		<input type="text" id="divisaConvertir">
+
 		<div class="boton botonCE" onclick="borrar();">CE</div>
 		<div class="boton botonC" onclick="borrarUltimo();">C</div>
 		<div class="boton botonOp" onclick="cambioDivisa();">=</div>

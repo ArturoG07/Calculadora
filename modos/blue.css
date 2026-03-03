@@ -61,7 +61,7 @@ body.tema-azul {
 }
 
 /*Botón Base*/
-.tema-azul #Base {
+.tema-azul #Base , .tema-azul #mostrarDivisas{
     background-color: #c7d2fe;
     border: 2px solid #4338ca;
     color: #1e1b4b;
@@ -140,7 +140,7 @@ body.tema-azul {
     color: #1e3a8a;
 }
 
-.tema-azul .calculadoraMenu {
+.tema-azul .calculadoraMenu, .tema-azul #divisas{
     background-color: #ffffff;
     border: 2px solid #bfdbfe;
     color: #1e40af;

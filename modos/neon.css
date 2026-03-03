@@ -62,7 +62,7 @@ body.tema-neon {
 }
 
 /*Base*/
-.tema-neon #Base {
+.tema-neon #Base , .tema-neon #mostrarDivisas{
     background-color: #240046;
     border: 2px solid #00f5ff;
     color: #00f5ff;
@@ -147,7 +147,7 @@ body.tema-neon {
     color: #ffffff;
 }
 
-.tema-neon .calculadoraMenu {
+.tema-neon .calculadoraMenu, .tema-neon #divisas {
     background-color: #141427;
     border: 2px solid #00f5ff;
     color: #00f5ff;

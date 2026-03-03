@@ -61,7 +61,7 @@ body.tema-pastel {
 }
 
 /*Botón Base*/
-.tema-pastel #Base {
+.tema-pastel #Base , .tema-pastel #mostrarDivisas{
     background-color: #e0f2fe;
     border: 2px solid #7dd3fc;
     color: #075985;
@@ -141,7 +141,7 @@ body.tema-pastel {
     color: #374151;
 }
 
-.tema-pastel .calculadoraMenu {
+.tema-pastel .calculadoraMenu, .tema-pastel #divisas {
     background-color: #ffffff;
     border: 2px solid #e5e7eb;
     color: #4b5563;

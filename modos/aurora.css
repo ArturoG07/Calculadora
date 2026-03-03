@@ -59,7 +59,7 @@ body.tema-aurora {
 }
 
 /* ===== Botón Base ===== */
-.tema-aurora #Base {
+.tema-aurora #Base, .tema-aurora #mostrarDivisas{
     background-color: #4361ee;
     border: 2px solid #3a0ca3;
     color: white;
@@ -142,7 +142,7 @@ body.tema-aurora {
     color: #90e0ef;
 }
 
-.tema-aurora .calculadoraMenu {
+.tema-aurora .calculadoraMenu, .tema-aurora #divisas {
     background-color: #2b1f4b;
     border: 2px solid #4cc9f0;
     color: #f0f8ff;

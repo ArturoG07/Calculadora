@@ -1,56 +1,48 @@
 /*Cambia entre divisas para la calculadora de divisas*/
-function cambioDivisa(){
+async function cambioDivisa(){
+    let pantalla = obtenerPantallaActiva();
     if (document.getElementById("divisa").value == "" ) {
-        alert("Seleccione divisa!!!");
+        pantalla.textContent = "❌ Error al obtener cambio, seleccione divisa";
     } else {
         if (document.getElementById("divisaConvertir").value == "" ) {
-            alert("Seleccione divisa!!!");
+            pantalla.textContent = "❌ Error al obtener cambio, seleccione divisa";
         }
     }
     let divisa = document.getElementById("divisa").value;
     let divisaConvertir = document.getElementById("divisaConvertir").value;
-    let pantalla = obtenerPantallaActiva();
     let cantidad = pantalla.textContent;
-    let euros = aEuros();
-    pantalla.textContent = aDivisa(euros);
-    let textoOperacion = `${cantidad} ${divisa} a ${divisaConvertir}`;
-    añadirHistorial(textoOperacion, pantalla.textContent);
-}
-/*Pasa cualquier tipo de moneda a euros*/
-function aEuros() {
-    let valor = obtenerPantallaActiva().textContent;
-    let divisaSel = document.getElementById("divisa").value;
-    const tasasAEUR = {
-        USD: 0.85,
-        JPY: 0.0055,
-        GBP: 1.14,
-        CNY: 0.12,
-        CHF: 1.10,
-        CAD: 0.62,
-        AUD: 0.60,
-        EUR: 1
-    };
-    for (const divisas in tasasAEUR)
-        if (divisaSel == divisas) {
-            return valor * tasasAEUR[divisas];
-        }
-}
-/*Pasa de euros a otras divisas*/
-function aDivisa(euros) {
-    let divisaSel = document.getElementById("divisaConvertir").value;
-    const tasasDesdeEUR = {
-        USD: 1.18,
-        JPY: 183,
-        GBP: 0.87,
-        CNY: 8.17,
-        CHF: 0.91,
-        CAD: 1.62,
-        AUD: 1.67,
-        EUR: 1
-    };
-    for (const divisas in tasasDesdeEUR)
-        if (divisaSel == divisas) {
-            return euros * tasasDesdeEUR[divisas];
-        }
 
+    const url = `https://v6.exchangerate-api.com/v6/b142171f17532ed003df8707/latest/${divisa}`;
+
+    try {
+        const respuesta = await fetch(url);
+        if (!respuesta.ok) {
+            throw new Error("Divisa no encontrada");
+        }
+        const datos = await respuesta.json();
+
+        const cambio = datos.conversion_rates[divisaConvertir];
+        let final = cantidad*cambio;
+        pantalla.textContent = final;
+        let textoOperacion = `${cantidad} ${divisa} a ${divisaConvertir}`;
+        añadirHistorial(textoOperacion);
+    }
+    catch (error) {
+        pantalla.textContent = "❌ Error al obtener cambio";
+        return null;
+    }
+}
+function mostrarDivisas() {
+    const contenedor = document.getElementById("divisas");
+    const divisa = document.getElementById("mostrarDivisas");
+
+    if (contenedor.style.display === "none") {
+        contenedor.style.display = "block";
+        divisa.style.left = "33%";
+        divisa.style.top = "0";
+    } else {
+        contenedor.style.display = "none";
+        divisa.style.left = "5px";
+        divisa.style.top = "20px";
+    }
 }

@@ -41,6 +41,14 @@ function updateCarousel() {
     } else {
         document.getElementById("Base").style.display = "block";
     }
+    if (currentIndex != 2) {
+        document.getElementById("mostrarDivisas").style.display = "none";
+        document.getElementById("divisas").style.display = "none";
+        document.getElementById("mostrarDivisas").style.left = "5px";
+        document.getElementById("mostrarDivisas").style.top = "20px";
+    } else {
+        document.getElementById("mostrarDivisas").style.display = "block";
+    }
     /*Al finalizar de actualizar el carrusel, actualiza los botones y el contenido de informacion*/
     actualizarBotones();
     cargarContenidoInfo(document.querySelector(".calculadora.activa"));

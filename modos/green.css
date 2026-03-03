@@ -61,7 +61,7 @@ body.tema-verde {
 }
 
 /*Botón Base*/
-.tema-verde #Base {
+.tema-verde #Base , .tema-verde #mostrarDivisas{
     background-color: #dcedc8;
     border: 2px solid #689f38;
     color: #33691e;
@@ -141,7 +141,7 @@ body.tema-verde {
     color: #1b4332;
 }
 
-.tema-verde .calculadoraMenu {
+.tema-verde .calculadoraMenu, .tema-verde #divisas {
     background-color: #ffffff;
     border: 2px solid #a5d6a7;
     color: #2e7d32;

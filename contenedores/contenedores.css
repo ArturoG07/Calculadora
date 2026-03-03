@@ -46,6 +46,20 @@ h2{
     text-align: center;
     margin: 0;
 }
+/*Base de la calculadora de programador*/
+#Base {
+    position: absolute;
+    margin: 10px;
+    height: 50px;
+    font-size: 30px;
+    text-align: center;
+    align-content: center;
+    border-radius:  20px;
+    font-weight: bolder;
+    top: 20px;
+    left: 5px;
+    z-index: 5;
+}
 input {
     margin: 20px;
     height: 30px;
@@ -111,4 +125,33 @@ input {
     align-content: center;
     font-size: 25px;
     font-weight: bolder;
+}
+#mostrarDivisas {
+    position: absolute;
+    margin: 10px;
+    height: 50px;
+    font-size: 30px;
+    text-align: center;
+    align-content: center;
+    border-radius:  20px;
+    font-weight: bolder;
+    top: 20px;
+    left: 5px;
+    z-index: 5;
+}
+#divisas {
+    position: absolute;
+    display: none;
+    width: 30%;
+    left: 5px;
+    top: 20px;
+    bottom: 20px;
+    z-index: 17;
+    overflow-y: scroll;
+    font-size: 30px;
+    font-weight: bolder;
+    padding: 10px;
+}
+#divisas p {
+    margin: 3px;
 }

@@ -147,7 +147,7 @@ body.tema-nombreDelTema {
     color: #374151;
 }
 
-.tema-nombreDelTema .calculadoraMenu {
+.tema-nombreDelTema .calculadoraMenu, .tema-nombreDelTema #divisas {
     background-color: #ffffff;
     border: 2px solid #e5e7eb;
     color: #4b5563;

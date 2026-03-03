@@ -117,9 +117,8 @@ function cargarContenidoInfo(calc) {
     }
 
     if (calc.id === "calc3") {
-        contenido.textContent = "Convierte entre múltiples monedas internacionales mediante la selección de divisa de origen y destino usando tasas de cambio predefinidas.";
+        contenido.textContent = "Convierte entre múltiples monedas internacionales mediante la selección de divisa de origen y destino usando una api libre, se debe escribir las tasas con formato de 3 caracteres en mayuscula (USD, EUR, etc..)" ;
     }
-
     if (calc.id === "calc4") {
         contenido.textContent = "Calcula la diferencia entre dos fechas en días, meses o años, y permite obtener la edad exacta a partir de una fecha de nacimiento.";
     }
@@ -156,8 +155,6 @@ function mostrarCalculadoras() {
         cont.style.display = "none";
         document.getElementById("calculadorasBoton").style.left ="5px";
         document.getElementById("calculadorasBoton").style.top ="35%";
-        document.getElementById("Base").style.left = "5px";
-        document.getElementById("Base").style.top = "20px";
     } else {
         cont.style.display = "block";
         document.getElementById("calculadorasBoton").style.left ="40%";

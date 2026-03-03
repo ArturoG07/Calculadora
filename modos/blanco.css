@@ -59,7 +59,7 @@ body.tema-blanco {
 }
 
 /*Boton Base*/
-.tema-blanco #Base {
+.tema-blanco #Base, .tema-blanco #mostrarDivisas{
 	background-color: #eef2ff;
 	border: 2px solid #6366f1;
 	color: #312e81;
@@ -137,7 +137,7 @@ body.tema-blanco {
 	color: #111827;
 }
 
-.tema-blanco .calculadoraMenu {
+.tema-blanco .calculadoraMenu, .tema-blanco #divisas {
 	background-color: #ffffff;
 	border: 2px solid #d1d5db;
 	color: #1f2937;

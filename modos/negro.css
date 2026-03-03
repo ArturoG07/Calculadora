@@ -61,7 +61,7 @@ body.tema-negro {
 }
 
 /*Botón Base*/
-.tema-negro #Base {
+.tema-negro #Base, .tema-negro #mostrarDivisas {
 	background-color: #312e81;
 	border: 2px solid #6366f1;
 	color: #eef2ff;
@@ -141,7 +141,7 @@ body.tema-negro {
 	color: #f1f5f9;
 }
 
-.tema-negro .calculadoraMenu {
+.tema-negro .calculadoraMenu, .tema-negro #divisas {
 	background-color: #0f172a;
 	border: 2px solid #334155;
 	color: #e2e8f0;

@@ -64,7 +64,7 @@ body.tema-cyber {
 }
 
 /*Botón Base*/
-.tema-cyber #Base {
+.tema-cyber #Base , .tema-cyber #mostrarDivisas{
     background-color: #001f3f;
     border: 2px solid #00f5ff;
     color: #00f5ff;
@@ -145,7 +145,7 @@ body.tema-cyber {
     color: #00f5ff;
 }
 
-.tema-cyber .calculadoraMenu {
+.tema-cyber .calculadoraMenu, .tema-cyber #divisas {
     background-color: #111827;
     border: 2px solid #3333ff;
     color: #e0f7ff;
