@@ -25,6 +25,9 @@ function obtenerPantallaActiva() {
 document.addEventListener('keydown', function(event) {
     const tecla = event.key;
     const calc = document.querySelector(".calculadora.activa");
+    if (event.key === "q" || event.key  === "q") {
+        obtenerPantallaActiva().textContent = "";
+    }
     if (["calc1", "calc2", "calc3"].includes(calc.id)) {
         if ((tecla >= '0' && tecla <= '9') || tecla === '.' || tecla === '+' || tecla === '-' || tecla === '*' || tecla === '/') {
             apretarBoton(tecla);
@@ -155,6 +158,8 @@ function mostrarCalculadoras() {
         cont.style.display = "none";
         document.getElementById("calculadorasBoton").style.left ="5px";
         document.getElementById("calculadorasBoton").style.top ="35%";
+        document.getElementById("Base").style.left = "5px";
+        document.getElementById("Base").style.top = "20px";
     } else {
         cont.style.display = "block";
         document.getElementById("calculadorasBoton").style.left ="40%";
@@ -181,5 +186,8 @@ function añadirCalculadorasMenu() {
 }
 añadirCalculadorasMenu();
 
-
-
+document.getElementById("limpiar").addEventListener("click", function() {
+    document.querySelectorAll('.pantalla').forEach(function(elemento) {
+        elemento.textContent = "";
+    });
+});

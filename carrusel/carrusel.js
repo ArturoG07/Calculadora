@@ -38,8 +38,12 @@ function updateCarousel() {
     if (currentIndex != 1) {
         document.getElementById("Base").textContent = "Decimal";
         document.getElementById("Base").style.display = "none";
+        document.getElementById("Base").style.left = "5px";
+        document.getElementById("Base").style.top = "20px";
     } else {
         document.getElementById("Base").style.display = "block";
+        document.getElementById("Base").style.left = "5px";
+        document.getElementById("Base").style.top = "20px";
     }
     if (currentIndex != 2) {
         document.getElementById("mostrarDivisas").style.display = "none";

@@ -158,16 +158,6 @@ body.tema-cyber {
     box-shadow: 0 0 10px rgba(255, 0, 204, 0.6);
 }
 
-
-/* ===== BOTON CALCULADORAS ===== */
-
-.tema-cyber #calculadorasBoton {
-    background-color: #1f2937;
-    border: 2px solid #ff00cc;
-    color: #ff00cc;
-}
-
-
 /* ===== PANEL INFORMACION ===== */
 
 .tema-cyber #contInf {

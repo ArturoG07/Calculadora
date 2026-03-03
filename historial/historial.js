@@ -14,6 +14,7 @@ function ocultarHistorial () {
     document.getElementById("botonHist").style.left = "5px";
     document.getElementById("botonHist").style.bottom ="40%";
     document.getElementById("Base").style.left = "5px";
+    document.getElementById("Base").style.top = "20px";
 }
 /*Añade una operacion al historial, pasandole como parametro el texto de la operacon, el resultado lo coge de la pantalla*/
 function añadirHistorial(textoOperacion) {
@@ -21,6 +22,7 @@ function añadirHistorial(textoOperacion) {
     miDiv.classList.add("operacion");
     miDiv.textContent = `${textoOperacion} = ${obtenerPantallaActiva().textContent}`;
     document.getElementById("historial").prepend(miDiv);
+    localStorage.setItem("historial", document.getElementById("historial").innerHTML)
 }
 /*Muestra o oculta el historial*/
 function cambiarVista() {
@@ -31,3 +33,4 @@ function cambiarVista() {
         ocultarHistorial();
     }
 }
+document.getElementById("historial").innerHTML = localStorage.getItem("historial");

@@ -1,6 +1,7 @@
-let actual = -1;
+let actual;
 let temas = [];
-
+actual = parseInt(localStorage.getItem("modo"));
+if (isNaN(actual)) actual = 0;
 // Detecta automáticamente todas las clases tema- disponibles en los estilos cargados
 function obtenerTemas() {
     const hojas = document.styleSheets;
@@ -35,8 +36,12 @@ function cambiarTema() {
 
     actual = (actual + 1) % temas.length;
     document.body.classList.add(temas[actual]);
+    localStorage.setItem("modo", actual);
 }
 
 // Inicializar automáticamente
 obtenerTemas();
-cambiarTema();
+if (temas.length > 0) {
+    if (actual >= temas.length) actual = 0;
+    document.body.classList.add(temas[actual]);
+}

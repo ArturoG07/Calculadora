@@ -49,6 +49,8 @@ dado su peso, altura, edad, sexo, nivel de actividad, objetivo, y preferencia de
 - **Historial**: guarda cada operacion en un historial de operaciones
 - **Informacion**: las calculadoras disponen de un boton de informacion en la esquina superior derecha  que muestra una breve descripcion
 - **Menu de calculadoras con vinculos**
+- **Boton para limpiar las pantallas**
+- **localstorage**: para guardar la preferencia de estilo y el historial
 
 ## 📂 Estructura del Proyecto
 ### /Calculadora

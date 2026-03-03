@@ -155,3 +155,12 @@ input {
 #divisas p {
     margin: 3px;
 }
+#limpiar {
+    position: fixed;
+    left: 5px;
+    top: 22.5%;
+    width: 20%;
+    height: 10%;
+    z-index: 5;
+    overflow: hidden;
+}

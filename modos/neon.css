@@ -160,14 +160,6 @@ body.tema-neon {
     box-shadow: 0 0 10px #ff00ff;
 }
 
-/* ===== BOTON CALCULADORAS ===== */
-
-.tema-neon #calculadorasBoton {
-    background-color: #00f5ff;
-    border: 2px solid #0088ff;
-    color: #000000;
-}
-
 /* ===== PANEL INFORMACION ===== */
 
 .tema-neon #contInf {
