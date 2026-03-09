@@ -164,3 +164,52 @@ input {
     z-index: 5;
     overflow: hidden;
 }
+.pkm {
+    width: 50px;
+    height: 50px;
+    margin: 20px;
+    margin-top: 0px;
+    border-radius: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('img/Pokemon_Type_Icon_Normal.png');
+    border: 3px solid black;
+}
+
+.boton {
+    width: 50px;      /* tamaño del botón */
+    height: 50px;
+    display: inline-block;
+    background-size: cover;   /* ajusta la imagen al div */
+    background-position: center;
+    margin: 5px;
+    cursor: pointer;
+}
+
+/* Tipos */
+#bicho    { background-image: url('../img/Pokemon_Type_Icon_Bug.png'); }
+#siniestro{ background-image: url('../img/Pokemon_Type_Icon_Dark.png'); }
+#dragon   { background-image: url('../img/Pokemon_Type_Icon_Dragon.png'); }
+#electrico{ background-image: url('../img/Pokemon_Type_Icon_Electric.png'); }
+#hada     { background-image: url('../img/Pokemon_Type_Icon_Fairy.png'); }
+#lucha    { background-image: url('../img/Pokemon_Type_Icon_Fighting.png'); }
+#fuego    { background-image: url('../img/Pokemon_Type_Icon_Fire.png'); }
+#volador  { background-image: url('../img/Pokemon_Type_Icon_Flying.png'); }
+#fantasma { background-image: url('../img/Pokemon_Type_Icon_Ghost.png'); }
+#planta   { background-image: url('../img/Pokemon_Type_Icon_Grass.png'); }
+#tierra   { background-image: url('../img/Pokemon_Type_Icon_Ground.png'); }
+#hielo    { background-image: url('../img/Pokemon_Type_Icon_Ice.png'); }
+#normal   { background-image: url('../img/Pokemon_Type_Icon_Normal.png'); }
+#veneno   { background-image: url('../img/Pokemon_Type_Icon_Poison.png'); }
+#psiquico { background-image: url('../img/Pokemon_Type_Icon_Psychic.png'); }
+#roca     { background-image: url('../img/Pokemon_Type_Icon_Rock.png'); }
+#acero    { background-image: url('../img/Pokemon_Type_Icon_Steel.png'); }
+#agua     { background-image: url('../img/Pokemon_Type_Icon_Water.png'); }
+#bicho, #siniestro, #dragon, #electrico, #hada, #lucha, #fuego, #volador,
+#fantasma, #planta, #tierra, #hielo, #normal, #veneno, #psiquico, #roca, #acero, #agua {
+    border: none;
+}
+.contenedorPokemonActivo {
+    scale: 1.25;
+}

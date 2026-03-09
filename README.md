@@ -17,9 +17,9 @@ Este proyecto consiste en un conjunto de **calculadoras interactivas** con inter
    - Interfaz con indicación de la base actual.
 
 3. **Calculadora de Divisas**
-   - Convierte entre múltiples monedas: EUR, USD, JPY, GBP, CNY, CHF, CAD, AUD.
+   - Convierte entre múltiples monedas 
    - Funciona mediante selección de moneda de origen y destino.
-   - Conversión basada en tasas fijas definidas en el código.
+   - Conversión basada en tasas en tiempo real usando una api
 
 4. **Calculadora de Fechas**
    - Permite calcular la diferencia entre dos fechas en **días, meses o años**.
