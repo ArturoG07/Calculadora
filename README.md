@@ -38,7 +38,9 @@ dado su peso, altura, edad, sexo, nivel de actividad, objetivo, y preferencia de
 9. **Conversor de unidades**
    - Convierte una diversa cantidad de unidades
 10. **Deportiva**
-   -Permite calcular el rendimiento deportivo en m/s y km/h dada una cantida de kilometros, horas, minutos, y segundos
+   - Permite calcular el rendimiento deportivo en m/s y km/h dada una cantida de kilometros, horas, minutos, y segundos
+11. **Pokemon**
+   - Permite calcular la efectividad de un ataque de un tipo a otro
 ## 🎨 Funcionalidades Generales
 
 - **Carrusel de calculadoras**: navega fácilmente entre las calculadoras mediante flechas o mediante un click a la calculadora deseada
@@ -69,6 +71,7 @@ dado su peso, altura, edad, sexo, nivel de actividad, objetivo, y preferencia de
    - **clima.js**
    - **conversor.js**
    - **deportiva.js**
+   - **pokemon.js**
 - #### /carrusel
    - Incluye los estilos y funciones para el funcionamiento del carrusel
    - **carrusel.js**

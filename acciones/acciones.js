@@ -149,6 +149,9 @@ function cargarContenidoInfo(calc) {
     if (calc.id === "calc10") {
         contenido.textContent = "Calcula tu velocidad media en m/s y km/h a partir de la distancia recorrida y el tiempo empleado.";
     }
+    if (calc.id === "calc11") {
+        contenido.textContent = "Permite calcular la efectividad de un ataque de un tipo a otro"
+    }
 }
 
 function mostrarCalculadoras() {
