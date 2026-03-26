@@ -68,7 +68,6 @@ dado su peso, altura, edad, sexo, nivel de actividad, objetivo, y preferencia de
    - **interes.js**
    - **IMC.js**
    - **macros.js**
-   - **clima.js**
    - **conversor.js**
    - **deportiva.js**
    - **pokemon.js**
