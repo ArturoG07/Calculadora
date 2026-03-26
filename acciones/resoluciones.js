@@ -11,7 +11,7 @@ const calculadoras = {
     calc10: calcularRendimiento,
     calc11: calcularAtaquePokemon,
 };
-document.querySelectorAll('.calculadoras.resultado').forEach((el) => {
+document.querySelectorAll('.resultado').forEach((el) => {
     el.addEventListener("click", () => calcular());
 });
 
