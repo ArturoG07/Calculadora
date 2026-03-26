@@ -1,11 +1,11 @@
 /*Esta hoja contiene las asignaciones personalizadas para un contendor en especifico*/
-
 #calc1 {
     width: 250px;
 }
 #calc5 {
     width: 350px;
 }
+
 #pnt5 {
     height: 200px;
     font-size: 20px;
@@ -14,27 +14,7 @@
     height: 150px;
     font-size: 20px;
 }
-#calc5 input {
-    width: 80%;
-}
-#calc5 select {
-    width: 80%;
-}
 
-
-#calc4 select {
-    margin: 10px;
-    width: 70px;
-    height: 35px;
-}
-#calc4 #tipoCalculo {
-    width: 100%;
-}
-input,
-select{
-    width: 100%;
-    margin: 10px;
-}
 #calc7 {
 width: 400px;
 }
@@ -46,10 +26,7 @@ width: 400px;
     height: 200px;
     font-size: 20px;
 }
-#horas, #minutos, #segundos {
-    width: 50px;
-    height: 50px;
-}
+
 #calc10 {
     justify-content: space-around;
 }
@@ -62,4 +39,32 @@ width: 400px;
     height: 100px;
     font-size: 20px;
     white-space: pre-line;
+}
+
+#divisas {
+    position: absolute;
+    display: none;
+    width: 30%;
+    left: 5px;
+    top: 20px;
+    bottom: 20px;
+    z-index: 17;
+    overflow-y: scroll;
+    font-size: 30px;
+    font-weight: bolder;
+    padding: 10px;
+}
+
+#calculadoras {
+    position: absolute;
+    display: none;
+    width: 40%;
+    left: 5px;
+    top: 20px;
+    bottom: 20px;
+    z-index: 14;
+}
+
+.contenedorPokemonActivo {
+    scale: 1.25;
 }

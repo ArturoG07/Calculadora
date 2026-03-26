@@ -1,40 +1,49 @@
 document.addEventListener('DOMContentLoaded', () => {
     const estilos = [
-        "contenedores/botones.css",
-        "contenedores/contenedores.css",
-        "historial/historial.css",
-        "carrusel/carrusel.css",
-        "contenedores/calcpnt.css",
-        "modos/blue.css",
-        "modos/green.css",
-        "modos/negro.css",
-        "modos/blanco.css",
-        "modos/pastel.css",
-        "modos/neon.css",
-        "modos/cyber.css",
-        "modos/aurora.css"
+        "css/componentes/botones.css",
+        "css/componentes/forms.css",
+        "css/layout/contenedoresEspecificos.css",
+        "css/layout/contenedoresGenerales.css",
+
+        // funcionalidades
+        "css/funcionalidades/carrusel.css",
+        "css/funcionalidades/historial.css",
+        "css/funcionalidades/infoCalculadoras.css",
+
+        // modos
+        "css/modos/aurora.css",
+        "css/modos/blanco.css",
+        "css/modos/blue.css",
+        "css/modos/cyber.css",
+        "css/modos/green.css",
+        "css/modos/negro.css",
+        "css/modos/neon.css",
+        "css/modos/pastel.css"
     ];
 
     const scripts = [
-        "calculos/conversiones.js",
-        "calculos/Basica.js",
-        "calculos/divisas.js",
-        "calculos/macros.js",
-        "calculos/fechas.js",
-        "calculos/interes.js",
-        "calculos/pokemon.js",
-        "calculos/IMC.js",
-        "calculos/programador.js",
-        "calculos/deportiva.js",
-        "carrusel/carrusel.js",
-        "historial/historial.js",
-        "modos/estilos.js",
-        "acciones/acciones.js",
-        "acciones/funcionalidadTeclado.js",
-        "acciones/resoluciones.js",
-        "acciones/funcionalidadBotones.js"
-    ];
+        // calculos
+        "js/calculos/conversiones.js",
+        "js/calculos/Basica.js",
+        "js/calculos/divisas.js",
+        "js/calculos/macros.js",
+        "js/calculos/fechas.js",
+        "js/calculos/interes.js",
+        "js/calculos/pokemon.js",
+        "js/calculos/IMC.js",
+        "js/calculos/programador.js",
+        "js/calculos/deportiva.js",
 
+        // funcionalidades
+        "js/Funcionalidades/carrusel.js",
+        "js/Funcionalidades/historial.js",
+        "js/Funcionalidades/estilos.js",
+        "js/Funcionalidades/funcionalidadTeclado.js",
+        "js/Funcionalidades/resoluciones.js",
+        "js/Funcionalidades/funcionalidadBotones.js",
+        "js/Funcionalidades/generales.js",
+
+    ];
     estilos.forEach(href => {
         const link = document.createElement("link");
         link.rel = "stylesheet";

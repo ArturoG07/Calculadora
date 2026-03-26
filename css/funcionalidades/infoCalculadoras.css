@@ -1,0 +1,33 @@
+/*Contenedor que contiene la informacion de las calculadoras*/
+#contInf {
+    position: absolute;
+    right: 20px;
+    top: 5px;
+    bottom: 75%;
+    width: 25%;
+    z-index: 10;
+    padding: 20px;
+    font-weight: bolder;
+    display:none;
+    overflow-y: auto;
+    white-space: pre-line;
+}
+/*Boton de mostrar informacion fijo en cada calculadora, en la esquina superior derecha*/
+#inf {
+    position: fixed;
+    top: 5px;
+    right: 5px;
+    border-radius: 10px;
+    font-weight: bolder;
+    text-align: center;
+    align-content: center;
+}
+/*Boton de ocultar informacion dentro del contenedor de informacion*/
+#ocultarInfo {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+}

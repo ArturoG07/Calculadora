@@ -11,12 +11,6 @@
     align-items: center;
     transition: transform 0.4s ease;
 }
-/*Calculadoras con el efecto de transicion*/
-.calculadora {
-    opacity: 0.4;
-    transform: scale(0.8);
-    transition: all 0.4s ease;
-}
 /*Calculadora que estara activa*/
 .calculadora.activa {
     opacity: 1;
