@@ -161,7 +161,7 @@ function actualizarOpciones(categoria) {
     }
 }
 function calcularConversion() {
-    const pantalla = obtenerPantallaActiva();
+    let pantalla = obtenerPantallaActiva();
     if (categoria.value === "1") {
         calcularLongitud(pantalla);
     }
@@ -194,7 +194,6 @@ function calcularConversion() {
     }
     añadirHistorial(`${num.value} ${origen.options[origen.selectedIndex].text} a ${destino.options[destino.selectedIndex].text}`);
 }
-let pantalla = obtenerPantallaActiva();
 
 function calcularLongitud(pantalla) {
     const factores = {

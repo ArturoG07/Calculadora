@@ -16,7 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
 
     const scripts = [
-        "acciones/acciones.js",
+        "calculos/conversiones.js",
+        "calculos/Basica.js",
         "calculos/divisas.js",
         "calculos/macros.js",
         "calculos/fechas.js",
@@ -25,12 +26,11 @@ document.addEventListener('DOMContentLoaded', () => {
         "calculos/IMC.js",
         "calculos/clima.js",
         "calculos/programador.js",
-        "calculos/conversiones.js",
         "calculos/deportiva.js",
-        "calculos/Basica.js",
         "carrusel/carrusel.js",
         "historial/historial.js",
         "modos/estilos.js",
+        "acciones/acciones.js",
         "acciones/funcionalidadTeclado.js",
         "acciones/resoluciones.js"
     ];
@@ -42,16 +42,30 @@ document.addEventListener('DOMContentLoaded', () => {
         document.head.appendChild(link);
     });
 
-    scripts.forEach(src => {
-        const script = document.createElement("script");
-        script.src = src;
-        script.defer = true;
-        document.body.appendChild(script);
-    });
+    cargarScriptsEnOrden(scripts);
     cargarDivisas();
 });
 
+function cargarScriptsEnOrden(scripts) {
+    cargarSiguiente(scripts, 0);
+}
 
+function cargarSiguiente(scripts, index) {
+    if (index >= scripts.length) return;
+
+    const script = document.createElement("script");
+    script.src = scripts[index];
+
+    script.onload = () => {
+        cargarSiguiente(scripts, index + 1);
+    };
+
+    script.onerror = () => {
+        console.error("Error cargando:", scripts[index]);
+    };
+
+    document.body.appendChild(script);
+}
 function cargarDivisas() {
     const divisas = [
         "USD — Dólar estadounidense",

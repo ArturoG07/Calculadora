@@ -11,13 +11,13 @@ const calculadoras = {
     calc10: calcularRendimiento,
     calc11: calcularAtaquePokemon,
 };
-document.querySelectorAll('.resultado').forEach((el) => {
-    el.addEventListener("click", () => calcular());
+document.querySelectorAll('.resultado').forEach(calculadora => {
+    calculadora.addEventListener("click", () => calcular());
 });
 
 function calcular() {
     let calc = document.querySelector(".calculadora.activa");
-    if (calculadoras[calc.id]) {
+        if (calculadoras[calc.id]) {
         calculadoras[calc.id]();
     }
 }
