@@ -11,8 +11,9 @@ async function cambioDivisa(){
     let divisa = document.getElementById("divisa").value;
     let divisaConvertir = document.getElementById("divisaConvertir").value;
     let cantidad = pantalla.textContent;
+    const API_KEY_DIVISAS = process.env.API_KEY_DIVISAS;
 
-    const url = `https://v6.exchangerate-api.com/v6/b142171f17532ed003df8707/latest/${divisa}`;
+    const url = `https://v6.exchangerate-api.com/v6/${API_KEY_DIVISAS}/latest/${divisa}`;
 
     try {
         const respuesta = await fetch(url);
