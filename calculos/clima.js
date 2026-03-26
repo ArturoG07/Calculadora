@@ -2,7 +2,8 @@
 async function buscarClima() {
     let pantalla = obtenerPantallaActiva();
     let zona = document.getElementById("zona").value;
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${zona}&appid=2c67d8e9416b46d40cbf446c17ba3028&units=metric&lang=es`;
+    const KEY1 = API_KEY_CLIMA;
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${zona}&appid=${KEY1}&units=metric&lang=es`;
 
     try {
         const respuesta = await fetch(url);
