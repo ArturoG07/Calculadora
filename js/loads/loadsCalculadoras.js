@@ -1,92 +1,3 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const estilos = [
-        "css/componentes/botones.css",
-        "css/componentes/forms.css",
-        "css/layout/contenedoresEspecificos.css",
-        "css/layout/contenedoresGenerales.css",
-
-        // funcionalidades
-        "css/funcionalidades/carrusel.css",
-        "css/funcionalidades/historial.css",
-        "css/funcionalidades/infoCalculadoras.css",
-
-        // modos
-        "css/modos/aurora.css",
-        "css/modos/blanco.css",
-        "css/modos/blue.css",
-        "css/modos/cyber.css",
-        "css/modos/green.css",
-        "css/modos/negro.css",
-        "css/modos/neon.css",
-        "css/modos/pastel.css"
-    ];
-
-    const scripts = [
-        // calculos
-        "js/calculos/conversiones.js",
-        "js/calculos/Basica.js",
-        "js/calculos/divisas.js",
-        "js/calculos/macros.js",
-        "js/calculos/fechas.js",
-        "js/calculos/interes.js",
-        "js/calculos/pokemon.js",
-        "js/calculos/IMC.js",
-        "js/calculos/programador.js",
-        "js/calculos/deportiva.js",
-
-        // funcionalidades
-        "js/Funcionalidades/carrusel.js",
-        "js/Funcionalidades/historial.js",
-        "js/Funcionalidades/estilos.js",
-        "js/Funcionalidades/funcionalidadTeclado.js",
-        "js/Funcionalidades/resoluciones.js",
-        "js/Funcionalidades/funcionalidadBotones.js",
-        "js/Funcionalidades/generales.js",
-
-    ];
-    estilos.forEach(href => {
-        const link = document.createElement("link");
-        link.rel = "stylesheet";
-        link.href = href;
-        document.head.appendChild(link);
-    });
-    cargarScriptsEnOrden(scripts);
-    cargarContenidos();
-});
-
-function cargarScriptsEnOrden(scripts) {
-    cargarSiguiente(scripts, 0);
-}
-
-function cargarSiguiente(scripts, index) {
-    if (index >= scripts.length) return;
-
-    const script = document.createElement("script");
-    script.src = scripts[index];
-
-    script.onload = () => {
-        cargarSiguiente(scripts, index + 1);
-    };
-
-    script.onerror = () => {
-        console.error("Error cargando:", scripts[index]);
-    };
-
-    document.body.appendChild(script);
-}
-function cargarContenidos() {
-    cargarBasica();
-    cargarProgramador();
-    cargarDivisas();
-    cargarFechas();
-    cargarInteres();
-    cargarIMC();
-    cargarMacros();
-    cargarConversor();
-    cargarDeportiva();
-    cargarPokemon();
-    cargarEventListeners();
-}
 function cargarBasica() {
     document.getElementById("calc1").innerHTML = `
         <h2>Basica</h2>
@@ -149,7 +60,7 @@ function cargarProgramador() {
 `;
 }
 function cargarDivisas() {
-        document.getElementById("calc3").innerHTML = `
+    document.getElementById("calc3").innerHTML = `
             <h2>Divisas</h2>
             <div class="pantalla" id="pnt3"></div>
             <p>Original:</p>

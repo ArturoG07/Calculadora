@@ -38,8 +38,6 @@ function cambiarTema() {
     document.body.classList.add(temas[actual]);
     localStorage.setItem("modo", actual);
 }
-
-// Inicializar automáticamente
 obtenerTemas();
 if (temas.length > 0) {
     if (actual >= temas.length) actual = 0;

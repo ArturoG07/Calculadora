@@ -21,11 +21,6 @@ function activarCalculadoraPorClick() {
     });
 }
 
-window.addEventListener("load", () => {
-    updateCarousel();
-    activarCalculadoraPorClick()
-});
-window.addEventListener("resize", updateCarousel);
 /*Funcion principal del carrusel, quita a todos la clase activa, y se la asigna al indice actual*/
 function updateCarousel() {
     cards.forEach(calculadora => calculadora.classList.remove('activa'));
@@ -57,20 +52,7 @@ function updateCarousel() {
     actualizarBotones();
     cargarContenidoInfo(document.querySelector(".calculadora.activa"));
 }
-/*Comprueba que haya mas calculadoras, pasa a la siquiente y actualiza el carrusel*/
-nextBtn.addEventListener('click', () => {
-    if (currentIndex < cards.length - 1) {
-        currentIndex++;
-        updateCarousel();
-    }
-});
-/*Comprueba que haya mas calculadoras atras, pasa a la siguiente y actualiza el carrusel*/
-prevBtn.addEventListener('click', () => {
-    if (currentIndex > 0) {
-        currentIndex--;
-        updateCarousel();
-    }
-});
+
 function actualizarBotones() {
     const calculadoras = document.querySelectorAll('.calculadora');
 

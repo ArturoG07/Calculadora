@@ -110,9 +110,3 @@ function añadirCalculadorasMenu() {
     });
 }
 añadirCalculadorasMenu();
-
-document.getElementById("limpiar").addEventListener("click", function() {
-    document.querySelectorAll('.pantalla').forEach(function(elemento) {
-        elemento.textContent = "";
-    });
-});

@@ -2,10 +2,7 @@ const categoria = document.getElementById("categoria");
 const origen = document.getElementById("origen");
 const destino = document.getElementById("destino");
 const num = document.getElementById("valor");
-categoria.addEventListener("change", function() {
-    actualizarOpciones(categoria.value);
-});
-actualizarOpciones(categoria.value);
+
 function actualizarOpciones(categoria) {
     if (categoria === "1") {
         origen.innerHTML = `
@@ -350,4 +347,5 @@ function calcularPresion(pantalla) {
 
     pantalla.textContent = resultado;
 }
+actualizarOpciones(document.getElementById("categoria").value);
 
