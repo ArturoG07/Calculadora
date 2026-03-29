@@ -1,6 +1,6 @@
 input {
-    margin: 20px;
-    height: 30px;
+    margin: 10px;
+    height: 10px;
     width: 100%;
 }
 select {
@@ -19,14 +19,15 @@ select {
     height: 50px;
 }
 
-#calc5 input {
-    width: 80%;
-}
-#calc5 select {
+#calc5 input,
+#calc5 select{
     width: 80%;
 }
 #calc4 select {
     margin: 10px;
     width: 70px;
     height: 35px;
+}
+#calc7 select, #calc7 input {
+    height: 20px;
 }

@@ -43,7 +43,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         "js/Funcionalidades/generales.js",
 
         // loads
-        "js/loads/loadsCalculadoras.js",
         "js/loads/loadsListeners.js"
     ];
     estilos.forEach(href => {
@@ -52,9 +51,10 @@ document.addEventListener('DOMContentLoaded', async () => {
         link.href = href;
         document.head.appendChild(link);
     });
-    await cargarScriptsEnOrden(scripts);
     await cargarCalculadoras();
-    cargarEventListeners();
+    await cargarScriptsEnOrden(scripts);
+    await cargarEventListeners();
+    actualizarOpciones(document.getElementById("categoria").value);
 });
 async function cargarScriptsEnOrden(scripts) {
     for (const src of scripts) {
@@ -72,7 +72,8 @@ function cargarScript(src) {
 }
 
 
-async function cargarCalculadoras() {
+async function cargarCalculadoras(){
+    await cargarScript("js/loads/loadsCalculadoras.js");
     try {
         await cargarBasica();
         await cargarProgramador();

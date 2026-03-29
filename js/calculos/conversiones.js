@@ -1,9 +1,10 @@
-const categoria = document.getElementById("categoria");
 const origen = document.getElementById("origen");
 const destino = document.getElementById("destino");
 const num = document.getElementById("valor");
 
 function actualizarOpciones(categoria) {
+    let origen = document.getElementById("origen");
+    let destino = document.getElementById("destino");
     if (categoria === "1") {
         origen.innerHTML = `
 <option value="1">Metro (m)</option>
@@ -158,6 +159,7 @@ function actualizarOpciones(categoria) {
     }
 }
 function calcularConversion() {
+    let categoria = document.getElementById("categoria");
     let pantalla = obtenerPantallaActiva();
     if (categoria.value === "1") {
         calcularLongitud(pantalla);
@@ -347,5 +349,5 @@ function calcularPresion(pantalla) {
 
     pantalla.textContent = resultado;
 }
-actualizarOpciones(document.getElementById("categoria").value);
+
 

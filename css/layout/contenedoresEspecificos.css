@@ -10,37 +10,10 @@
     height: 200px;
     font-size: 20px;
 }
-#pnt6 {
+#pnt7 {
     height: 150px;
-    font-size: 20px;
+    font-size: 15px;
 }
-
-#calc7 {
-width: 400px;
-}
-#pnt7{
-    height: 200px;
-    font-size: 20px;
-}
-#pnt8 {
-    height: 200px;
-    font-size: 20px;
-}
-
-#calc10 {
-    justify-content: space-around;
-}
-#pnt10 {
-    height: 150px;
-    margin-bottom: 10px;
-    font-size: 30px;
-}
-#pnt11 {
-    height: 100px;
-    font-size: 20px;
-    white-space: pre-line;
-}
-
 #divisas {
     position: absolute;
     display: none;

@@ -46,14 +46,14 @@ function cargarEventListeners() {
         });
     });
     /*Comprueba que haya mas calculadoras, pasa a la siquiente y actualiza el carrusel*/
-    document.querySelector('.prev').addEventListener('click', () => {
+    document.querySelector('.next').addEventListener('click', () => {
         if (currentIndex < cards.length - 1) {
             currentIndex++;
             updateCarousel();
         }
     });
     /*Comprueba que haya mas calculadoras atras, pasa a la siguiente y actualiza el carrusel*/
-    document.querySelector('.next').addEventListener('click', () => {
+    document.querySelector('.prev').addEventListener('click', () => {
         if (currentIndex > 0) {
             currentIndex--;
             updateCarousel();

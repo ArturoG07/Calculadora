@@ -60,4 +60,6 @@ se ajustara automaticamente, si quieres ajustar la altura se debe hacer con los 
     font-size: 25px;
     font-weight: bolder;
 }
-
+p {
+    margin: 3px;
+}
