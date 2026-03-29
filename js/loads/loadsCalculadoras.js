@@ -21,7 +21,7 @@ function cargarBasica() {
         <div class="boton botonOp">+</div>
         <div class="boton botonNum">0</div>
         <div class="boton botonOp">-</div>
-        <div class="boton botonOp resultado">=</div>`;
+        <div class="boton resultado">=</div>`;
 }
 function cargarProgramador() {
     document.getElementById("calc2").innerHTML = `
@@ -56,7 +56,7 @@ function cargarProgramador() {
         <div class="boton botonOp">*</div>
         <div class="boton botonOp">+</div>
         <div class="boton botonOp">-</div>
-        <div class="boton botonOp resultado">=</div>
+        <div class="boton resultado">=</div>
 `;
 }
 function cargarDivisas() {
@@ -70,7 +70,7 @@ function cargarDivisas() {
             
             <div class="boton botonCE">CE</div>
             <div class="boton botonC">C</div>
-            <div class="boton botonOp resultado">=</div>
+            <div class="boton resultado">=</div>
             <div class="boton botonOp">.</div>
             <div class="boton vacio"></div>
             <div class="boton botonNum">1</div>

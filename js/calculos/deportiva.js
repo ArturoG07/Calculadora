@@ -19,9 +19,7 @@ function calcularRendimiento() {
         h = h-24;
         dias++;
     }
-
-    let texto = `${rendimiento.toFixed(2)} m/s<hr>
+    pantalla.textContent = `${rendimiento.toFixed(2)} m/s\n
     ${(rendimiento*3.6).toFixed(2)} km/h`;
-    pantalla.innerHTML = texto;
-    añadirHistorial(`Rendimiento :${km}km en ${dias} dia/s ${h}h ${m}min ${s}sg`)
+    añadirHistorial(`Rendimiento :${km}km en ${dias} dia/s ${h}h ${m}min ${s}sg`);
 }

@@ -46,6 +46,8 @@ se ajustara automaticamente, si quieres ajustar la altura se debe hacer con los 
     overflow-x: auto;
     overflow-y: auto;
     border: 3px solid black;
+    white-space: pre-line;
+    line-height: 0.6;
 }
 
 

@@ -26,10 +26,10 @@ function calculoIMC(){
         tipo = "Obesidad grado III"
     }
     let texto =
-        `Peso: ${peso}Kg<br>
-        Altura: ${altura}m<br>
-        IMC: ${total}<br>
-        Clasificacion: ${tipo}<br>`;
-    pantalla.innerHTML = texto;
+        `Peso: ${peso}Kg \n
+        Altura: ${altura}m \n
+        IMC: ${total} \n
+        Clasificacion: ${tipo} \n`;
+    pantalla.textContent = texto;
     añadirHistorial(`IMC`);
 }

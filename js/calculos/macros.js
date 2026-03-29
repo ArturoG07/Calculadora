@@ -12,7 +12,7 @@ function calcularMacros() {
     let TDEE = calcularTDEE(TMB, actividad);
     let calorias = calcularCalorias(TDEE, objetivo);
     let distribucion = calcularDistribucion(calorias, preferencia);
-    pantalla.innerHTML = distribucion;
+    pantalla.textContent = distribucion;
     añadirHistorial("MACROS");
 }
 /*Calcula la tabla metabolica basal, a partir del sexo peso altura (en centimetros) y edad
@@ -71,9 +71,9 @@ function calcularDistribucion(calorias, preferencia) {
         grasas = (calorias*0.25)/9;
     }
     let texto = `
-Calorías: ${calorias.toFixed(0)} kcal<hr>
-Proteínas: ${proteina.toFixed(0)} g<hr>
-Carbohidratos: ${carbohidratos.toFixed(0)} g<hr>
+Calorías: ${calorias.toFixed(0)} kcal \n
+Proteínas: ${proteina.toFixed(0)} g \n
+Carbohidratos: ${carbohidratos.toFixed(0)} g \n
 Grasas: ${grasas.toFixed(0)} g
 `;
     return texto;

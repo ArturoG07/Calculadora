@@ -25,15 +25,15 @@ function calculoInteres() {
             cuota = total/anios/12;
 
         }
-        pantalla.innerHTML = `
-Capital inicial: ${capital}<br>
-Tasa de Intereses: ${interes * 100}%<br>
-Años: ${anios}<br>
-Tipo de interés: ${tipo}<br>
-Total pagado: ${total.toFixed(2)}<br>
-Total intereses: ${intereses.toFixed(2)}<br>
+        pantalla.textContent = `
+Capital inicial: ${capital} \n
+Tasa de Intereses: ${interes * 100}% \n
+Años: ${anios} \n
+Tipo de interés: ${tipo} \n 
+Total pagado: ${total.toFixed(2)} \n
+Total intereses: ${intereses.toFixed(2)} \n
 Cuota mensual: ${cuota.toFixed(2)}`;
-        añadirHistorialIntereses();
+        añadirHistorial(`Intereses de capital de ${capital} a tasa ${interes} de tipo ${tipo} en ${anios} anios`);
     }else {
         pantalla.textContent = comprobacion;
     }

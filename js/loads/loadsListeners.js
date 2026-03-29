@@ -30,6 +30,11 @@ function cargarEventListeners() {
             calcular();
         })
     })
+    document.querySelectorAll(".resultado").forEach( el => {
+        el.addEventListener('click', e => {
+            calcular();
+        })
+    })
     document.querySelectorAll(".conversion").forEach( el => {
         el.addEventListener('click', e => {
             conversion(el.textContent);
