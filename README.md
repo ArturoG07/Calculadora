@@ -3,7 +3,7 @@
 
 # Calculadoras Multifunción
 
-Este proyecto consiste en un conjunto de **calculadoras interactivas** con interfaz gráfica y funcionalidades avanzadas. Incluye un carrusel para cambiar entre calculadoras y la opción de alternar entre **distintos estilos**.
+Este proyecto consiste en un conjunto de **10 calculadoras interactivas** con interfaz gráfica y funcionalidades avanzadas. Incluye un carrusel para cambiar entre calculadoras y la opción de alternar entre **distintos estilos**.
 
 ## 🖥️ Calculadoras Incluidas
 
@@ -33,13 +33,11 @@ Este proyecto consiste en un conjunto de **calculadoras interactivas** con inter
 7. **Calculadora de Macros**
    - Permite calcular el total de calorias, y macronutrientes (proteinas, carbohidratos y grasas) de una persona
 dado su peso, altura, edad, sexo, nivel de actividad, objetivo, y preferencia de distribucion
-8. **Calculadora de clima**
-   - Permite buscar en tiempo real de una zona usando una api de clima abierta
-9. **Conversor de unidades**
+8. **Conversor de unidades**
    - Convierte una diversa cantidad de unidades
-10. **Deportiva**
-   - Permite calcular el rendimiento deportivo en m/s y km/h dada una cantida de kilometros, horas, minutos, y segundos
-11. **Pokemon**
+9. **Deportiva**
+  - Permite calcular el rendimiento deportivo en m/s y km/h dada una cantida de kilometros, horas, minutos, y segundos
+0**Pokemon**
    - Permite calcular la efectividad de un ataque de un tipo a otro
 ## 🎨 Funcionalidades Generales
 
@@ -55,42 +53,99 @@ dado su peso, altura, edad, sexo, nivel de actividad, objetivo, y preferencia de
 - **localstorage**: para guardar la preferencia de estilo y el historial
 
 ## 📂 Estructura del Proyecto
-### /Calculadora
-- **index.html** Estructura principal y carrusel
-- **README.md** Documentación del proyecto
-- #### /Acciones
-   - **acciones.js**: incluye funciones generales de la calculadora
-- #### /calculos
-   - Incluye un archivo de scripts para cada calculadora, con las funciones necesarias para sus calculos
-   - **programador.js**
-   - **divisas.js**
-   - **fechas.js**
-   - **interes.js**
-   - **IMC.js**
-   - **macros.js**
-   - **conversor.js**
-   - **deportiva.js**
-   - **pokemon.js**
-- #### /carrusel
-   - Incluye los estilos y funciones para el funcionamiento del carrusel
-   - **carrusel.js**
-   - **carrusel.css**
-- #### /historial
-   - Incluye los estilos y funciones para el funcionamiento del historial
-   - **historial.css**
-   - **historial.js**
-- #### /contenedores
-   - **calcpnt.css**: hoja de estilos para asignar estilo a una calculadora, pantalla o elemento especifico de una calculadora
-   - **contenedores.css**: hoja de estilos para asignar el tamaño de ciertos contenedores genericos
-- #### /modos
-   - Incluye las hojas de estilo de todos los modos que tiene la calculadora
-   - **plantilla.css**: contiene una plantilla con todos los elementos a los que hay que dar estilo, y una explicacion de ellos, como soporte para crear nuevos estilos de manera sencilla
-   - **blanco.css**
-   - **blue.css**
-   - **cyber.css**
-   - **green.css**
-   - **negro.css**
-   - **pastel.css**
-   - **neon.css**
-   - **aurora.css**
-   - **estilos.js**: script para el cambio entre modos
+
+### 📁 Raíz
+- **index.html** → Estructura principal de la aplicación
+- **README.md** → Documentación del proyecto
+- **.gitignore** → Archivos ignorados por Git
+
+---
+
+### 📁 /css
+Contiene todos los estilos organizados por responsabilidad.
+
+#### 📁 /componentes
+Estilos reutilizables de elementos UI:
+- **botones.css**
+- **forms.css**
+
+#### 📁 /funcionalidades
+Estilos de funcionalidades concretas:
+- **carrusel.css**
+- **historial.css**
+- **infoCalculadoras.css**
+
+#### 📁 /layout
+Estructura y distribución:
+- **contenedoresEspecificos.css**
+- **contenedoresGenerales.css**
+
+#### 📁 /modos
+Temas visuales de la aplicación:
+- **aurora.css**
+- **blanco.css**
+- **blue.css**
+- **cyber.css**
+- **green.css**
+- **negro.css**
+- **neon.css**
+- **pastel.css**
+
+---
+
+### 📁 /js
+
+#### 📁 /calculos
+Scripts de cada calculadora:
+- **Basica.js**
+- **conversiones.js**
+- **deportiva.js**
+- **divisas.js**
+- **fechas.js**
+- **IMC.js**
+- **interes.js**
+- **macros.js**
+- **pokemon.js**
+- **programador.js**
+
+---
+
+#### 📁 /Funcionalidades
+Lógica general de la aplicación:
+- **carrusel.js** → Control del carrusel
+- **estilos.js** → Cambio de temas/modos
+- **funcionalidadTeclado.js** → Soporte de entrada por teclado
+- **generales.js** → Funciones globales reutilizables
+- **historial.js** → Gestión del historial
+- **resoluciones.js** → Adaptación a diferentes tamaños de pantalla
+
+---
+
+#### 📁 /loads
+Inicialización de la aplicación:
+- **loadsCalculadoras.js** → Carga de calculadoras
+- **loadsListeners.js** → Registro de eventos
+- **start.js** → Punto de entrada de la app
+
+---
+
+### 📁 /img
+Imágenes utilizadas en la aplicación (principalmente iconos de tipos Pokémon):
+- **Pokemon_Type_Icon_Bug.png**
+- **Pokemon_Type_Icon_Dark.png**
+- **Pokemon_Type_Icon_Dragon.png**
+- **Pokemon_Type_Icon_Electric.png**
+- **Pokemon_Type_Icon_Fairy.png**
+- **Pokemon_Type_Icon_Fighting.png**
+- **Pokemon_Type_Icon_Fire.png**
+- **Pokemon_Type_Icon_Flying.png**
+- **Pokemon_Type_Icon_Ghost.png**
+- **Pokemon_Type_Icon_Grass.png**
+- **Pokemon_Type_Icon_Ground.png**
+- **Pokemon_Type_Icon_Ice.png**
+- **Pokemon_Type_Icon_Normal.png**
+- **Pokemon_Type_Icon_Poison.png**
+- **Pokemon_Type_Icon_Psychic.png**
+- **Pokemon_Type_Icon_Rock.png**
+- **Pokemon_Type_Icon_Steel.png**
+- **Pokemon_Type_Icon_Water.png**
