@@ -149,3 +149,11 @@ Imágenes utilizadas en la aplicación (principalmente iconos de tipos Pokémon)
 - **Pokemon_Type_Icon_Rock.png**
 - **Pokemon_Type_Icon_Steel.png**
 - **Pokemon_Type_Icon_Water.png**
+
+## 📝 Notas del Proyecto
+
+- Proyecto desarrollado en JavaScript vanilla sin frameworks.
+- Arquitectura modular separando cálculos, funcionalidades y carga inicial.
+- Sistema de temas dinámico basado en CSS.
+- Escalabilidad preparada para actualizaciones futuras con facil incorporacion de nuevas calculadoras y/o estilos
+- Ningun elemento introducido por el usuario se interpretara como codigo HTML en ningun momento para evitar cross site scripting
