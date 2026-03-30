@@ -45,17 +45,27 @@ document.addEventListener('DOMContentLoaded', async () => {
         // loads
         "js/loads/loadsListeners.js"
     ];
-    estilos.forEach(href => {
-        const link = document.createElement("link");
-        link.rel = "stylesheet";
-        link.href = href;
-        document.head.appendChild(link);
-    });
+    await cargarEstilos(estilos);
     await cargarCalculadoras();
     await cargarScriptsEnOrden(scripts);
     await cargarEventListeners();
     actualizarOpciones(document.getElementById("categoria").value);
 });
+async function cargarEstilos(estilos) {
+    for (const href of estilos) {
+        await cargarEstilo(href)
+    }
+}
+function cargarEstilo(href) {
+    return new Promise((resolve, reject) => {
+        const estilo = document.createElement("link");
+        estilo.rel = "stylesheet";
+        estilo.href = href;
+        estilo.onload = resolve;
+        estilo.onerror = reject;
+        document.body.appendChild(estilo);
+    });
+}
 async function cargarScriptsEnOrden(scripts) {
     for (const src of scripts) {
         await cargarScript(src);
@@ -70,7 +80,6 @@ function cargarScript(src) {
         document.body.appendChild(script);
     });
 }
-
 
 async function cargarCalculadoras(){
     await cargarScript("js/loads/loadsCalculadoras.js");

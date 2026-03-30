@@ -1,129 +1,124 @@
-/*Resuelve la operacion en pantalla*/
+// Variable global que indica la base actual de la calculadora
+let baseActual = 10;
+
+/* ------------------------------
+   Resuelve la operación en pantalla
+--------------------------------- */
 function resolverProgramador() {
     const pantalla = obtenerPantallaActiva();
-    const calcActiva = document.querySelector(".calculadora.activa");
     let expresion = pantalla.textContent;
-    let operacion = pantalla.textContent;
+    const operacionOriginal = expresion;
 
-    // Si baseActual no es decimal, convertir cada número a decimal
+    // Si la base no es decimal, convertir cada número a decimal antes de evaluar
     if (baseActual !== 10) {
-        let tokens = expresion.match(/[0-9A-F]+|[\+\-\*\/\(\)]/gi); // separar números y operadores
+        const tokens = expresion.match(/[0-9A-F]+|[\+\-\*\/\(\)]/gi); // separa números y operadores
         if (!tokens) {
             pantalla.textContent = "Error";
             return;
         }
         expresion = tokens.map(tok => {
-            // Si es número, parsea a decimal
-            if (/^[0-9A-F]+$/i.test(tok)) {
-                return parseInt(tok, baseActual);
-            }
-            return tok; // operador (+, -, *, /, (, ))
+            if (/^[0-9A-F]+$/i.test(tok)) return parseInt(tok, baseActual); // parsea a decimal
+            return tok; // operadores
         }).join('');
     }
 
-    // Evaluar la expresión
+    // Evaluar la expresión de manera segura
     try {
         const resultado = Function("return " + expresion)();
         if (typeof resultado === "number" && isFinite(resultado)) {
-            let final = resultado.toString(baseActual).toUpperCase();
-            pantalla.textContent = final;
-            operacion = `${operacion}`
-            añadirHistorial(operacion);
+            pantalla.textContent = resultado.toString(baseActual).toUpperCase();
+            añadirHistorial(operacionOriginal);
         } else {
             pantalla.textContent = "Error";
         }
-    } catch(e) {
+    } catch (e) {
         pantalla.textContent = "Error";
     }
 }
-/*Cambio entre bases para la calculadora de programador*/
-function cambiarBase() {
-    let tipo = document.getElementById("Base").textContent;
 
-    switch(tipo) {
+/* ------------------------------
+   Cambio cíclico de bases
+--------------------------------- */
+function cambiarBase() {
+    const baseLabel = document.getElementById("Base");
+
+    switch (baseLabel.textContent) {
         case "Decimal":
-            document.getElementById("Base").textContent = "Binario";
             baseActual = 2;
+            baseLabel.textContent = "Binario";
             break;
         case "Binario":
-            document.getElementById("Base").textContent = "Octal";
             baseActual = 8;
+            baseLabel.textContent = "Octal";
             break;
         case "Octal":
-            document.getElementById("Base").textContent = "Hexadecimal";
             baseActual = 16;
+            baseLabel.textContent = "Hexadecimal";
             break;
         case "Hexadecimal":
-            document.getElementById("Base").textContent = "Decimal";
             baseActual = 10;
+            baseLabel.textContent = "Decimal";
             break;
     }
 
-    actualizarBotonesHex(); // habilita/deshabilita A-F
+    actualizarBotonesHex();
 }
+
+/* ------------------------------
+   Habilita o deshabilita los botones A-F según la base
+--------------------------------- */
 function actualizarBotonesHex() {
     const botonesHex = document.querySelectorAll(".botonNum");
 
     botonesHex.forEach(btn => {
         const letra = btn.textContent.toUpperCase();
         if ("ABCDEF".includes(letra)) {
-            // Solo habilitar si la base actual es 16
             btn.disabled = (baseActual !== 16);
             btn.style.opacity = (baseActual === 16 ? 1 : 0.5);
             btn.style.cursor = (baseActual === 16 ? "pointer" : "not-allowed");
         }
     });
 }
-let baseActual = 10;
-/*Convierte entre bases para la calculadora de programador*/
-function conversion(valor) {
-    let pantalla = obtenerPantallaActiva();
-    let num = pantalla.textContent;
 
-    let decimal = parseInt(num, baseActual);
-    let base;
-    if (baseActual == 10) {
-        base = "Dc"
-    }
-    if (baseActual == 8) {
-        base = "Oc"
-    }
-    if (baseActual == 16) {
-        base = "Hx"
-    }
-    if (baseActual == 2) {
-        base = "Bn"
-    }
-    let expresion = `${base} ${num} TO ${valor}`
+/* ------------------------------
+   Conversión directa entre bases
+   valor: "Hx", "Dc", "Oc", "Bn"
+--------------------------------- */
+function conversion(valor) {
+    const pantalla = obtenerPantallaActiva();
+    const num = pantalla.textContent;
+    const decimal = parseInt(num, baseActual);
+
     if (isNaN(decimal)) {
         alert("Número inválido para la base actual");
         return;
     }
 
-    if (valor === "Hx") {
-        num = decimal.toString(16).toUpperCase();
-        baseActual = 16;
-        document.getElementById("Base").textContent = "Hexadecimal";
+    let nuevoValor;
+    switch (valor) {
+        case "Hx":
+            nuevoValor = decimal.toString(16).toUpperCase();
+            baseActual = 16;
+            document.getElementById("Base").textContent = "Hexadecimal";
+            break;
+        case "Dc":
+            nuevoValor = decimal.toString(10);
+            baseActual = 10;
+            document.getElementById("Base").textContent = "Decimal";
+            break;
+        case "Oc":
+            nuevoValor = decimal.toString(8);
+            baseActual = 8;
+            document.getElementById("Base").textContent = "Octal";
+            break;
+        case "Bn":
+            nuevoValor = decimal.toString(2);
+            baseActual = 2;
+            document.getElementById("Base").textContent = "Binario";
+            break;
     }
 
-    if (valor === "Dc") {
-        num = decimal.toString(10);
-        baseActual = 10;
-        document.getElementById("Base").textContent = "Decimal";
-    }
-
-    if (valor === "Oc") {
-        num = decimal.toString(8);
-        baseActual = 8;
-        document.getElementById("Base").textContent = "Octal"
-    }
-
-    if (valor === "Bn") {
-        num = decimal.toString(2);
-        baseActual = 2;
-        document.getElementById("Base").textContent = "Binario"
-    }
-
-    pantalla.textContent = num;
-    añadirHistorial(expresion, pantalla.textContent);
+    pantalla.textContent = nuevoValor;
+    const expresionHistorial = `${num} TO ${valor}`;
+    añadirHistorial(expresionHistorial, pantalla.textContent);
 }

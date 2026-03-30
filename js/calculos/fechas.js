@@ -1,90 +1,113 @@
-/*Calculos de la calculadora de fecha, dependiendo del tipo de calculo*/
+/**
+ * 📌 fechas.js
+ * Calculadora de fechas: diferencias entre fechas y cálculo de edad.
+ * Funciones:
+ *  - calculoFecha: Calcula según el tipo de operación seleccionada.
+ *  - calcularFecha: Devuelve un objeto Date según los campos de entrada.
+ *  - diferenciaMeses: Calcula la diferencia en meses entre dos fechas.
+ *  - calcularEdad: Calcula la edad basada en una fecha de nacimiento.
+ */
+
+/**
+ * Ejecuta el cálculo de fecha según el tipo seleccionado en el <select> "tipoCalculo".
+ */
 function calculoFecha() {
-    let calculo = document.getElementById("tipoCalculo").value;
-    if (calculo == -1) {
-        alert("Seleccione el tipo de calculo!!!");
-    }
-    let fechaInicio = calcularFecha("Inicio");
-    let fechaFinal = calcularFecha("Final");
-    let diffDias = ((fechaFinal - fechaInicio)/(1000*60*60*24))
-    let pantalla = obtenerPantallaActiva();
+    const select = document.getElementById("tipoCalculo");
+    const calculo = parseInt(select.value);
+    const tipo = select.options[select.selectedIndex].text;
+    const pantalla = obtenerPantallaActiva();
+    const fechaInicio = calcularFecha("Inicio");
+    const fechaFinal = calcularFecha("Final");
+    const diffDias = (fechaFinal - fechaInicio) / (1000 * 60 * 60 * 24); // Diferencia en días
+    let resultado;
 
-    var select = document.getElementById("tipoCalculo");
-    var tipo = select.options[select.selectedIndex].text;
-
-    /*El calculo 1 devuelve la diferencia en dias entre dos fechas*/
-    if (calculo == 1) {
-        pantalla.textContent = diffDias;
+    switch (calculo) {
+        case 1: // Diferencia en días
+            resultado = diffDias;
+            pantalla.textContent = resultado;
+            añadirHistorial(`${tipo} entre ${fechaInicio} y ${fechaFinal} = ${resultado}`);
+            break;
+        case 2: // Diferencia en meses
+            resultado = diferenciaMeses(fechaInicio, fechaFinal);
+            pantalla.textContent = resultado;
+            añadirHistorial(`${tipo} entre ${fechaInicio} y ${fechaFinal} = ${resultado}`);
+            break;
+        case 3: // Diferencia en años (entero)
+            resultado = Math.floor(diferenciaMeses(fechaInicio, fechaFinal) / 12);
+            pantalla.textContent = resultado;
+            añadirHistorial(`${tipo} entre ${fechaInicio} y ${fechaFinal} = ${resultado}`);
+            break;
+        case 4: // Edad de una persona nacida en fechaInicio
+            resultado = calcularEdad(fechaInicio);
+            pantalla.textContent = resultado;
+            añadirHistorial(`${tipo} de ${fechaInicio} = ${resultado}`);
+            break;
+        default:
+            alert("Tipo de cálculo no reconocido");
+            break;
     }
-    /*El calculo 2 devuelve la diferencia en meses entre dos fechas*/
-    if (calculo == 2) {
-        pantalla.textContent = diferenciaMeses(fechaInicio, fechaFinal);
-    }
-    /*El calculo 3 devuelve la diferencia en años entre dos fechas, en numero entero*/
-    if (calculo == 3) {
-        pantalla.textContent = diferenciaMeses(fechaInicio, fechaFinal)/12;
-    }
-    /*El calculo 4 devuelve la edad que tendria una persona nacida en la primera fecha*/
-    if (calculo == 4) {
-        pantalla.textContent = calcularEdad(fechaInicio);
-        let operacion = `${tipo} de ${fechaInicio} = ${pantalla.textContent}`
-        añadirHistorial(operacion);
-    }
-    if (calculo < 4 && calculo > 0) {
-        let operacion = `${tipo} entre ${fechaInicio} y ${fechaFinal} = ${pantalla.textContent}`
-        añadirHistorial(operacion);
 }
 
-}
-/*Dados los valores actuales devuelve una fecha formateada, usado para operaciones internas*/
+/**
+ * Devuelve un objeto Date basado en los campos de entrada del DOM.
+ * @param {string} tipo - "Inicio" o "Final"
+ * @returns {Date} Objeto Date construido
+ */
 function calcularFecha(tipo) {
-    let fecha;
-    if (tipo == "Inicio") {
-        let dia = parseInt(document.getElementById("diaInicio").value);
-        let mes = parseInt(document.getElementById("mesInicio").value);
-        let anio = parseInt(document.getElementById("anioInicio").value);
-        fecha = new Date(anio, mes-1, dia);
+    let dia, mes, anio;
+
+    if (tipo === "Inicio") {
+        dia = parseInt(document.getElementById("diaInicio").value);
+        mes = parseInt(document.getElementById("mesInicio").value);
+        anio = parseInt(document.getElementById("anioInicio").value);
+    } else if (tipo === "Final") {
+        dia = parseInt(document.getElementById("diaFinal").value);
+        mes = parseInt(document.getElementById("mesFinal").value);
+        anio = parseInt(document.getElementById("anioFinal").value);
     } else {
-        if (tipo == "Final") {
-            let dia = parseInt(document.getElementById("diaFinal").value);
-            let mes = parseInt(document.getElementById("mesFinal").value);
-            let anio = parseInt(document.getElementById("anioFinal").value);
-            fecha = new Date(anio, mes - 1, dia);
-        } else {
-            alert("error");
-        }
+        alert("Error al calcular fecha: tipo inválido");
+        return null;
     }
-    return fecha;
+
+    return new Date(anio, mes - 1, dia);
 }
-/*Calcula la diferencia en meses entre dos fechas, restando un mes en caso de que los dias acaben siendo
-* negativos, y sumando 12 por año*/
-function diferenciaMeses(inicio,final) {
+
+/**
+ * Calcula la diferencia en meses entre dos fechas.
+ * Ajusta meses y días para reflejar correctamente los meses parciales.
+ * @param {Date} inicio - Fecha de inicio
+ * @param {Date} final - Fecha final
+ * @returns {number} Número total de meses entre las fechas
+ */
+function diferenciaMeses(inicio, final) {
     let años = final.getFullYear() - inicio.getFullYear();
     let meses = final.getMonth() - inicio.getMonth();
-    let dias = final.getDate();
-    -inicio.getDate;
+    let dias = final.getDate() - inicio.getDate();
+
     if (dias < 0) {
-        meses--
+        meses--;
     }
     if (meses < 0) {
         meses += 12;
+        años--;
     }
-    let total = años * 12 + meses
-    return total;
+
+    return años * 12 + meses;
 }
-/*Calcula la edad dada una fecha*/
+
+/**
+ * Calcula la edad de una persona dado su fecha de nacimiento.
+ * @param {Date} fecha - Fecha de nacimiento
+ * @returns {number} Edad en años completos
+ */
 function calcularEdad(fecha) {
-    let hoy = new Date();
-    let cumple = new Date(fecha);
-    let edad = hoy.getFullYear() - cumple.getFullYear();
-    if (hoy.getMonth() < cumple.getMonth()) {
+    const hoy = new Date();
+    let edad = hoy.getFullYear() - fecha.getFullYear();
+
+    if (hoy.getMonth() < fecha.getMonth() ||
+        (hoy.getMonth() === fecha.getMonth() && hoy.getDate() < fecha.getDate())) {
         edad--;
-    } else {
-        if (hoy.getMonth() === cumple.getMonth()) {
-            if (hoy.getDate() < cumple.getDate()) {
-                edad--;
-            }
-        }
     }
+
     return edad;
 }

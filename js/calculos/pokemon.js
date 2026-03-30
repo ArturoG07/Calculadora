@@ -1,10 +1,20 @@
+// Elementos del DOM para ataque y defensa
 const atq = document.getElementById("ATQ");
 const def1 = document.getElementById("DEF1");
 const def2 = document.getElementById("DEF2");
+
+// Botones de selección de tipo y contenedores de Pokémon
 const botones = document.querySelectorAll('.botonPokemon');
 const contenedores = document.querySelectorAll('.pkm');
-const tipos = ["normal","lucha","volador","veneno","tierra","roca","bicho","fantasma","acero","fuego","agua","planta","electrico","psiquico","hielo","dragon","siniestro","hada"];
-// Tabla de multiplicadores por tipo (orden según el array tipos)
+
+// Lista de tipos de Pokémon
+const tipos = [
+    "normal","lucha","volador","veneno","tierra","roca","bicho","fantasma",
+    "acero","fuego","agua","planta","electrico","psiquico","hielo","dragon",
+    "siniestro","hada"
+];
+
+// Tabla de efectividad (multiplicadores) según el tipo atacante y defensor
 const efectividad = {
     normal:    [1,1,1,1,1,0.5,1,0,0.5,1,1,1,1,1,1,1,1,1],
     lucha:     [2,1,0.5,0.5,1,2,0.5,0,2,1,1,1,1,0.5,2,1,2,0.5],
@@ -25,6 +35,8 @@ const efectividad = {
     siniestro: [1,0.5,1,1,1,1,1,2,1,1,1,1,1,2,1,1,0.5,0.5],
     hada:      [1,2,1,0.5,1,1,1,1,0.5,1,1,1,1,1,1,2,2,1]
 };
+
+// Map de imágenes a tipos de Pokémon
 const imagenATipo = {
     "Pokemon_Type_Icon_Normal.png": "normal",
     "Pokemon_Type_Icon_Bug.png": "bicho",
@@ -45,133 +57,66 @@ const imagenATipo = {
     "Pokemon_Type_Icon_Steel.png": "acero",
     "Pokemon_Type_Icon_Water.png": "agua"
 };
-atq.addEventListener("click", function() {
-    actual = 1;
-})
-def1.addEventListener("click", function() {
-    actual = 2;
-})
-def2.addEventListener("click", function() {
-    actual = 3;
-})
 
+// Variables de control de selección (1 = ataque, 2/3 = defensa)
+let actual = 1;
+
+// Eventos de selección de ataque y defensa
+atq.addEventListener("click", () => actual = 1);
+def1.addEventListener("click", () => actual = 2);
+def2.addEventListener("click", () => actual = 3);
+
+// Selección de contenedores activos
 contenedores.forEach(cont => {
     cont.addEventListener('click', () => {
         contenedores.forEach(c => c.classList.remove('contenedorPokemonActivo'));
-
         cont.classList.add('contenedorPokemonActivo');
     });
 });
+
+// Cambio de tipo de Pokémon al hacer clic en un botón
 botones.forEach(boton => {
     boton.addEventListener('click', () => {
-        let contenedor = document.querySelector('.contenedorPokemonActivo');
-        switch (boton.id) {
-            case 'normal':
-                contenedor.style.backgroundImage = "url('img/Pokemon_Type_Icon_Normal.png')";
-                break;
-            case 'bicho':
-                contenedor.style.backgroundImage = "url('img/Pokemon_Type_Icon_Bug.png')";
-                break;
-            case 'siniestro':
-                contenedor.style.backgroundImage = "url('img/Pokemon_Type_Icon_Dark.png')";
-                break;
-            case 'dragon':
-                contenedor.style.backgroundImage = "url('img/Pokemon_Type_Icon_Dragon.png')";
-                break;
-            case 'electrico':
-                contenedor.style.backgroundImage = "url('img/Pokemon_Type_Icon_Electric.png')";
-                break;
-            case 'hada':
-                contenedor.style.backgroundImage = "url('img/Pokemon_Type_Icon_Fairy.png')";
-                break;
-            case 'lucha':
-                contenedor.style.backgroundImage = "url('img/Pokemon_Type_Icon_Fighting.png')";
-                break;
-            case 'fuego':
-                contenedor.style.backgroundImage = "url('img/Pokemon_Type_Icon_Fire.png')";
-                break;
-            case 'volador':
-                contenedor.style.backgroundImage = "url('img/Pokemon_Type_Icon_Flying.png')";
-                break;
-            case 'fantasma':
-                contenedor.style.backgroundImage = "url('img/Pokemon_Type_Icon_Ghost.png')";
-                break;
-            case 'planta':
-                contenedor.style.backgroundImage = "url('img/Pokemon_Type_Icon_Grass.png')";
-                break;
-            case 'tierra':
-                contenedor.style.backgroundImage = "url('img/Pokemon_Type_Icon_Ground.png')";
-                break;
-            case 'hielo':
-                contenedor.style.backgroundImage = "url('img/Pokemon_Type_Icon_Ice.png')";
-                break;
-            case 'veneno':
-                contenedor.style.backgroundImage = "url('img/Pokemon_Type_Icon_Poison.png')";
-                break;
-            case 'psiquico':
-                contenedor.style.backgroundImage = "url('img/Pokemon_Type_Icon_Psychic.png')";
-                break;
-            case 'roca':
-                contenedor.style.backgroundImage = "url('img/Pokemon_Type_Icon_Rock.png')";
-                break;
-            case 'acero':
-                contenedor.style.backgroundImage = "url('img/Pokemon_Type_Icon_Steel.png')";
-                break;
-            case 'agua':
-                contenedor.style.backgroundImage = "url('img/Pokemon_Type_Icon_Water.png')";
-                break;
-        }
+        const contenedor = document.querySelector('.contenedorPokemonActivo');
+        if (!contenedor) return;
+
+        const imgUrl = `img/Pokemon_Type_Icon_${boton.id.charAt(0).toUpperCase() + boton.id.slice(1)}.png`;
+        contenedor.style.backgroundImage = `url('${imgUrl}')`;
     });
 });
+
+// Obtiene el tipo de Pokémon según la imagen de fondo del contenedor
 function obtenerTipoPorImagen(contenedor) {
-    const url = contenedor.style.backgroundImage; // ej: url("img/Pokemon_Type_Icon_Fire.png")
-    if (!url) return null;
-    const nombreArchivo = url.match(/Pokemon_Type_Icon_\w+\.png/);
-    if (!nombreArchivo) return null;
-    return imagenATipo[nombreArchivo[0]];
+    if (!contenedor || !contenedor.style.backgroundImage) return null;
+    const match = contenedor.style.backgroundImage.match(/Pokemon_Type_Icon_\w+\.png/);
+    return match ? imagenATipo[match[0]] : null;
 }
+
+// Calcula el multiplicador de daño de un ataque según tipos
 function calcularAtaquePokemon() {
-    let tipoAtq = obtenerTipoPorImagen(atq);
-    let tipodef1 = obtenerTipoPorImagen(def1);
-    let tipodef2 = obtenerTipoPorImagen(def2);
+    const tipoAtq = obtenerTipoPorImagen(atq);
+    const tipodef1 = obtenerTipoPorImagen(def1);
+    const tipodef2 = obtenerTipoPorImagen(def2);
 
     if (!tipoAtq) {
         console.log("No se ha seleccionado tipo de ataque.");
-        return 1; // por defecto neutral
+        return;
     }
 
     let multiplicador = 1;
 
-    if (tipodef1) {
-        const indiceDef1 = tipos.indexOf(tipodef1);
-        if (indiceDef1 >= 0) {
-            multiplicador *= efectividad[tipoAtq][indiceDef1];
-        }
-    }
+    if (tipodef1) multiplicador *= efectividad[tipoAtq][tipos.indexOf(tipodef1)];
+    if (tipodef2) multiplicador *= efectividad[tipoAtq][tipos.indexOf(tipodef2)];
 
-    if (tipodef2) {
-        const indiceDef2 = tipos.indexOf(tipodef2);
-        if (indiceDef2 >= 0) {
-            multiplicador *= efectividad[tipoAtq][indiceDef2];
-        }
-    }
     let textoEfectividad;
+    if (multiplicador === 0) textoEfectividad = "No es eficaz";
+    else if (multiplicador < 1) textoEfectividad = "Poco eficaz";
+    else if (multiplicador === 1) textoEfectividad = "Normal";
+    else textoEfectividad = "Muy eficaz";
 
-    if (multiplicador === 0) {
-        textoEfectividad = "No es eficaz";
-    } else if (multiplicador < 1) {
-        textoEfectividad = "Poco eficaz";
-    } else if (multiplicador === 1) {
-        textoEfectividad = "Normal";
-    } else if (multiplicador > 1) {
-        textoEfectividad = "Muy eficaz";
-    }
-    obtenerPantallaActiva().textContent = `Multiplicador: ${multiplicador}
-    \nEfectividad: ${textoEfectividad}`;
-    if (tipodef2) {
-        añadirHistorial(`Ataque de ${tipoAtq} a ${tipodef1} y ${tipodef2}`);
-    }
-    else {
-        añadirHistorial(`Ataque de ${tipoAtq} a ${tipodef1}`);
-    }
+    obtenerPantallaActiva().textContent = `Multiplicador: ${multiplicador}\nEfectividad: ${textoEfectividad}`;
+
+    // Registro en historial
+    const defText = tipodef2 ? `${tipodef1} y ${tipodef2}` : tipodef1;
+    añadirHistorial(`Ataque de ${tipoAtq} a ${defText}`);
 }

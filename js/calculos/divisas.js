@@ -1,38 +1,61 @@
-/*Cambia entre divisas para la calculadora de divisas*/
-async function cambioDivisa(){
-    let pantalla = obtenerPantallaActiva();
-    if (document.getElementById("divisa").value == "" ) {
+/**
+ * 📌 divisas.js
+ * Funciones para la calculadora de divisas:
+ * - cambioDivisa: realiza la conversión usando la API de ExchangeRate.
+ * - mostrarDivisas: alterna la visualización del panel de divisas.
+ */
+
+const API_KEY_DIVISAS = "88e0042c21f317cee972b2d1"; // Clave de la API de ExchangeRate
+
+/**
+ * Convierte la cantidad mostrada en pantalla de una divisa a otra.
+ * Usa la API de ExchangeRate para obtener el tipo de cambio actual.
+ */
+async function cambioDivisa() {
+    const pantalla = obtenerPantallaActiva();
+    const divisa = document.getElementById("divisa").value;
+    const divisaConvertir = document.getElementById("divisaConvertir").value;
+    const cantidad = parseFloat(pantalla.textContent);
+
+    // Validación de campos
+    if (!divisa || !divisaConvertir) {
         pantalla.textContent = "❌ Error al obtener cambio, seleccione divisa";
-    } else {
-        if (document.getElementById("divisaConvertir").value == "" ) {
-            pantalla.textContent = "❌ Error al obtener cambio, seleccione divisa";
-        }
+        return;
     }
-    let divisa = document.getElementById("divisa").value;
-    let divisaConvertir = document.getElementById("divisaConvertir").value;
-    let cantidad = pantalla.textContent;
-    const API_KEY_DIVISAS = "88e0042c21f317cee972b2d1";
 
     const url = `https://v6.exchangerate-api.com/v6/${API_KEY_DIVISAS}/latest/${divisa}`;
 
     try {
         const respuesta = await fetch(url);
-        if (!respuesta.ok) {
-            throw new Error("Divisa no encontrada");
-        }
-        const datos = await respuesta.json();
 
+        if (!respuesta.ok) {
+            throw new Error("Divisa no encontrada en la API");
+        }
+
+        const datos = await respuesta.json();
         const cambio = datos.conversion_rates[divisaConvertir];
-        let final = cantidad*cambio;
-        pantalla.textContent = final;
-        let textoOperacion = `${cantidad} ${divisa} a ${divisaConvertir}`;
+
+        if (cambio === undefined) {
+            throw new Error("Tipo de cambio no disponible");
+        }
+
+        // Calcular y mostrar resultado
+        const resultado = cantidad * cambio;
+        pantalla.textContent = resultado;
+
+        // Guardar operación en historial
+        const textoOperacion = `${cantidad} ${divisa} a ${divisaConvertir}`;
         añadirHistorial(textoOperacion);
-    }
-    catch (error) {
+
+    } catch (error) {
         pantalla.textContent = "❌ Error al obtener cambio";
-        return null;
+        console.error("Error en cambioDivisa:", error);
     }
 }
+
+/**
+ * Muestra u oculta el contenedor de divisas en la UI.
+ */
 function mostrarDivisas() {
     const contenedor = document.getElementById("divisas");
     const divisa = document.getElementById("mostrarDivisas");
