@@ -117,7 +117,7 @@ Lógica general de la aplicación:
 - **funcionalidadTeclado.js** → Soporte de entrada por teclado
 - **generales.js** → Funciones globales reutilizables
 - **historial.js** → Gestión del historial
-- **resoluciones.js** → Adaptación a diferentes tamaños de pantalla
+- **resoluciones.js** → función que relaciona las calculadoras y sus funciones al resolver
 
 ---
 
