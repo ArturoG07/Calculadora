@@ -65,7 +65,7 @@ function calculoInteres() {
  * @param {number} interes - Tasa de interés en formato decimal
  * @param {string} tipo - "Simple" o "Compuesto"
  * @param {number} anios - Número de años
- * @returns {true|string} True si todo es válido, mensaje de error si no
+ * @returns {true|string} True si es válido, mensaje de error si no
  */
 function comprobarParametrosInteres(capital, interes, tipo, anios) {
     if (!capital || isNaN(capital) || capital <= 0) return "Introduzca un capital válido";
