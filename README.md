@@ -1,10 +1,28 @@
-## Contacto: arturogregori836@gmail.com
-## Github: https://github.com/ArturoG07
-
 # Calculadoras Multifunción
-
 Este proyecto consiste en un conjunto de **10 calculadoras interactivas** con interfaz gráfica y funcionalidades avanzadas. Incluye un carrusel para cambiar entre calculadoras y la opción de alternar entre **distintos estilos**.
+## Autor
+- Arturo Gregori 
+- Email: arturogregori836@gmail.com
+- GitHub: ArturoG07
 
+## Licencia
+MIT License – puede usarse, modificarse y distribuirse libremente, con atribución.
+
+## Contacto
+Para dudas, sugerencias o reportes de errores: arturogregori836@gmail.com
+## Manual de Programador
+Este proyecto incluye un **Manual de Programador** destinado a desarrolladores que quieran entender, mantener o ampliar la aplicación.  
+El manual describe:
+
+- Estructura de carpetas y archivos (JS, CSS, imágenes).
+- Cómo añadir nuevas calculadoras.
+- Cómo añadir nuevos estilos/temas.
+- Flujo de la aplicación y dependencias entre módulos.
+- Convenciones de nombres y buenas prácticas.
+
+Se encuentra en:  
+`docs/manual.md`.  
+Se recomienda leerlo antes de realizar cambios importantes en el código.
 ## 🖥️ Calculadoras Incluidas
 
 1. **Calculadora Básica**  
@@ -51,104 +69,6 @@ dado su peso, altura, edad, sexo, nivel de actividad, objetivo, y preferencia de
 - **Menu de calculadoras con vinculos**
 - **Boton para limpiar las pantallas**
 - **localstorage**: para guardar la preferencia de estilo y el historial
-
-## 📂 Estructura del Proyecto
-
-### 📁 Raíz
-- **index.html** → Estructura principal de la aplicación
-- **README.md** → Documentación del proyecto
-- **.gitignore** → Archivos ignorados por Git
-
----
-
-### 📁 /css
-Contiene todos los estilos organizados por responsabilidad.
-
-#### 📁 /componentes
-Estilos reutilizables de elementos UI:
-- **botones.css**
-- **forms.css**
-
-#### 📁 /funcionalidades
-Estilos de funcionalidades concretas:
-- **carrusel.css**
-- **historial.css**
-- **infoCalculadoras.css**
-
-#### 📁 /layout
-Estructura y distribución:
-- **contenedoresEspecificos.css**
-- **contenedoresGenerales.css**
-
-#### 📁 /modos
-Temas visuales de la aplicación:
-- **aurora.css**
-- **blanco.css**
-- **blue.css**
-- **cyber.css**
-- **green.css**
-- **negro.css**
-- **neon.css**
-- **pastel.css**
-
----
-
-### 📁 /js
-
-#### 📁 /calculos
-Scripts de cada calculadora:
-- **Basica.js**
-- **conversiones.js**
-- **deportiva.js**
-- **divisas.js**
-- **fechas.js**
-- **IMC.js**
-- **interes.js**
-- **macros.js**
-- **pokemon.js**
-- **programador.js**
-
----
-
-#### 📁 /Funcionalidades
-Lógica general de la aplicación:
-- **carrusel.js** → Control del carrusel
-- **estilos.js** → Cambio de temas/modos
-- **funcionalidadTeclado.js** → Soporte de entrada por teclado
-- **generales.js** → Funciones globales reutilizables
-- **historial.js** → Gestión del historial
-- **resoluciones.js** → función que relaciona las calculadoras y sus funciones al resolver
-
----
-
-#### 📁 /loads
-Inicialización de la aplicación:
-- **loadsCalculadoras.js** → Carga de calculadoras
-- **loadsListeners.js** → Registro de eventos
-- **start.js** → Punto de entrada de la app
-
----
-
-### 📁 /img
-Imágenes utilizadas en la aplicación (principalmente iconos de tipos Pokémon):
-- **Pokemon_Type_Icon_Bug.png**
-- **Pokemon_Type_Icon_Dark.png**
-- **Pokemon_Type_Icon_Dragon.png**
-- **Pokemon_Type_Icon_Electric.png**
-- **Pokemon_Type_Icon_Fairy.png**
-- **Pokemon_Type_Icon_Fighting.png**
-- **Pokemon_Type_Icon_Fire.png**
-- **Pokemon_Type_Icon_Flying.png**
-- **Pokemon_Type_Icon_Ghost.png**
-- **Pokemon_Type_Icon_Grass.png**
-- **Pokemon_Type_Icon_Ground.png**
-- **Pokemon_Type_Icon_Ice.png**
-- **Pokemon_Type_Icon_Normal.png**
-- **Pokemon_Type_Icon_Poison.png**
-- **Pokemon_Type_Icon_Psychic.png**
-- **Pokemon_Type_Icon_Rock.png**
-- **Pokemon_Type_Icon_Steel.png**
-- **Pokemon_Type_Icon_Water.png**
 
 ## 📝 Notas del Proyecto
 

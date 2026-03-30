@@ -1,5 +1,10 @@
 
 function cargarEventListeners() {
+    cargarListenersGenerales();
+    cargarListenersEspecificos();
+
+}
+function cargarListenersGenerales() {
     document.querySelectorAll('.botonOp').forEach(el => {
         el.addEventListener('click', e => {
             apretarBoton(e.target.textContent);
@@ -40,16 +45,6 @@ function cargarEventListeners() {
             conversion(el.textContent);
         })
     })
-    document.getElementById("mostrarDivisas").addEventListener("click", mostrarDivisas);
-    document.getElementById("Base").addEventListener("click", cambiarBase);
-    document.getElementById("categoria").addEventListener("change", function() {
-        actualizarOpciones(document.getElementById("categoria").value);
-    });
-    document.getElementById("limpiar").addEventListener("click", function() {
-        document.querySelectorAll('.pantalla').forEach(function(elemento) {
-            elemento.textContent = "";
-        });
-    });
     /*Comprueba que haya mas calculadoras, pasa a la siquiente y actualiza el carrusel*/
     document.querySelector('.next').addEventListener('click', () => {
         if (currentIndex < cards.length - 1) {
@@ -64,9 +59,51 @@ function cargarEventListeners() {
             updateCarousel();
         }
     });
+
     window.addEventListener("load", () => {
         updateCarousel();
         activarCalculadoraPorClick()
     });
     window.addEventListener("resize", updateCarousel);
+    document.getElementById("calculadorasBoton").addEventListener("click", mostrarCalculadoras);
+    document.getElementById("botonHist").addEventListener("click", cambiarVista);
+    document.getElementById("inf").addEventListener("click", mostrarInfo);
+    document.getElementById("ocultarInfo").addEventListener("click", ocultarInfo);
+    document.querySelector(".toggle").addEventListener("click", cambiarTema);
+    document.getElementById("limpiar").addEventListener("click", function() {
+        document.querySelectorAll('.pantalla').forEach(function(elemento) {
+            elemento.textContent = "";
+        });
+    });
+
+}
+function cargarListenersEspecificos() {
+    document.getElementById("mostrarDivisas").addEventListener("click", mostrarDivisas);
+    document.getElementById("Base").addEventListener("click", cambiarBase);
+    document.getElementById("categoria").addEventListener("change", function() {
+        actualizarOpciones(document.getElementById("categoria").value);
+    });
+    // Selección de contenedores activos
+    document.querySelectorAll('.pkm').forEach(cont => {
+        cont.addEventListener('click', () => {
+            document.querySelectorAll('.pkm').forEach(c => c.classList.remove('contenedorPokemonActivo'));
+            cont.classList.add('contenedorPokemonActivo');
+        });
+    });
+    // Eventos de selección de ataque y defensa
+    document.getElementById("ATQ").addEventListener("click", () => actual = 1);
+    document.getElementById("DEF1").addEventListener("click", () => actual = 2);
+    document.getElementById("DEF2").addEventListener("click", () => actual = 3);
+
+    // Cambio de tipo de Pokémon al hacer clic en un botón
+    document.querySelectorAll('.botonPokemon').forEach(boton => {
+        boton.addEventListener('click', () => {
+            const contenedor = document.querySelector('.contenedorPokemonActivo');
+            if (!contenedor) return;
+
+            const imgUrl = `img/Pokemon_Type_Icon_${boton.id.charAt(0).toUpperCase() + boton.id.slice(1)}.png`;
+            contenedor.style.backgroundImage = `url('${imgUrl}')`;
+        });
+    });
+
 }

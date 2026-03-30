@@ -35,14 +35,14 @@ document.addEventListener('DOMContentLoaded', async () => {
         "js/calculos/deportiva.js",
 
         // funcionalidades
-        "js/Funcionalidades/carrusel.js",
-        "js/Funcionalidades/historial.js",
-        "js/Funcionalidades/estilos.js",
-        "js/Funcionalidades/funcionalidadTeclado.js",
-        "js/Funcionalidades/resoluciones.js",
-        "js/Funcionalidades/menuCalcs.js",
-        "js/Funcionalidades/infoCalcs.js",
-        "js/Funcionalidades/generales.js",
+        "js/funcionalidades/carrusel.js",
+        "js/funcionalidades/historial.js",
+        "js/funcionalidades/estilos.js",
+        "js/funcionalidades/funcionalidadTeclado.js",
+        "js/funcionalidades/resoluciones.js",
+        "js/funcionalidades/menuCalcs.js",
+        "js/funcionalidades/infoCalcs.js",
+        "js/funcionalidades/generales.js",
 
         // loads
         "js/loads/loadsListeners.js"

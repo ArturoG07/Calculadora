@@ -61,29 +61,6 @@ const imagenATipo = {
 // Variables de control de selección (1 = ataque, 2/3 = defensa)
 let actual = 1;
 
-// Eventos de selección de ataque y defensa
-atq.addEventListener("click", () => actual = 1);
-def1.addEventListener("click", () => actual = 2);
-def2.addEventListener("click", () => actual = 3);
-
-// Selección de contenedores activos
-contenedores.forEach(cont => {
-    cont.addEventListener('click', () => {
-        contenedores.forEach(c => c.classList.remove('contenedorPokemonActivo'));
-        cont.classList.add('contenedorPokemonActivo');
-    });
-});
-
-// Cambio de tipo de Pokémon al hacer clic en un botón
-botones.forEach(boton => {
-    boton.addEventListener('click', () => {
-        const contenedor = document.querySelector('.contenedorPokemonActivo');
-        if (!contenedor) return;
-
-        const imgUrl = `img/Pokemon_Type_Icon_${boton.id.charAt(0).toUpperCase() + boton.id.slice(1)}.png`;
-        contenedor.style.backgroundImage = `url('${imgUrl}')`;
-    });
-});
 
 // Obtiene el tipo de Pokémon según la imagen de fondo del contenedor
 function obtenerTipoPorImagen(contenedor) {

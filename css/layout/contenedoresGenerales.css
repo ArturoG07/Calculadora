@@ -58,7 +58,7 @@ h2 {
     overflow-y: auto;
     border: 3px solid black;
     white-space: pre-line;
-    line-height: 0.6;
+    line-height: 1;
 }
 
 /* ===== Botones de menú de calculadoras ===== */
