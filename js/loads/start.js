@@ -40,6 +40,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         "js/Funcionalidades/estilos.js",
         "js/Funcionalidades/funcionalidadTeclado.js",
         "js/Funcionalidades/resoluciones.js",
+        "js/Funcionalidades/menuCalcs.js",
+        "js/Funcionalidades/infoCalcs.js",
         "js/Funcionalidades/generales.js",
 
         // loads
@@ -49,7 +51,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     await cargarCalculadoras();
     await cargarScriptsEnOrden(scripts);
     await cargarEventListeners();
-    cargaFinal();
+    await cargaFinal();
 });
 async function cargarEstilos(estilos) {
     for (const href of estilos) {

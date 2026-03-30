@@ -1,4 +1,3 @@
-let actual;
 let temas = [];
 
 // Recupera el tema seleccionado previamente desde localStorage
