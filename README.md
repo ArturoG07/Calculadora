@@ -55,7 +55,7 @@ dado su peso, altura, edad, sexo, nivel de actividad, objetivo, y preferencia de
    - Convierte una diversa cantidad de unidades
 9. **Deportiva**
   - Permite calcular el rendimiento deportivo en m/s y km/h dada una cantida de kilometros, horas, minutos, y segundos
-0**Pokemon**
+10. **Pokemon**
    - Permite calcular la efectividad de un ataque de un tipo a otro
 ## 🎨 Funcionalidades Generales
 
