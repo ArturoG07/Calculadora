@@ -1,5 +1,7 @@
-/*Muestra el contenedor del historial, cambia de sitio la base de programador, el boton de historial,
-y cambia el texto a ocultar*/
+/**
+ * Muestra el contenedor del historial, cambia de sitio la base de programador, el boton de historial,
+    y cambia el texto a ocultar
+ */
 function mostrarHistorial() {
     document.getElementById("historial").style.display = "block";
     document.getElementById("botonHist").textContent = "Ocultar Historial";
@@ -7,7 +9,7 @@ function mostrarHistorial() {
     document.getElementById("botonHist").style.bottom ="10%";
     document.getElementById("Base").style.left = "40%";
 }
-/*Oculta el contenedor de historial, y devuelve los botones a su lugar original*/
+/**Oculta el contenedor de historial, y devuelve los botones a su lugar original*/
 function ocultarHistorial () {
     document.getElementById("historial").style.display = "none";
     document.getElementById("botonHist").textContent = "Mostrar historial";
@@ -16,7 +18,7 @@ function ocultarHistorial () {
     document.getElementById("Base").style.left = "5px";
     document.getElementById("Base").style.top = "20px";
 }
-/*Añade una operacion al historial, pasandole como parametro el texto de la operacon, el resultado lo coge de la pantalla*/
+/**Añade una operacion al historial, pasandole como parametro el texto de la operacon, el resultado lo coge de la pantalla*/
 function añadirHistorial(textoOperacion) {
     let miDiv = document.createElement("div");
     miDiv.classList.add("operacion");
@@ -24,7 +26,7 @@ function añadirHistorial(textoOperacion) {
     document.getElementById("historial").prepend(miDiv);
     localStorage.setItem("historial", document.getElementById("historial").innerHTML)
 }
-/*Muestra o oculta el historial*/
+/**Muestra o oculta el historial*/
 function cambiarVista() {
     let historial = document.getElementById("botonHist");
     if (historial.textContent == "Mostrar historial") {
@@ -33,4 +35,3 @@ function cambiarVista() {
         ocultarHistorial();
     }
 }
-document.getElementById("historial").innerHTML = localStorage.getItem("historial");

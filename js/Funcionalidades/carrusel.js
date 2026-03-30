@@ -1,15 +1,15 @@
-/*Recorrido del carrusel*/
+// Referencias principales del carrusel
 const track = document.querySelector('.carousel-track');
-/*Cada elemento calculadora incluido en el carrusel*/
-const cards = document.querySelectorAll('.calculadora');
-/*Boton de anterior*/
-const prevBtn = document.querySelector('.prev');
-/*Boton de siguiente*/
-const nextBtn = document.querySelector('.next');
-/*Indice*/
+const cards = document.querySelectorAll('.calculadora'); // Cada calculadora en el carrusel
+const prevBtn = document.querySelector('.prev'); // Botón anterior
+const nextBtn = document.querySelector('.next'); // Botón siguiente
+
+// Índice actual del carrusel
 let currentIndex = 0;
 
-/*Permite cambiar calculadora por click*/
+/* ------------------------------
+   Activar calculadora por click
+--------------------------------- */
 function activarCalculadoraPorClick() {
     cards.forEach((card, index) => {
         card.addEventListener("click", () => {
@@ -21,61 +21,73 @@ function activarCalculadoraPorClick() {
     });
 }
 
-/*Funcion principal del carrusel, quita a todos la clase activa, y se la asigna al indice actual*/
+/* ------------------------------
+   Actualiza el carrusel visualmente
+--------------------------------- */
 function updateCarousel() {
-    cards.forEach(calculadora => calculadora.classList.remove('activa'));
+    // Remover clase 'activa' de todas las calculadoras
+    cards.forEach(card => card.classList.remove('activa'));
+    // Asignar clase 'activa' a la calculadora actual
     cards[currentIndex].classList.add('activa');
 
+    // Centrar la calculadora activa en el carrusel
     const offset = -((cards[currentIndex].offsetLeft) - (track.offsetWidth / 2) + (cards[currentIndex].offsetWidth / 2));
     track.style.transform = `translateX(${offset}px)`;
-    /*Comprueba si esta en la calculadora de programador, en caso negativo pasa la
-    base a decimal y la oculta, sino la muestra*/
-    if (currentIndex != 1) {
-        document.getElementById("Base").textContent = "Decimal";
-        document.getElementById("Base").style.display = "none";
-        document.getElementById("Base").style.left = "5px";
-        document.getElementById("Base").style.top = "20px";
-    } else {
-        document.getElementById("Base").style.display = "block";
-        document.getElementById("Base").style.left = "5px";
-        document.getElementById("Base").style.top = "20px";
-    }
-    if (currentIndex != 2) {
-        document.getElementById("mostrarDivisas").style.display = "none";
-        document.getElementById("divisas").style.display = "none";
-        document.getElementById("mostrarDivisas").style.left = "5px";
-        document.getElementById("mostrarDivisas").style.top = "20px";
-    } else {
-        document.getElementById("mostrarDivisas").style.display = "block";
-    }
-    /*Al finalizar de actualizar el carrusel, actualiza los botones y el contenido de informacion*/
+
+    // Mostrar u ocultar elementos especiales según la calculadora activa
+    handleElementosEspeciales();
+
+    // Actualizar interactividad de botones, inputs y selects
     actualizarBotones();
+
+    // Cargar contenido informativo relacionado con la calculadora activa
     cargarContenidoInfo(document.querySelector(".calculadora.activa"));
 }
 
+/* ------------------------------
+   Mostrar u ocultar elementos especiales según la calculadora
+--------------------------------- */
+function handleElementosEspeciales() {
+    // Base para calculadora de programador
+    const baseElem = document.getElementById("Base");
+    if (currentIndex === 1) { // Programador
+        baseElem.style.display = "block";
+    } else {
+        baseElem.style.display = "none";
+        baseElem.textContent = "Decimal"; // Reset base
+    }
+    baseElem.style.left = "5px";
+    baseElem.style.top = "20px";
+
+    // Divisas
+    const mostrarDivisas = document.getElementById("mostrarDivisas");
+    const divisas = document.getElementById("divisas");
+    if (currentIndex === 2) { // Divisas
+        mostrarDivisas.style.display = "block";
+    } else {
+        mostrarDivisas.style.display = "none";
+        divisas.style.display = "none";
+    }
+    mostrarDivisas.style.left = "5px";
+    mostrarDivisas.style.top = "20px";
+}
+
+/* ------------------------------
+   Activar / desactivar inputs y botones según calculadora activa
+--------------------------------- */
 function actualizarBotones() {
-    const calculadoras = document.querySelectorAll('.calculadora');
-
-    calculadoras.forEach(calc => {
-        const botones = calc.querySelectorAll('.boton');
-        const inputs = calc.querySelectorAll('input');
-        const selects = calc.querySelectorAll('select');
-
+    cards.forEach(calc => {
         const activa = calc.classList.contains('activa');
 
-        // Activar / desactivar botones
-        botones.forEach(btn => {
+        // Botones
+        calc.querySelectorAll('.boton').forEach(btn => {
             btn.style.pointerEvents = activa ? 'auto' : 'none';
         });
 
-        // Activar / desactivar inputs
-        inputs.forEach(input => {
-            input.disabled = !activa;
-        });
+        // Inputs
+        calc.querySelectorAll('input').forEach(input => input.disabled = !activa);
 
-        // Activar / desactivar selects
-        selects.forEach(select => {
-            select.disabled = !activa;
-        });
+        // Selects
+        calc.querySelectorAll('select').forEach(select => select.disabled = !activa);
     });
 }

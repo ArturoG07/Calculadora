@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     await cargarCalculadoras();
     await cargarScriptsEnOrden(scripts);
     await cargarEventListeners();
-    actualizarOpciones(document.getElementById("categoria").value);
+    cargaFinal();
 });
 async function cargarEstilos(estilos) {
     for (const href of estilos) {
@@ -97,4 +97,9 @@ async function cargarCalculadoras(){
     } catch (error) {
         console.error("Error cargando contenidos:", error);
     }
+}
+function cargaFinal() {
+    actualizarOpciones(document.getElementById("categoria").value);
+    añadirCalculadorasMenu();
+    document.getElementById("historial").innerHTML = localStorage.getItem("historial");
 }

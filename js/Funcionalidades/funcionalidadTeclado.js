@@ -7,37 +7,70 @@ document.addEventListener('keydown', function(event) {
     const pantalla = obtenerPantallaActiva();
     const tag = document.activeElement.tagName.toLowerCase();
 
+    // Evitar interferir cuando el usuario escribe en input, textarea o select
+    const enInput = (tag === 'input' || tag === 'textarea' || tag === 'select');
+
+    // -----------------------------------
+    // Teclas de edición
+    // -----------------------------------
     if (tecla === "Delete") {
-        pantalla.textContent = "";
+        borrar(); // Limpiar pantalla
+        return;
     }
-    if (calculadorasNumeros.includes(calc.id) && tecla >= 0 && tecla <= 9) {
+    if (tecla === "Backspace") {
+        borrarUltimo(); // Borrar último carácter
+        return;
+    }
+
+    // -----------------------------------
+    // Teclas de números
+    // -----------------------------------
+    if (calculadorasNumeros.includes(calc.id) && tecla >= '0' && tecla <= '9') {
         apretarBoton(tecla);
+        return;
     }
-    if (calculadorasOperadores.includes(calc.id) && (tecla === '.' || tecla === '+' || tecla === '-' || tecla === '*' || tecla === '/' || tecla === '(' || tecla === ')')) {
+
+    // -----------------------------------
+    // Teclas de operadores
+    // -----------------------------------
+    if (calculadorasOperadores.includes(calc.id) && ['.', '+', '-', '*', '/', '(', ')'].includes(tecla)) {
         apretarBoton(tecla);
+        return;
     }
-    if (calculadoraProgramador === calc.id) {
-            if (tecla.toUpperCase() === 'A' || tecla.toUpperCase() === 'B' ||tecla.toUpperCase() === 'C'
-            ||tecla.toUpperCase() === 'D' || tecla.toUpperCase() === 'E' || tecla.toUpperCase() === 'F' ) {
-                apretarBoton(tecla.toUpperCase());
-            }
+
+    // -----------------------------------
+    // Teclas de calculadora programador (hex)
+    // -----------------------------------
+    if (calc.id === calculadoraProgramador) {
+        if ("ABCDEF".includes(tecla.toUpperCase())) {
+            apretarBoton(tecla.toUpperCase());
+            return;
+        }
     }
+
+    // -----------------------------------
+    // Ejecutar cálculo
+    // -----------------------------------
     if (tecla === 'Enter') {
         calcular(calc.id);
+        return;
     }
-    if (tecla === 'Backspace') {
-            borrarUltimo();
-    }
-    if (tecla === 'Delete') {
-            borrar();
-    }
-    if (tecla == "ArrowRight" && !(tag === 'input' || tag === 'textarea' || tag === 'select')){
-        nextBtn.click();
-    }
-    if (tecla == "ArrowLeft" && !(tag === 'input' || tag === 'textarea' || tag === 'select')){
-        prevBtn.click();
-    }
-    if (tecla == " "){
-        cambiarTema();
+
+    // -----------------------------------
+    // Navegación carrusel (ignorar inputs)
+    // -----------------------------------
+    if (!enInput) {
+        if (tecla === "ArrowRight") {
+            nextBtn.click();
+            return;
+        }
+        if (tecla === "ArrowLeft") {
+            prevBtn.click();
+            return;
+        }
+        if (tecla === " ") {
+            cambiarTema();
+            return;
+        }
     }
 });

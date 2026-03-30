@@ -1,3 +1,7 @@
+/**
+ * Asigna a cada calculadora la operacion que le corresponde
+ * @type {{calc1: *, calc2: *, calc3: *, calc4: *, calc5: *, calc6: *, calc7: *, calc8: *, calc9: *, calc10: *}}
+ */
 const calculadoras = {
     calc1: resolverBasica,
     calc2: resolverProgramador,
@@ -11,6 +15,9 @@ const calculadoras = {
     calc10: calcularAtaquePokemon,
 };
 
+/**
+ * Ejecuta la funcion correspondiante a la calculadora
+ */
 function calcular() {
     let calc = document.querySelector(".calculadora.activa");
         if (calculadoras[calc.id]) {
