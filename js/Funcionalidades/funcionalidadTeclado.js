@@ -5,6 +5,7 @@ document.addEventListener('keydown', function(event) {
     const calculadorasOperadores = ["calc1", "calc2"];
     const calculadoraProgramador  = "calc2";
     const pantalla = obtenerPantallaActiva();
+    const tag = document.activeElement.tagName.toLowerCase();
 
     if (tecla === "Delete") {
         pantalla.textContent = "";
@@ -30,10 +31,10 @@ document.addEventListener('keydown', function(event) {
     if (tecla === 'Delete') {
             borrar();
     }
-    if (tecla == "ArrowRight"){
+    if (tecla == "ArrowRight" && !(tag === 'input' || tag === 'textarea' || tag === 'select')){
         nextBtn.click();
     }
-    if (tecla == "ArrowLeft"){
+    if (tecla == "ArrowLeft" && !(tag === 'input' || tag === 'textarea' || tag === 'select')){
         prevBtn.click();
     }
     if (tecla == " "){
