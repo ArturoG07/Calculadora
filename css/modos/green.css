@@ -1,174 +1,246 @@
-/** Tema verde moderno y contrastado */
+/* =========================================
+   ===== TEMA VERDE =====
+   ========================================= */
 
-/*Fondo general*/
+/* ===== Fondo general ===== */
 body.tema-verde {
     background-color: #e8f5e9;
 }
 
-/*Fondo de la calculadora*/
-.tema-verde .calculadora {
-    background-color: #ffffff;
-    border: 3px solid #66bb6a;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
-}
-
-/*Pantalla*/
-.tema-verde .pantalla {
-    background-color: #f1f8f4;
-    border: 2px solid #81c784;
-    color: #1b4332;
-}
-
-/*Botones generales*/
-.tema-verde .boton {
-    background-color: #ffffff;
-    border: 2px solid #a5d6a7;
-    color: #1b4332;
-    transition: all 0.2s ease-in-out;
-}
-
-.tema-verde .boton:hover {
-    background-color: #e8f5e9;
-    border-color: #66bb6a;
-}
-
-/*Botones de operación*/
-.tema-verde .botonOp {
-    background-color: #c8e6c9;
-    border: 2px solid #43a047;
-    color: #1b5e20;
-}
-
-/*Botón CE*/
-.tema-verde .botonCE {
-    background-color: #d32f2f;
-    border: 2px solid #b71c1c;
-    color: white;
-}
-
-/*Botón C*/
-.tema-verde .botonC {
-    background-color: #aed581;
-    border: 2px solid #7cb342;
-    color: #1b4332;
-}
-
-/*Botones hexadecimales*/
-.tema-verde .hex {
-    background-color: #b2dfdb;
-    border: 2px solid #00897b;
-    color: #004d40;
-}
-
-/*Botón Base*/
-.tema-verde #Base , .tema-verde #mostrarDivisas{
-    background-color: #dcedc8;
-    border: 2px solid #689f38;
-    color: #33691e;
-}
-
-/*Botón enviar*/
-.tema-verde .enviar {
-    background-color: #2e7d32;
-    border: 2px solid #1b5e20;
-    color: #ffffff;
-}
-
-/*Botones conversión*/
-.tema-verde .conversion {
-    background-color: #c5e1a5;
-    border: 2px solid #558b2f;
-    color: #33691e;
-}
-
-/*Selectores*/
-.tema-verde .SelectDivisa,
-.tema-verde #tipoCalculo {
-    background-color: #ffffff;
-    border: 2px solid #81c784;
-    color: #1b4332;
-}
-
-/*Botón toggle*/
-.tema-verde .toggle {
-    background-color: #ffffff;
-    border: 3px solid #2e7d32;
-    color: #2e7d32;
-}
-
-/*Botón historial*/
-.tema-verde .botonHist {
-    background-color: #d0f0c0;
-    border: 2px solid #43a047;
-    color: #1b5e20;
-}
-
-/*Título*/
+/* ===== Título ===== */
 .tema-verde h2 {
     color: #1b4332;
 }
 
-/*Contenedor historial*/
-.tema-verde #historial {
-    background-color: #f1f8f4;
-    border: 3px solid #66bb6a;
-    opacity: 1;
-}
-
-/*Operación individual*/
-.tema-verde .operacion {
-    background-color: #ffffff;
-    border: 2px solid #a5d6a7;
-    color: #2e7d32;
-    font-weight: bold;
-}
-
-/*Inputs y selects generales*/
-.tema-verde select,
-.tema-verde input,
-.tema-verde #tipoInteres {
-    background-color: #ffffff;
-    color: #1b4332;
-    border: 2px solid #66bb6a;
-    font-weight: 600;
-}
-
-/* ===== MENU CALCULADORAS ===== */
-
-.tema-verde #calculadoras {
-    background-color: #f1f8f4;
-    border: 3px solid #66bb6a;
+/* ===== Texto de párrafos ===== */
+.tema-verde p {
     color: #1b4332;
 }
 
-.tema-verde .calculadoraMenu, .tema-verde #divisas {
+
+/* =========================================
+   ===== CALCULADORA =====
+   ========================================= */
+
+.tema-verde .calculadora {
+    border: 3px solid #66bb6a;
+
     background-color: #ffffff;
-    border: 2px solid #a5d6a7;
-    color: #2e7d32;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
 }
 
-.tema-verde .calculadoraMenu:hover {
+
+/* ===== Pantalla ===== */
+.tema-verde .pantalla {
+    border: 2px solid #81c784;
+
+    background-color: #f1f8f4;
+    color: #1b4332;
+}
+
+
+/* =========================================
+   ===== BOTONES =====
+   ========================================= */
+
+/* ===== Botones generales ===== */
+.tema-verde .boton {
+    border: 2px solid #a5d6a7;
+
+    background-color: #ffffff;
+    color: #1b4332;
+
+    transition: 0.2s;
+}
+
+.tema-verde .boton:hover {
+    border-color: #66bb6a;
+
     background-color: #e8f5e9;
+}
+
+
+/* ===== Botones de operación ===== */
+.tema-verde .botonOp {
     border: 2px solid #43a047;
+
+    background-color: #c8e6c9;
     color: #1b5e20;
 }
 
-/* ===== PANEL INFORMACION ===== */
+
+/* ===== Botón resultado (=) ===== */
+.tema-verde .resultado {
+    border: 2px solid #1b5e20;
+
+    background-color: #2e7d32;
+    color: #ffffff;
+}
+
+
+/* ===== Botón CE ===== */
+.tema-verde .botonCE {
+    border: 2px solid #b71c1c;
+
+    background-color: #d32f2f;
+    color: #ffffff;
+}
+
+
+/* ===== Botón C ===== */
+.tema-verde .botonC {
+    border: 2px solid #7cb342;
+
+    background-color: #aed581;
+    color: #1b4332;
+}
+
+
+/* ===== Botones hexadecimales ===== */
+.tema-verde .hex {
+    border: 2px solid #00897b;
+
+    background-color: #b2dfdb;
+    color: #004d40;
+}
+
+
+/* ===== Botones de conversión ===== */
+.tema-verde .conversion {
+    border: 2px solid #558b2f;
+
+    background-color: #c5e1a5;
+    color: #33691e;
+}
+
+
+/* ===== Botón enviar ===== */
+.tema-verde .enviar {
+    border: 2px solid #1b5e20;
+
+    background-color: #2e7d32;
+    color: #ffffff;
+}
+
+
+/* ===== Botón base y divisas ===== */
+.tema-verde #Base,
+.tema-verde #mostrarDivisas {
+    border: 2px solid #689f38;
+
+    background-color: #dcedc8;
+    color: #33691e;
+}
+
+
+/* ===== Botón toggle ===== */
+.tema-verde .toggle {
+    border: 3px solid #2e7d32;
+
+    background-color: #ffffff;
+    color: #2e7d32;
+}
+
+
+/* ===== Botón historial ===== */
+.tema-verde .botonHist {
+    border: 2px solid #43a047;
+
+    background-color: #d0f0c0;
+    color: #1b5e20;
+}
+
+
+/* =========================================
+   ===== HISTORIAL =====
+   ========================================= */
+
+.tema-verde #historial {
+    border: 3px solid #66bb6a;
+
+    background-color: #f1f8f4;
+    color: #1b4332;
+    opacity: 1;
+}
+
+.tema-verde .operacion {
+    border: 3px solid #a5d6a7;
+
+    background-color: #ffffff;
+    color: #2e7d32;
+
+    font-weight: bold;
+}
+
+
+/* =========================================
+   ===== INPUTS Y SELECTS =====
+   ========================================= */
+
+.tema-verde select,
+.tema-verde input {
+    border: 3px solid #66bb6a;
+
+    background-color: #ffffff;
+    color: #1b4332;
+
+    font-weight: bolder;
+}
+
+
+/* =========================================
+   ===== MENÚ CALCULADORAS =====
+   ========================================= */
+
+.tema-verde #calculadoras {
+    border: 3px solid #66bb6a;
+
+    background-color: #f1f8f4;
+    color: #1b4332;
+}
+
+.tema-verde .calculadoraMenu {
+    border: 2px solid #a5d6a7;
+
+    background-color: #ffffff;
+    color: #2e7d32;
+
+    cursor: pointer;
+}
+
+.tema-verde .calculadoraMenu:hover {
+    border: 2px solid #43a047;
+
+    background-color: #e8f5e9;
+    color: #1b5e20;
+}
+
+
+/* =========================================
+   ===== PANEL INFORMACIÓN =====
+   ========================================= */
 
 .tema-verde #contInf {
-    background-color: #f1f8f4;
     border: 3px solid #66bb6a;
+
+    background-color: #f1f8f4;
     color: #1b4332;
 }
 
 .tema-verde #inf {
-    background-color: #dcedc8;
     border: 2px solid #689f38;
+
+    background-color: #dcedc8;
     color: #33691e;
+
+    cursor: pointer;
 }
 
 .tema-verde #ocultarInfo {
-    background-color: #ffcdd2;
     border: 2px solid #c62828;
+
+    background-color: #ffcdd2;
     color: #b71c1c;
+
+    cursor: pointer;
 }

@@ -1,104 +1,10 @@
-/* ===== Tema Aurora ===== */
+/* =========================================
+   ===== TEMA AURORA =====
+   ========================================= */
+
+/* ===== Fondo general ===== */
 body.tema-aurora {
-    background-color: #0b0c1a; /* Fondo general oscuro */
-}
-
-/* ===== Fondo de la calculadora ===== */
-.tema-aurora .calculadora {
-    background: linear-gradient(145deg, #1f1c3a, #2b1f4b);
-    border: 3px solid #6a0dad;
-    box-shadow: 0 4px 12px rgba(106, 13, 173, 0.4);
-}
-
-/* ===== Pantalla de la calculadora ===== */
-.tema-aurora .pantalla {
-    background-color: #1a1a2e;
-    border: 2px solid #6a0dad;
-    color: #f0f8ff;
-}
-
-/* ===== Botones generales ===== */
-.tema-aurora .boton {
-    background-color: #3a0ca3;
-    border: 2px solid #7209b7;
-    color: #ffffff;
-    transition: 0.2s;
-}
-
-.tema-aurora .boton:hover {
-    background-color: #7209b7;
-    border-color: #4cc9f0;
-}
-
-/* ===== Botones de operación ===== */
-.tema-aurora .botonOp {
-    background-color: #4cc9f0;
-    border: 2px solid #4361ee;
-    color: #0b0c1a;
-}
-
-/* ===== Botón CE ===== */
-.tema-aurora .botonCE {
-    background-color: #f72585;
-    border: 2px solid #b5179e;
-    color: white;
-}
-
-/* ===== Botón C ===== */
-.tema-aurora .botonC {
-    background-color: #ffb703;
-    border: 2px solid #fb8500;
-    color: #0b0c1a;
-}
-
-/* ===== Botones hexadecimales ===== */
-.tema-aurora .hex {
-    background-color: #7209b7;
-    border: 2px solid #3f37c9;
-    color: #f8f9fa;
-}
-
-/* ===== Botón Base ===== */
-.tema-aurora #Base, .tema-aurora #mostrarDivisas{
-    background-color: #4361ee;
-    border: 2px solid #3a0ca3;
-    color: white;
-}
-
-/* ===== Botón Enviar ===== */
-.tema-aurora .enviar {
-    background-color: #00ffab;
-    border: 2px solid #0d6efd;
-    color: #0b0c1a;
-}
-
-/* ===== Botones de conversión ===== */
-.tema-aurora .conversion {
-    background-color: #90e0ef;
-    border: 2px solid #00b4d8;
-    color: #0b0c1a;
-}
-
-/* ===== Selectores ===== */
-.tema-aurora .SelectDivisa,
-.tema-aurora #tipoCalculo {
-    background-color: #1a1a2e;
-    border: 2px solid #7209b7;
-    color: #f0f8ff;
-}
-
-/* ===== Botón de cambio de tema ===== */
-.tema-aurora .toggle {
     background-color: #0b0c1a;
-    border: 3px solid #00ffab;
-    color: #00ffab;
-}
-
-/* ===== Botón historial ===== */
-.tema-aurora .botonHist {
-    background-color: #4361ee;
-    border: 2px solid #7209b7;
-    color: #f0f8ff;
 }
 
 /* ===== Título ===== */
@@ -106,78 +12,235 @@ body.tema-aurora {
     color: #00ffab;
 }
 
-/* ===== Contenedor historial ===== */
-.tema-aurora #historial {
-    background-color: #1a1a2e;
-    opacity: 0.85;
-    border: 3px solid #7209b7;
-    color: #90e0ef;
+/* ===== Texto de párrafos ===== */
+.tema-aurora p {
+    color: #00ffab;
 }
 
-/* ===== Operación individual ===== */
-.tema-aurora .operacion {
+
+/* =========================================
+   ===== CALCULADORA =====
+   ========================================= */
+
+.tema-aurora .calculadora {
+    border: 3px solid #6a0dad;
+
+    background: linear-gradient(145deg, #1f1c3a, #2b1f4b);
+    box-shadow: 0 4px 12px rgba(106, 13, 173, 0.4);
+}
+
+
+/* ===== Pantalla ===== */
+.tema-aurora .pantalla {
+    border: 2px solid #6a0dad;
+
     background-color: #1a1a2e;
-    opacity: 1;
+    color: #f0f8ff;
+}
+
+
+/* =========================================
+   ===== BOTONES =====
+   ========================================= */
+
+/* ===== Botones generales ===== */
+.tema-aurora .boton {
+    border: 2px solid #7209b7;
+
+    background-color: #3a0ca3;
+    color: #ffffff;
+
+    transition: 0.2s;
+}
+
+.tema-aurora .boton:hover {
+    border-color: #4cc9f0;
+
+    background-color: #7209b7;
+}
+
+
+/* ===== Botones de operación ===== */
+.tema-aurora .botonOp {
+    border: 2px solid #4361ee;
+
+    background-color: #4cc9f0;
+    color: #0b0c1a;
+}
+
+
+/* ===== Botón resultado (=) ===== */
+.tema-aurora .resultado {
+    border: 2px solid #0d6efd;
+
+    background-color: #00ffab;
+    color: #0b0c1a;
+}
+
+
+/* ===== Botón CE ===== */
+.tema-aurora .botonCE {
+    border: 2px solid #b5179e;
+
+    background-color: #f72585;
+    color: #ffffff;
+}
+
+
+/* ===== Botón C ===== */
+.tema-aurora .botonC {
+    border: 2px solid #fb8500;
+
+    background-color: #ffb703;
+    color: #0b0c1a;
+}
+
+
+/* ===== Botones hexadecimales ===== */
+.tema-aurora .hex {
+    border: 2px solid #3f37c9;
+
+    background-color: #7209b7;
+    color: #f8f9fa;
+}
+
+
+/* ===== Botones de conversión ===== */
+.tema-aurora .conversion {
+    border: 2px solid #00b4d8;
+
+    background-color: #90e0ef;
+    color: #0b0c1a;
+}
+
+
+/* ===== Botón enviar ===== */
+.tema-aurora .enviar {
+    border: 2px solid #0d6efd;
+
+    background-color: #00ffab;
+    color: #0b0c1a;
+}
+
+
+/* ===== Botón base y divisas ===== */
+.tema-aurora #Base,
+.tema-aurora #mostrarDivisas {
+    border: 2px solid #3a0ca3;
+
+    background-color: #4361ee;
+    color: #ffffff;
+}
+
+
+/* ===== Botón toggle ===== */
+.tema-aurora .toggle {
     border: 3px solid #00ffab;
-    color: #ffb703;
-    font-weight: bold;
-    padding: 4px;
-    margin: 4px 0;
-}
 
-/* ===== Inputs y selects generales ===== */
-.tema-aurora select,
-.tema-aurora input,
-.tema-aurora #tipoInteres {
     background-color: #0b0c1a;
     color: #00ffab;
+}
+
+
+/* ===== Botón historial ===== */
+.tema-aurora .botonHist {
+    border: 2px solid #7209b7;
+
+    background-color: #4361ee;
+    color: #f0f8ff;
+}
+
+
+/* =========================================
+   ===== HISTORIAL =====
+   ========================================= */
+
+.tema-aurora #historial {
     border: 3px solid #7209b7;
+
+    background-color: #1a1a2e;
+    color: #90e0ef;
+    opacity: 0.85;
+}
+
+.tema-aurora .operacion {
+    border: 3px solid #00ffab;
+
+    background-color: #1a1a2e;
+    color: #ffb703;
+
+    font-weight: bold;
+}
+
+
+/* =========================================
+   ===== INPUTS Y SELECTS =====
+   ========================================= */
+
+.tema-aurora select,
+.tema-aurora input {
+    border: 3px solid #7209b7;
+
+    background-color: #0b0c1a;
+    color: #00ffab;
+
     font-weight: bolder;
 }
 
-/* ===== Menú de calculadoras ===== */
+
+/* =========================================
+   ===== MENÚ CALCULADORAS =====
+   ========================================= */
+
 .tema-aurora #calculadoras {
-    background-color: #1a1a2e;
     border: 3px solid #7209b7;
+
+    background-color: #1a1a2e;
     color: #90e0ef;
 }
 
-.tema-aurora .calculadoraMenu, .tema-aurora #divisas {
-    background-color: #2b1f4b;
+.tema-aurora .calculadoraMenu {
     border: 2px solid #4cc9f0;
+
+    background-color: #2b1f4b;
     color: #f0f8ff;
-    padding: 6px 10px;
-    margin: 4px 0;
+
     cursor: pointer;
 }
 
 .tema-aurora .calculadoraMenu:hover {
-    background-color: #3a0ca3;
     border: 2px solid #00ffab;
+
+    background-color: #3a0ca3;
     color: #ffb703;
 }
 
 
-/* ===== Panel de información ===== */
+/* =========================================
+   ===== PANEL INFORMACIÓN =====
+   ========================================= */
+
 .tema-aurora #contInf {
-    background-color: #1a1a2e;
     border: 3px solid #7209b7;
+
+    background-color: #1a1a2e;
     color: #90e0ef;
-    padding: 10px;
 }
 
 .tema-aurora #inf {
-    background-color: #2b1f4b;
     border: 2px solid #4361ee;
+
+    background-color: #2b1f4b;
     color: #f0f8ff;
+
     cursor: pointer;
-    padding: 4px 8px;
 }
 
 .tema-aurora #ocultarInfo {
-    background-color: #f72585;
     border: 2px solid #b5179e;
-    color: white;
+
+    background-color: #f72585;
+    color: #ffffff;
+
     cursor: pointer;
-    padding: 4px 8px;
 }

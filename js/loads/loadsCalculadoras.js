@@ -405,7 +405,7 @@ function cargarDeportiva() {
     document.getElementById("calc9").innerHTML = `
 <h2>Deportiva</h2>
 <div class="pantalla" id="pnt9"></div>
-<label for="kilometros">Kilometros:</label>
+<p>Kilometros:</p>
 <input type="number" required id="kilometros">
 <p>Horas:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 Minutos:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

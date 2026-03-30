@@ -1,0 +1,165 @@
+/* =========================================
+   ===== TEMA [NOMBRE DEL TEMA] =====
+   ========================================= */
+
+/* ===== Fondo general ===== */
+body.tema-[nombre-tema] {
+
+}
+
+/* ===== Título ===== */
+.tema-[nombre-tema] h2 {
+
+}
+
+/* ===== Texto de párrafos ===== */
+.tema-[nombre-tema] p {
+
+}
+
+
+/* =========================================
+   ===== CALCULADORA =====
+   ========================================= */
+
+.tema-[nombre-tema] .calculadora {
+
+}
+
+
+/* ===== Pantalla ===== */
+.tema-[nombre-tema] .pantalla {
+
+}
+
+
+/* =========================================
+   ===== BOTONES =====
+   ========================================= */
+
+/* ===== Botones generales ===== */
+.tema-[nombre-tema] .boton {
+
+}
+
+.tema-[nombre-tema] .boton:hover {
+
+}
+
+
+/* ===== Botones de operación ===== */
+.tema-[nombre-tema] .botonOp {
+
+}
+
+
+/* ===== Botón resultado (=) ===== */
+.tema-[nombre-tema] .resultado {
+
+}
+
+
+/* ===== Botón CE ===== */
+.tema-[nombre-tema] .botonCE {
+
+}
+
+
+/* ===== Botón C ===== */
+.tema-[nombre-tema] .botonC {
+
+}
+
+
+/* ===== Botones hexadecimales ===== */
+.tema-[nombre-tema] .hex {
+
+}
+
+
+/* ===== Botones de conversión ===== */
+.tema-[nombre-tema] .conversion {
+
+}
+
+
+/* ===== Botón enviar ===== */
+.tema-[nombre-tema] .enviar {
+
+}
+
+
+/* ===== Botón base y divisas ===== */
+.tema-[nombre-tema] #Base,
+.tema-[nombre-tema] #mostrarDivisas {
+
+}
+
+
+/* ===== Botón toggle ===== */
+.tema-[nombre-tema] .toggle {
+
+}
+
+
+/* ===== Botón historial ===== */
+.tema-[nombre-tema] .botonHist {
+
+}
+
+
+/* =========================================
+   ===== HISTORIAL =====
+   ========================================= */
+
+.tema-[nombre-tema] #historial {
+
+}
+
+.tema-[nombre-tema] .operacion {
+
+}
+
+
+/* =========================================
+   ===== INPUTS Y SELECTS =====
+   ========================================= */
+
+.tema-[nombre-tema] select,
+.tema-[nombre-tema] input {
+
+}
+
+
+/* =========================================
+   ===== MENÚ CALCULADORAS =====
+   ========================================= */
+
+.tema-[nombre-tema] #calculadoras {
+
+}
+
+.tema-[nombre-tema] .calculadoraMenu {
+
+}
+
+.tema-[nombre-tema] .calculadoraMenu:hover {
+
+}
+
+
+/* =========================================
+   ===== PANEL INFORMACIÓN =====
+   ========================================= */
+
+.tema-[nombre-tema] #contInf {
+
+}
+
+.tema-[nombre-tema] #inf {
+
+}
+
+.tema-[nombre-tema] #ocultarInfo {
+
+}

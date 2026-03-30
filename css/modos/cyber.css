@@ -1,179 +1,256 @@
-/** Tema Cyber Sunset - moderno, vibrante y sorprendente */
+/* =========================================
+   ===== TEMA CYBER =====
+   ========================================= */
 
-/*Fondo general*/
+/* ===== Fondo general ===== */
 body.tema-cyber {
     background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
 }
 
-/*Fondo de la calculadora*/
-.tema-cyber .calculadora {
-    background-color: #111827;
-    border: 3px solid #ff00cc;
-    box-shadow: 0 0 20px rgba(255, 0, 204, 0.4);
-}
-
-/*Pantalla*/
-.tema-cyber .pantalla {
-    background-color: #0b1120;
-    border: 2px solid #00f5ff;
-    color: #00f5ff;
-    text-shadow: 0 0 6px rgba(0, 245, 255, 0.6);
-}
-
-/*Botones generales*/
-.tema-cyber .boton {
-    background-color: #1f2937;
-    border: 2px solid #374151;
-    color: #f9fafb;
-    transition: all 0.2s ease-in-out;
-}
-
-.tema-cyber .boton:hover {
-    background-color: #2d3748;
-    border-color: #ff00cc;
-    box-shadow: 0 0 10px rgba(255, 0, 204, 0.6);
-}
-
-/*Botones de operación*/
-.tema-cyber .botonOp {
-    background: linear-gradient(45deg, #ff00cc, #3333ff);
-    border: 2px solid #ff00cc;
-    color: #ffffff;
-}
-
-/*Botón CE*/
-.tema-cyber .botonCE {
-    background-color: #ff1744;
-    border: 2px solid #ff4569;
-    color: white;
-    box-shadow: 0 0 10px rgba(255, 23, 68, 0.6);
-}
-
-/*Botón C*/
-.tema-cyber .botonC {
-    background-color: #ff9100;
-    border: 2px solid #ffb74d;
-    color: #1a1a1a;
-}
-
-/*Botones hexadecimales*/
-.tema-cyber .hex {
-    background-color: #6a00f4;
-    border: 2px solid #c77dff;
-    color: #f3e8ff;
-}
-
-/*Botón Base*/
-.tema-cyber #Base , .tema-cyber #mostrarDivisas{
-    background-color: #001f3f;
-    border: 2px solid #00f5ff;
-    color: #00f5ff;
-}
-
-/*Botón enviar*/
-.tema-cyber .enviar {
-    background-color: #00c853;
-    border: 2px solid #69f0ae;
-    color: #003d1f;
-}
-
-/*Botones conversión*/
-.tema-cyber .conversion {
-    background-color: #0091ea;
-    border: 2px solid #40c4ff;
-    color: #ffffff;
-}
-
-/*Selectores*/
-.tema-cyber .SelectDivisa,
-.tema-cyber #tipoCalculo {
-    background-color: #111827;
-    border: 2px solid #00f5ff;
-    color: #e0f7ff;
-}
-
-/*Botón toggle*/
-.tema-cyber .toggle {
-    background-color: #000000;
-    border: 3px solid #ff00cc;
-    color: #ff00cc;
-}
-
-/*Botón historial*/
-.tema-cyber .botonHist {
-    background-color: #1a1a2e;
-    border: 2px solid #00f5ff;
-    color: #00f5ff;
-}
-
-/*Título*/
+/* ===== Título ===== */
 .tema-cyber h2 {
     color: #ff00cc;
     text-shadow: 0 0 8px rgba(255, 0, 204, 0.7);
 }
 
-/*Contenedor historial*/
-.tema-cyber #historial {
-    background-color: #0b1120;
+/* ===== Texto de párrafos ===== */
+.tema-cyber p {
+    color: #00f5ff;
+}
+
+
+/* =========================================
+   ===== CALCULADORA =====
+   ========================================= */
+
+.tema-cyber .calculadora {
     border: 3px solid #ff00cc;
-    opacity: 1;
-}
 
-/*Operación individual*/
-.tema-cyber .operacion {
     background-color: #111827;
-    border: 2px solid #3333ff;
-    color: #00f5ff;
-    font-weight: bold;
+    box-shadow: 0 0 20px rgba(255, 0, 204, 0.4);
 }
 
-/*Inputs y selects generales*/
-.tema-cyber select,
-.tema-cyber input,
-.tema-cyber #tipoInteres {
+
+/* ===== Pantalla ===== */
+.tema-cyber .pantalla {
+    border: 2px solid #00f5ff;
+
     background-color: #0b1120;
     color: #00f5ff;
-    border: 2px solid #ff00cc;
-    font-weight: 600;
+
+    text-shadow: 0 0 6px rgba(0, 245, 255, 0.6);
 }
 
-/* ===== MENU CALCULADORAS ===== */
 
-.tema-cyber #calculadoras {
-    background-color: #0b1120;
-    border: 3px solid #00f5ff;
-    color: #00f5ff;
+/* =========================================
+   ===== BOTONES =====
+   ========================================= */
+
+/* ===== Botones generales ===== */
+.tema-cyber .boton {
+    border: 2px solid #374151;
+
+    background-color: #1f2937;
+    color: #f9fafb;
+
+    transition: 0.2s;
 }
 
-.tema-cyber .calculadoraMenu, .tema-cyber #divisas {
-    background-color: #111827;
-    border: 2px solid #3333ff;
-    color: #e0f7ff;
-}
+.tema-cyber .boton:hover {
+    border-color: #ff00cc;
 
-.tema-cyber .calculadoraMenu:hover {
-    background-color: #1a1f35;
-    border: 2px solid #ff00cc;
-    color: #ff00cc;
+    background-color: #2d3748;
     box-shadow: 0 0 10px rgba(255, 0, 204, 0.6);
 }
 
-/* ===== PANEL INFORMACION ===== */
+
+/* ===== Botones de operación ===== */
+.tema-cyber .botonOp {
+    border: 2px solid #ff00cc;
+
+    background: linear-gradient(45deg, #ff00cc, #3333ff);
+    color: #ffffff;
+}
+
+
+/* ===== Botón resultado (=) ===== */
+.tema-cyber .resultado {
+    border: 2px solid #69f0ae;
+
+    background-color: #00c853;
+    color: #003d1f;
+
+    box-shadow: 0 0 10px rgba(0, 200, 83, 0.6);
+}
+
+
+/* ===== Botón CE ===== */
+.tema-cyber .botonCE {
+    border: 2px solid #ff4569;
+
+    background-color: #ff1744;
+    color: #ffffff;
+
+    box-shadow: 0 0 10px rgba(255, 23, 68, 0.6);
+}
+
+
+/* ===== Botón C ===== */
+.tema-cyber .botonC {
+    border: 2px solid #ffb74d;
+
+    background-color: #ff9100;
+    color: #1a1a1a;
+}
+
+
+/* ===== Botones hexadecimales ===== */
+.tema-cyber .hex {
+    border: 2px solid #c77dff;
+
+    background-color: #6a00f4;
+    color: #f3e8ff;
+}
+
+
+/* ===== Botones de conversión ===== */
+.tema-cyber .conversion {
+    border: 2px solid #40c4ff;
+
+    background-color: #0091ea;
+    color: #ffffff;
+}
+
+
+/* ===== Botón enviar ===== */
+.tema-cyber .enviar {
+    border: 2px solid #69f0ae;
+
+    background-color: #00c853;
+    color: #003d1f;
+}
+
+
+/* ===== Botón base y divisas ===== */
+.tema-cyber #Base,
+.tema-cyber #mostrarDivisas {
+    border: 2px solid #00f5ff;
+
+    background-color: #001f3f;
+    color: #00f5ff;
+}
+
+
+/* ===== Botón toggle ===== */
+.tema-cyber .toggle {
+    border: 3px solid #ff00cc;
+
+    background-color: #000000;
+    color: #ff00cc;
+}
+
+
+/* ===== Botón historial ===== */
+.tema-cyber .botonHist {
+    border: 2px solid #00f5ff;
+
+    background-color: #1a1a2e;
+    color: #00f5ff;
+}
+
+
+/* =========================================
+   ===== HISTORIAL =====
+   ========================================= */
+
+.tema-cyber #historial {
+    border: 3px solid #ff00cc;
+
+    background-color: #0b1120;
+    color: #00f5ff;
+    opacity: 1;
+}
+
+.tema-cyber .operacion {
+    border: 3px solid #3333ff;
+
+    background-color: #111827;
+    color: #00f5ff;
+
+    font-weight: bold;
+}
+
+
+/* =========================================
+   ===== INPUTS Y SELECTS =====
+   ========================================= */
+
+.tema-cyber select,
+.tema-cyber input {
+    border: 3px solid #ff00cc;
+
+    background-color: #0b1120;
+    color: #00f5ff;
+
+    font-weight: bolder;
+}
+
+
+/* =========================================
+   ===== MENÚ CALCULADORAS =====
+   ========================================= */
+
+.tema-cyber #calculadoras {
+    border: 3px solid #00f5ff;
+
+    background-color: #0b1120;
+    color: #00f5ff;
+}
+
+.tema-cyber .calculadoraMenu {
+    border: 2px solid #3333ff;
+
+    background-color: #111827;
+    color: #e0f7ff;
+
+    cursor: pointer;
+}
+
+.tema-cyber .calculadoraMenu:hover {
+    border: 2px solid #ff00cc;
+
+    background-color: #1a1f35;
+    color: #ff00cc;
+
+    box-shadow: 0 0 10px rgba(255, 0, 204, 0.6);
+}
+
+
+/* =========================================
+   ===== PANEL INFORMACIÓN =====
+   ========================================= */
 
 .tema-cyber #contInf {
-    background-color: #0b1120;
     border: 3px solid #00f5ff;
+
+    background-color: #0b1120;
     color: #00f5ff;
 }
 
 .tema-cyber #inf {
-    background-color: #001f3f;
     border: 2px solid #00f5ff;
+
+    background-color: #001f3f;
     color: #00f5ff;
+
+    cursor: pointer;
 }
 
 .tema-cyber #ocultarInfo {
-    background-color: #1a1a2e;
     border: 2px solid #ff1744;
+
+    background-color: #1a1a2e;
     color: #ff4569;
+
+    cursor: pointer;
 }

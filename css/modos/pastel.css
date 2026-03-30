@@ -1,28 +1,44 @@
-/** Tema pastel suave y moderno */
+/* =========================================
+   ===== TEMA PASTEL SUAVE =====
+   ========================================= */
 
-/*Fondo general*/
+/* ===== Fondo general ===== */
 body.tema-pastel {
     background-color: #fdf6f9;
 }
 
-/*Fondo de la calculadora*/
-.tema-pastel .calculadora {
-    background-color: #ffffff;
-    border: 3px solid #e9d5ff;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+/* ===== Título ===== */
+.tema-pastel h2 {
+    color: #6d28d9;
 }
 
-/*Pantalla*/
+/* ===== Texto de párrafos ===== */
+.tema-pastel p {
+    color: #374151;
+}
+
+/* =========================================
+   ===== CALCULADORA =====
+   ========================================= */
+.tema-pastel .calculadora {
+    border: 3px solid #e9d5ff;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* ===== Pantalla ===== */
 .tema-pastel .pantalla {
-    background-color: #fef9ff;
     border: 2px solid #d8b4fe;
+    background-color: #fef9ff;
     color: #4b5563;
 }
 
-/*Botones generales*/
+/* =========================================
+   ===== BOTONES =====
+   ========================================= */
 .tema-pastel .boton {
-    background-color: #ffffff;
     border: 2px solid #e5e7eb;
+    background-color: #ffffff;
     color: #374151;
     transition: all 0.2s ease-in-out;
 }
@@ -32,140 +48,134 @@ body.tema-pastel {
     border-color: #c4b5fd;
 }
 
-/*Botones de operación*/
+/* ===== Botones de operación ===== */
 .tema-pastel .botonOp {
-    background-color: #dbeafe; /* azul pastel */
     border: 2px solid #93c5fd;
+    background-color: #dbeafe;
     color: #1e3a8a;
 }
 
-/*Botón CE*/
+/* ===== Botón CE ===== */
 .tema-pastel .botonCE {
-    background-color: #fecaca; /* rojo pastel */
     border: 2px solid #f87171;
+    background-color: #fecaca;
     color: #7f1d1d;
 }
 
-/*Botón C*/
+/* ===== Botón C ===== */
 .tema-pastel .botonC {
-    background-color: #fef3c7; /* amarillo pastel */
     border: 2px solid #fcd34d;
+    background-color: #fef3c7;
     color: #78350f;
 }
 
-/*Botones hexadecimales*/
+/* ===== Botones hexadecimales ===== */
 .tema-pastel .hex {
-    background-color: #e9d5ff; /* lila pastel */
     border: 2px solid #c4b5fd;
+    background-color: #e9d5ff;
     color: #5b21b6;
 }
 
-/*Botón Base*/
-.tema-pastel #Base , .tema-pastel #mostrarDivisas{
-    background-color: #e0f2fe;
+/* ===== Botón Base ===== */
+.tema-pastel #Base,
+.tema-pastel #mostrarDivisas {
     border: 2px solid #7dd3fc;
+    background-color: #e0f2fe;
     color: #075985;
 }
 
-/*Botón enviar*/
+/* ===== Botón enviar ===== */
 .tema-pastel .enviar {
-    background-color: #bbf7d0; /* verde pastel */
     border: 2px solid #4ade80;
+    background-color: #bbf7d0;
     color: #14532d;
 }
 
-/*Botones conversión*/
+/* ===== Botones conversión ===== */
 .tema-pastel .conversion {
-    background-color: #fde68a;
     border: 2px solid #facc15;
+    background-color: #fde68a;
     color: #713f12;
 }
 
-/*Selectores*/
-.tema-pastel .SelectDivisa,
-.tema-pastel #tipoCalculo {
-    background-color: #ffffff;
-    border: 2px solid #e9d5ff;
-    color: #374151;
-}
-
-/*Botón toggle*/
+/* ===== Botón toggle ===== */
 .tema-pastel .toggle {
-    background-color: #ffffff;
     border: 3px solid #c4b5fd;
+    background-color: #ffffff;
     color: #6d28d9;
 }
 
-/*Botón historial*/
+/* ===== Botón historial ===== */
 .tema-pastel .botonHist {
-    background-color: #d1fae5;
     border: 2px solid #6ee7b7;
+    background-color: #d1fae5;
     color: #065f46;
 }
 
-/*Título*/
-.tema-pastel h2 {
-    color: #6d28d9;
-}
-
-/*Contenedor historial*/
+/* ===== Historial ===== */
 .tema-pastel #historial {
-    background-color: #fef9ff;
     border: 3px solid #e9d5ff;
+    background-color: #fef9ff;
+    color: #374151;
     opacity: 1;
 }
 
-/*Operación individual*/
 .tema-pastel .operacion {
-    background-color: #ffffff;
     border: 2px solid #fbcfe8;
+    background-color: #ffffff;
     color: #9d174d;
     font-weight: bold;
 }
 
-/*Inputs y selects generales*/
+/* ===== Inputs y selects ===== */
 .tema-pastel select,
 .tema-pastel input,
 .tema-pastel #tipoInteres {
+    border: 2px solid #e9d5ff;
     background-color: #ffffff;
     color: #374151;
-    border: 2px solid #e9d5ff;
     font-weight: 600;
 }
 
-/* ===== MENU CALCULADORAS ===== */
-
+/* =========================================
+   ===== MENÚ CALCULADORAS =====
+   ========================================= */
 .tema-pastel #calculadoras {
-    background-color: #fef9ff;
     border: 3px solid #e9d5ff;
+    background-color: #fef9ff;
     color: #374151;
 }
 
-.tema-pastel .calculadoraMenu, .tema-pastel #divisas {
-    background-color: #ffffff;
+.tema-pastel .calculadoraMenu,
+.tema-pastel #divisas {
     border: 2px solid #e5e7eb;
+    background-color: #ffffff;
     color: #4b5563;
 }
 
 .tema-pastel .calculadoraMenu:hover {
-    background-color: #f3f4f6;
     border: 2px solid #c4b5fd;
+    background-color: #f3f4f6;
     color: #6d28d9;
 }
-/* ===== PANEL INFORMACION ===== */
+
+/* =========================================
+   ===== PANEL INFORMACIÓN =====
+   ========================================= */
 .tema-pastel #contInf {
-    background-color: #fef9ff;
     border: 3px solid #e9d5ff;
+    background-color: #fef9ff;
     color: #374151;
 }
+
 .tema-pastel #inf {
-    background-color: #e0f2fe;
     border: 2px solid #7dd3fc;
+    background-color: #e0f2fe;
     color: #075985;
 }
 
 .tema-pastel #ocultarInfo {
-    background-color: #fecaca;
     border: 2px solid #f87171;
+    background-color: #fecaca;
     color: #7f1d1d;
 }
