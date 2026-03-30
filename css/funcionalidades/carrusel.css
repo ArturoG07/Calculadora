@@ -1,22 +1,29 @@
-/*Hoja de estilos con los estilos necesarios para el funcionamiento del carrusel*/
-/*Carrusel principal*/
+/* =========================================
+   ===== CARRUSEL.CSS
+   ===== Estilos necesarios para el carrusel
+   ========================================= */
+
+/* ===== Carrusel principal ===== */
 .carousel {
     position: relative;
     width: 100%;
     overflow: hidden;
 }
-/*Recorrido del carrusel*/
+
+/* ===== Track del carrusel (recorrido de los items) ===== */
 .carousel-track {
     display: flex;
     align-items: center;
     transition: transform 0.4s ease;
 }
-/*Calculadora que estara activa*/
+
+/* ===== Calculadora activa dentro del carrusel ===== */
 .calculadora.activa {
     opacity: 1;
     transform: scale(1);
 }
-/*Boton de navegacion*/
+
+/* ===== Botones de navegación ===== */
 .nav {
     position: fixed;
     bottom: 0px;
@@ -30,6 +37,12 @@
     z-index: 10;
     width: 50px;
 }
-/*Botones de navegacion*/
-.prev { left: 0; }
-.next { right: 0; }
+
+/* Posicionamiento específico de los botones de navegación */
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}

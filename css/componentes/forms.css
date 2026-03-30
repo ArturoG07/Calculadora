@@ -1,36 +1,64 @@
+/* =========================================
+   ===== FORMS.CSS
+   ===== Estilos para inputs y selects
+   ========================================= */
+
+/* ===== Inputs globales ===== */
 input {
     margin: 10px;
-    height: 20px;
     width: 100%;
+    height: 20px;
 }
+
+/* ===== Selects globales ===== */
 select {
     margin: 10px;
     width: 100%;
     height: 50px;
 }
+
+/* =========================================
+   ===== CALCULADORA 3 =====
+   ========================================= */
 #calc3 input {
     height: 20px;
 }
+
+/* =========================================
+   ===== CALCULADORA 4 =====
+   ========================================= */
 #calc4 select {
     margin: 10px;
     width: 70px;
     height: 35px;
 }
+
 #calc4 #tipoCalculo {
     width: 100%;
     height: 35px;
 }
-#horas, #minutos, #segundos {
+
+/* ===== Campos de tiempo ===== */
+#horas,
+#minutos,
+#segundos {
     width: 50px;
     height: 50px;
 }
 
+/* =========================================
+   ===== CALCULADORA 5 =====
+   ========================================= */
 #calc5 input,
-#calc5 select{
+#calc5 select {
     width: 80%;
     height: 25px;
 }
 
-#calc7 select, #calc7 input {
+/* =========================================
+   ===== CALCULADORA 7 =====
+   ========================================= */
+#calc7 select,
+#calc7 input {
     height: 20px;
 }

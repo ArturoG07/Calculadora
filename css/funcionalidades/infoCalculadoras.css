@@ -1,4 +1,9 @@
-/*Contenedor que contiene la informacion de las calculadoras*/
+/* =========================================
+   ===== INFOCALCS.CSS
+   ===== Estilos del panel de información de calculadoras
+   ========================================= */
+
+/* ===== Contenedor principal de información ===== */
 #contInf {
     position: absolute;
     right: 20px;
@@ -8,21 +13,24 @@
     z-index: 10;
     padding: 20px;
     font-weight: bolder;
-    display:none;
-    overflow-y: auto;
-    white-space: pre-line;
+    display: none; /* Se muestra al activarlo */
+    overflow-y: auto; /* Scroll vertical si el contenido excede */
+    white-space: pre-line; /* Mantener saltos de línea en el texto */
 }
-/*Boton de mostrar informacion fijo en cada calculadora, en la esquina superior derecha*/
+
+/* ===== Botón de mostrar información ===== */
 #inf {
-    position: fixed;
+    position: fixed; /* Siempre visible en la esquina superior derecha */
     top: 5px;
     right: 5px;
     border-radius: 10px;
     font-weight: bolder;
     text-align: center;
     align-content: center;
+    cursor: pointer; /* Indica interactividad */
 }
-/*Boton de ocultar informacion dentro del contenedor de informacion*/
+
+/* ===== Botón de ocultar información dentro del contenedor ===== */
 #ocultarInfo {
     position: absolute;
     bottom: 10px;
@@ -30,4 +38,5 @@
     width: 50px;
     height: 50px;
     border-radius: 5px;
+    cursor: pointer; /* Mejora la interacción */
 }

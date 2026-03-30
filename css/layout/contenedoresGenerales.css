@@ -1,3 +1,9 @@
+/* =========================================
+   ===== CONTENEDORES GENERALES.CSS
+   ===== Estilos generales para layout y contenedores
+   ========================================= */
+
+/* ===== Body y layout principal ===== */
 body {
     display: flex;
     align-items: center;
@@ -8,7 +14,8 @@ body {
     margin: 0;
 }
 
-/*Crea una calculadora, al añadir una nueva se ordenaran todos los botones solos*/
+/* ===== Contenedor general de calculadora =====
+   Se ajustan todos los botones automáticamente al añadir nuevas calculadoras */
 .calculadora {
     position: relative;
     border-radius: 10px;
@@ -21,19 +28,23 @@ body {
     justify-content: center;
     flex-shrink: 0;
     width: 300px;
+
+    /* Efectos de opacidad y escala para animación */
     opacity: 0.4;
     transform: scale(0.8);
     transition: all 0.4s ease;
 }
 
-/*Titulo de las calculadoras*/
-h2{
+/* ===== Título de las calculadoras ===== */
+h2 {
     font-size: 50px;
     text-align: center;
     margin: 0;
 }
-/*Pantalla de todas las calculadoras, se pone justo despues del titulo y antes de los botones, el largo
-se ajustara automaticamente, si quieres ajustar la altura se debe hacer con los id */
+
+/* ===== Pantalla de las calculadoras =====
+   Se coloca justo después del título y antes de los botones.
+   Altura ajustable por ID específico si se necesita */
 .pantalla {
     box-sizing: border-box;
     position: relative;
@@ -50,7 +61,7 @@ se ajustara automaticamente, si quieres ajustar la altura se debe hacer con los 
     line-height: 0.6;
 }
 
-
+/* ===== Botones de menú de calculadoras ===== */
 .calculadoraMenu {
     position: relative;
     width: 95%;
@@ -62,6 +73,8 @@ se ajustara automaticamente, si quieres ajustar la altura se debe hacer con los 
     font-size: 25px;
     font-weight: bolder;
 }
+
+/* ===== Texto de párrafos generales ===== */
 p {
     margin: 3px;
 }

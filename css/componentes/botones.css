@@ -1,64 +1,106 @@
-/*Boton general para crear un boton vacio, no tiene fondo ni bordes*/
+/* =========================================
+   ===== BOTONES GENERALES =====
+   ========================================= */
+
+/* Botón general: vacío, sin fondo ni bordes */
 .boton {
-    font-size: 30px;
-    text-align: center;
-    font-weight: bolder;
-    margin: 10px;
-    width: 40px;
-    height: 40px;
-    box-sizing: border-box;
-    border-radius: 10px;
-    align-content: center;
+    display: inline-block;
     width: 50px;
     height: 50px;
-    display: inline-block;
+    font-size: 30px;
+    font-weight: bolder;
+    text-align: center;
+    align-content: center;
+    border-radius: 10px;
+    box-sizing: border-box;
     background-size: cover;
     background-position: center;
     margin: 5px;
     cursor: pointer;
 }
-/*Hace una animacion al pasar por un boton*/
+
+/* Animación al pasar por un botón */
 .boton:hover {
     transform: scale(1.1);
     cursor: pointer;
 }
-/*Boton para borrar el contenido de la pantalla de la calculadora, color rojo */
-.botonCE {
-    font-size: 20px;
-}
-/*Boton para borrar el ultimo caracter*/
-.botonC {
-    font-size: 20px;
-}
-/*Boton para cambiar de estilo entre claro y oscuro*/
-.toggle {
-    position: fixed;
-    height: 100px;
-    font-size: 30px;
-    text-align: center;
-    align-content: center;
-    border-radius:  20px;
-    right: 40%;
-    left: 40%;
-    bottom: 0px;
-}
 
+/* Botón vacío sin efecto hover */
 .vacio:hover {
     transform: none;
     cursor: default;
 }
-/*Boton de enviar*/
+
+/* Botón de enviar */
 .enviar {
     width: 100%;
     height: 100px;
     font-size: 80px;
     text-align: center;
     align-content: center;
-    font-weigth: bolder;
+    font-weight: bolder;
 }
-/**
- * Boton para desplegar el menú de calculadoras
- */
+
+/* Botón CE: borrar contenido de pantalla */
+.botonCE {
+    font-size: 20px;
+}
+
+/* Botón C: borrar último carácter */
+.botonC {
+    font-size: 20px;
+}
+
+/* Botón para cambiar tema (claro/oscuro) */
+.toggle {
+    position: fixed;
+    height: 100px;
+    width: auto;
+    font-size: 30px;
+    text-align: center;
+    align-content: center;
+    border-radius: 20px;
+    right: 40%;
+    left: 40%;
+    bottom: 0;
+}
+
+/* Botón base de calculadora de programador */
+#Base {
+    position: absolute;
+    top: 20px;
+    left: 5px;
+    margin: 10px;
+    height: 50px;
+    font-size: 30px;
+    text-align: center;
+    align-content: center;
+    border-radius: 20px;
+    font-weight: bolder;
+    z-index: 5;
+}
+
+/* Botón de conversiones en calculadora de programador */
+.conversion {
+    font-size: 20px;
+}
+
+/* Botón para mostrar divisas */
+#mostrarDivisas {
+    position: absolute;
+    top: 20px;
+    left: 5px;
+    margin: 10px;
+    height: 50px;
+    font-size: 30px;
+    text-align: center;
+    align-content: center;
+    border-radius: 20px;
+    font-weight: bolder;
+    z-index: 5;
+}
+
+/* Botón para desplegar el menú de calculadoras */
 #calculadorasBoton {
     position: fixed;
     left: 5px;
@@ -69,6 +111,7 @@
     overflow: hidden;
 }
 
+/* Botón limpiar */
 #limpiar {
     position: fixed;
     left: 5px;
@@ -78,75 +121,48 @@
     z-index: 5;
     overflow: hidden;
 }
-/*Base de la calculadora de programador*/
-#Base {
-    position: absolute;
-    margin: 10px;
-    height: 50px;
-    font-size: 30px;
-    text-align: center;
-    align-content: center;
-    border-radius:  20px;
-    font-weight: bolder;
-    top: 20px;
-    left: 5px;
-    z-index: 5;
-}
-/* boton de conversiones en la calculadora de programador*/
-.conversion{
-    font-size: 20px;
-}
-#mostrarDivisas {
-    position: absolute;
-    margin: 10px;
-    height: 50px;
-    font-size: 30px;
-    text-align: center;
-    align-content: center;
-    border-radius:  20px;
-    font-weight: bolder;
-    top: 20px;
-    left: 5px;
-    z-index: 5;
-}
-/**
- * Contenedor con los tipos de pokemon para ataque y defensa
- */
+
+/* =========================================
+   ===== ICONOS DE TIPOS DE POKEMON =====
+   ========================================= */
+
+/* Contenedor de iconos */
 .pkm {
     width: 50px;
     height: 50px;
-    margin: 20px;
-    margin-top: 0px;
+    margin: 0 20px 20px 20px;
     border-radius: 100%;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     border: 3px solid black;
 }
-/* Tipos */
-#bicho    { background-image: url('../../img/Pokemon_Type_Icon_Bug.png'); }
-#siniestro{ background-image: url('../../img/Pokemon_Type_Icon_Dark.png'); }
-#dragon   { background-image: url('../../img/Pokemon_Type_Icon_Dragon.png'); }
-#electrico{ background-image: url('../../img/Pokemon_Type_Icon_Electric.png'); }
-#hada     { background-image: url('../../img/Pokemon_Type_Icon_Fairy.png'); }
-#lucha    { background-image: url('../../img/Pokemon_Type_Icon_Fighting.png'); }
-#fuego    { background-image: url('../../img/Pokemon_Type_Icon_Fire.png'); }
-#volador  { background-image: url('../../img/Pokemon_Type_Icon_Flying.png'); }
-#fantasma { background-image: url('../../img/Pokemon_Type_Icon_Ghost.png'); }
-#planta   { background-image: url('../../img/Pokemon_Type_Icon_Grass.png'); }
-#tierra   { background-image: url('../../img/Pokemon_Type_Icon_Ground.png'); }
-#hielo    { background-image: url('../../img/Pokemon_Type_Icon_Ice.png'); }
-#normal   { background-image: url('../../img/Pokemon_Type_Icon_Normal.png'); }
-#veneno   { background-image: url('../../img/Pokemon_Type_Icon_Poison.png'); }
-#psiquico { background-image: url('../../img/Pokemon_Type_Icon_Psychic.png'); }
-#roca     { background-image: url('../../img/Pokemon_Type_Icon_Rock.png'); }
-#acero    { background-image: url('../../img/Pokemon_Type_Icon_Steel.png'); }
-#agua     { background-image: url('../../img/Pokemon_Type_Icon_Water.png'); }
+
+/* Tipos individuales */
+#bicho     { background-image: url('../../img/Pokemon_Type_Icon_Bug.png'); }
+#siniestro { background-image: url('../../img/Pokemon_Type_Icon_Dark.png'); }
+#dragon    { background-image: url('../../img/Pokemon_Type_Icon_Dragon.png'); }
+#electrico { background-image: url('../../img/Pokemon_Type_Icon_Electric.png'); }
+#hada      { background-image: url('../../img/Pokemon_Type_Icon_Fairy.png'); }
+#lucha     { background-image: url('../../img/Pokemon_Type_Icon_Fighting.png'); }
+#fuego     { background-image: url('../../img/Pokemon_Type_Icon_Fire.png'); }
+#volador   { background-image: url('../../img/Pokemon_Type_Icon_Flying.png'); }
+#fantasma  { background-image: url('../../img/Pokemon_Type_Icon_Ghost.png'); }
+#planta    { background-image: url('../../img/Pokemon_Type_Icon_Grass.png'); }
+#tierra    { background-image: url('../../img/Pokemon_Type_Icon_Ground.png'); }
+#hielo     { background-image: url('../../img/Pokemon_Type_Icon_Ice.png'); }
+#normal    { background-image: url('../../img/Pokemon_Type_Icon_Normal.png'); }
+#veneno    { background-image: url('../../img/Pokemon_Type_Icon_Poison.png'); }
+#psiquico  { background-image: url('../../img/Pokemon_Type_Icon_Psychic.png'); }
+#roca      { background-image: url('../../img/Pokemon_Type_Icon_Rock.png'); }
+#acero     { background-image: url('../../img/Pokemon_Type_Icon_Steel.png'); }
+#agua      { background-image: url('../../img/Pokemon_Type_Icon_Water.png'); }
+
+/* Quitar borde para todos los tipos */
 #bicho, #siniestro, #dragon, #electrico, #hada, #lucha, #fuego, #volador,
 #fantasma, #planta, #tierra, #hielo, #normal, #veneno, #psiquico, #roca, #acero, #agua {
     border: none;
 }
-
 
 
 

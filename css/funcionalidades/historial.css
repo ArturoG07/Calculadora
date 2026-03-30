@@ -1,26 +1,33 @@
-/*Contenedor para cada operacion incluida en el historial*/
+/* =========================================
+   ===== HISTORIAL.CSS
+   ===== Estilos del historial de operaciones
+   ========================================= */
+
+/* ===== Contenedor de cada operación dentro del historial ===== */
 .operacion {
     width: 90%;
     height: auto;
     z-index: 2000;
     margin: 10px;
 }
-/*Contenido del historial*/
+
+/* ===== Contenedor principal del historial ===== */
 #historial {
     box-sizing: border-box;
     width: 40%;
     margin: 10px;
     position: fixed;
-    display: none;
+    display: none; /* Se muestra al activarlo */
     left: 0px;
     top: 3px;
     bottom: 3px;
     font-size: 50px;
     align-content: space-between;
-    overflow-y: auto;
+    overflow-y: auto; /* Permite scroll vertical */
     z-index: 10;
 }
-/*Boton para mostrar y ocultar el historial*/
+
+/* ===== Botón para mostrar/ocultar el historial ===== */
 .botonHist {
     z-index: 4;
     width: 20%;
@@ -31,4 +38,5 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer; /* Mejora la interacción */
 }
